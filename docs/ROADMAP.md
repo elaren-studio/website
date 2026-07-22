@@ -6,7 +6,7 @@ Last updated: July 22, 2026
 
 - Keep link validation and the 27-page production build green from the canonical Elaren/website path.
 - Keep README, RUNBOOK, and handoff documents aligned with the actual dual content system.
-- Verify the live hosting and GitHub connection before any remote transfer.
+- GitHub repository and GitHub-recorded deployment linkage are verified; directly verify Vercel project ownership and custom-domain settings before any remote transfer.
 
 ## Maintenance
 

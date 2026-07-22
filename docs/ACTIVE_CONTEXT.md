@@ -24,19 +24,29 @@ This repository owns website implementation and public copy. Elaren company stra
 - The tracked legacy zip snapshot was retired; active elaren_site_content files remain because current routes read them.
 - The stale SETUP.md was retired in favor of README.md and RUNBOOK.md.
 
+## Verified external state
+
+- Elevated GitHub CLI authentication is active for fdtorres1.
+- The live remote is the public fdtorres1/elaren-studio repository, and fdtorres1 has ADMIN permission.
+- The live default branch is main at c33f0fc. This local main is one unpushed commit ahead at e6a2e45.
+- GitHub records Preview and Production environments.
+- The latest Production deployment for c33f0fc completed successfully through a Vercel target URL on March 3, 2026.
+- Main is not branch-protected.
+
 ## External state not yet verified
 
-- Live GitHub visibility and remote freshness
-- Authenticated hosting project and repository connection
-- Production build branch
+- Direct Vercel account ownership and project settings
+- Custom-domain attachment for elarenstudio.com
+- Production build settings and branch inside Vercel
 - FormSubmit account ownership
 - Plausible account ownership
+- Final GitHub organization and repository name
 
 No GitHub, hosting, DNS, form, or analytics setting was changed during local relocation.
 
 ## Next actions
 
-1. Restore authenticated GitHub access.
-2. Verify the hosting project and deployment connection.
-3. Decide whether to transfer or rename the remote into an Elaren GitHub organization.
-4. Update deployment documentation from authenticated evidence.
+1. Decide whether the repository remains under fdtorres1 temporarily or moves to a newly created Elaren organization.
+2. Verify the Vercel project and elarenstudio.com attachment directly.
+3. Account for the likely Production deployment before pushing the local documentation commit.
+4. Update deployment documentation after direct Vercel verification.
