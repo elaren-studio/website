@@ -40,3 +40,10 @@
 - Reconnected Vercel to elaren-studio/website and verified repository ID 1092039889, production branch main, project-root builds, Astro, and Node.js 22.x.
 - Verified that elarenstudio.com remains attached with intended nameservers and the existing Production deployment remains Ready.
 - Triggered no deployment and left the pending website documentation commits unpushed.
+
+## 2026-07-22 - First post-transfer Production deployment verified
+
+- Pushed website main from c33f0fc to 728a060 at elaren-studio/website after link validation and a 27-page production build passed.
+- Verified Vercel automatically created Production deployment dpl_8Q7CHcYRb4Ykj9jGMwthhpZcdg8F from the transferred repository connection.
+- Verified Vercel Ready status, GitHub deployment success, the elarenstudio.com production alias, and an HTTP 200 response from the custom domain.
+- Verified local main and origin/main were identical at 728a060 after the push.

@@ -28,26 +28,23 @@ This repository owns website implementation and public copy. Elaren company stra
 
 - Elevated GitHub CLI authentication is active for fdtorres1.
 - The public repository was transferred and renamed from fdtorres1/elaren-studio to elaren-studio/website. GitHub preserved repository ID 1092039889, history, main, environments, and the former-path redirect; fdtorres1 retains ADMIN permission.
-- The live default branch is main at c33f0fc. Before this transfer handoff commit, local main was three unpushed documentation commits ahead at 2a0bcd2.
+- The live default branch is main at 728a060, and local main matches origin/main.
 - GitHub records Preview and Production environments.
 - The authenticated Vercel project is felixs-projects-a5ff4c9b/elaren-studio, project ID prj_xFdQeKvaDH8l5LeD4smVEUxmM2FX.
 - Vercel is connected to GitHub repository ID 1092039889 at elaren-studio/website with production branch main, Astro preset, repository-root builds, and Node.js 22.x.
 - The Vercel GitHub App is installed on elaren-studio with selected-repository access limited to website.
 - elarenstudio.com remains attached to the Vercel project with the intended Vercel nameservers.
-- The latest Production deployment for c33f0fc remains Ready and aliased to elarenstudio.com. The transfer and reconnection did not trigger a deployment.
+- The first post-transfer Git push of 728a060 created Vercel Production deployment dpl_8Q7CHcYRb4Ykj9jGMwthhpZcdg8F. Vercel and GitHub report success, the deployment is Ready, and elarenstudio.com is attached and returns HTTP 200.
 - Main is not branch-protected.
 
 ## External state not yet verified
 
-- First Git-triggered Preview or Production deployment after the repository transfer
 - FormSubmit account ownership
 - Plausible account ownership
 
-The repository owner, name, local origin, and Vercel Git connection changed. The Vercel project, deployment, domain, DNS, form, and analytics settings did not change.
+The repository owner, name, local origin, and Vercel Git connection changed successfully. The Vercel project, domain, DNS, form, and analytics settings did not change.
 
 ## Next actions
 
-1. Run validation and a production build before the first post-transfer push.
-2. Push the pending documentation commits only after accepting that main will likely trigger a Production deployment.
-3. Verify that the first post-transfer Git deployment reaches Ready and retains the elarenstudio.com alias.
-4. Verify FormSubmit and Plausible account ownership separately when needed.
+1. Continue running validation and a production build before pushes to main.
+2. Verify FormSubmit and Plausible account ownership separately when needed.

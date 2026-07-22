@@ -8,7 +8,7 @@ Last updated: July 22, 2026
 - Keep README, RUNBOOK, and handoff documents aligned with the actual dual content system.
 - Website transferred to elaren-studio/website with repository identity and history preserved.
 - Vercel project, production branch, selected-repository GitHub App access, production deployment, and elarenstudio.com attachment verified after reconnection.
-- Validate the first post-transfer Git-triggered deployment on the next authorized push to main.
+- First post-transfer Git-triggered Production deployment verified Ready with the elarenstudio.com alias and GitHub success status.
 
 ## Maintenance
 
