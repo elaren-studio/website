@@ -23,7 +23,7 @@ Legacy static pages continue reading elaren_site_content while resources and SEO
 
 ## D-004 - Defer remote and deployment changes
 
-Status: accepted
+Status: satisfied and superseded by D-006
 Date: July 22, 2026
 
 Keep the existing GitHub remote until authenticated GitHub and hosting evidence confirms that transfer or rename will not interrupt production.
@@ -34,3 +34,10 @@ Status: implemented
 Date: July 22, 2026
 
 Do not migrate generated dependencies, build output, test results, local AI chat history, or generated PDF output. Retire the unused tracked content zip because Git history preserves it and no code references it.
+
+## D-006 - Place the website under the Elaren GitHub organization
+
+Status: implemented
+Date: July 22, 2026
+
+The canonical public website repository is `elaren-studio/website`. Preserve the existing repository identity, history, default branch, and deployment project. Vercel remains connected to the same GitHub repository ID with `main` as the production branch, and its GitHub App access is limited to the `website` repository rather than all Elaren repositories.

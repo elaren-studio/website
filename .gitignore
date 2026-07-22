@@ -29,3 +29,5 @@ pnpm-debug.log*
 # macOS and editor-local files
 .DS_Store
 .idea/
+.vercel
+.env*

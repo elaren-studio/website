@@ -44,11 +44,14 @@ Do not describe all content as living in only one folder. See RUNBOOK.md for sch
 ## Integrations
 
 - Production domain configured in Astro: https://elarenstudio.com
+- Hosting: Vercel project `felixs-projects-a5ff4c9b/elaren-studio`
+- Canonical GitHub repository: https://github.com/elaren-studio/website
+- Production branch: `main`
 - Lead forms: FormSubmit
 - Analytics: Plausible
 - Sitemap: Astro sitemap integration
 
-The production hosting provider and repository connection must be verified in the authenticated provider portal before a GitHub transfer or rename. No hosting configuration file in this repository proves the live connection.
+The GitHub transfer and Vercel reconnection were authenticated and verified on July 22, 2026. Vercel's GitHub App is limited to the `website` repository. See RUNBOOK.md for the verified project, domain, and deployment boundary.
 
 ## Brand boundary
 

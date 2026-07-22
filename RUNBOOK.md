@@ -15,7 +15,7 @@ Operational reference for [elarenstudio.com](https://elarenstudio.com). Start he
 | Sitemap     | `@astrojs/sitemap` (auto)     |
 | Forms       | FormSubmit (third-party)      |
 | PDF gen     | Playwright (dev only)         |
-| Hosting     | Static deploy (GitHub Pages / Vercel / etc.) |
+| Hosting     | Vercel                       |
 
 Config: `astro.config.mjs` — site URL, integrations, Vite plugins.
 
@@ -31,6 +31,31 @@ npm run validate   # Check SEO page links + slug collisions
 ```
 
 Always run `build` and `validate` before pushing.
+
+---
+
+## Deployment and Git Integration
+
+- Canonical repository: `https://github.com/elaren-studio/website`
+- Vercel scope and project: `felixs-projects-a5ff4c9b/elaren-studio`
+- Vercel project ID: `prj_xFdQeKvaDH8l5LeD4smVEUxmM2FX`
+- Production branch: `main`
+- Project root: repository root
+- Framework preset: Astro
+- Node.js version: 22.x
+- Production domain: `https://elarenstudio.com`
+
+The Vercel GitHub App is installed on the `elaren-studio` organization with selected-repository access limited to `website`. A push to `main` is expected to create a Production deployment. Run `npm run validate` and `npm run build` first, then verify the resulting deployment and domain alias.
+
+The local `.vercel/` link metadata and `.env*` files are ignored. Never commit Vercel tokens or downloaded environment files.
+
+Useful authenticated checks:
+
+```
+vercel project inspect elaren-studio
+vercel inspect https://elarenstudio.com
+vercel domains inspect elarenstudio.com
+```
 
 ---
 

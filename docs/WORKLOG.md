@@ -29,3 +29,14 @@
 - Recorded creation of the free elaren-studio GitHub organization with fdtorres1 as its active administrator and sole member.
 - Confirmed that the website remains in fdtorres1/elaren-studio and that no transfer, rename, push, or deployment change occurred.
 - Deferred repository transfer until direct Vercel project and custom-domain verification is complete.
+
+## 2026-07-22 - Website transferred and Vercel reconnected
+
+- Captured the authenticated pre-transfer GitHub repository identity, Vercel project settings, production deployment, and custom-domain state.
+- Transferred and renamed the public repository from fdtorres1/elaren-studio to elaren-studio/website while preserving GitHub repository ID 1092039889 and main at c33f0fc.
+- Updated the canonical local origin and verified fetch access through the new URL; GitHub continues redirecting the former URL.
+- Linked the local checkout to the existing Vercel project without creating a new project.
+- Installed the Vercel GitHub App on elaren-studio with selected-repository access limited to website; hq and first-words were excluded.
+- Reconnected Vercel to elaren-studio/website and verified repository ID 1092039889, production branch main, project-root builds, Astro, and Node.js 22.x.
+- Verified that elarenstudio.com remains attached with intended nameservers and the existing Production deployment remains Ready.
+- Triggered no deployment and left the pending website documentation commits unpushed.

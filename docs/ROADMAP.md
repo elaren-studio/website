@@ -6,8 +6,9 @@ Last updated: July 22, 2026
 
 - Keep link validation and the 27-page production build green from the canonical Elaren/website path.
 - Keep README, RUNBOOK, and handoff documents aligned with the actual dual content system.
-- GitHub repository and GitHub-recorded deployment linkage are verified; directly verify Vercel project ownership and custom-domain settings before any remote transfer.
-- The elaren-studio organization exists; keep the website under fdtorres1 until transfer and deployment effects are verified and separately authorized.
+- Website transferred to elaren-studio/website with repository identity and history preserved.
+- Vercel project, production branch, selected-repository GitHub App access, production deployment, and elarenstudio.com attachment verified after reconnection.
+- Validate the first post-transfer Git-triggered deployment on the next authorized push to main.
 
 ## Maintenance
 
@@ -18,7 +19,6 @@ Last updated: July 22, 2026
 
 ## Deferred
 
-- GitHub organization transfer or repository rename
 - Hosting-provider migration
 - Broad content-system consolidation
 - Removal of elaren_site_content while current routes still depend on it
