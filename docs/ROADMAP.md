@@ -7,6 +7,7 @@ Last updated: July 22, 2026
 - Keep link validation and the 27-page production build green from the canonical Elaren/website path.
 - Keep README, RUNBOOK, and handoff documents aligned with the actual dual content system.
 - GitHub repository and GitHub-recorded deployment linkage are verified; directly verify Vercel project ownership and custom-domain settings before any remote transfer.
+- The elaren-studio organization exists; keep the website under fdtorres1 until transfer and deployment effects are verified and separately authorized.
 
 ## Maintenance
 

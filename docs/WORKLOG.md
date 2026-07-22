@@ -23,3 +23,9 @@
 - Verified GitHub Preview and Production environments and a successful Vercel-backed Production deployment for live main.
 - Verified that main is unprotected.
 - Left the local commit unpushed because the target organization is unresolved and a push is likely to trigger Production deployment.
+
+## 2026-07-22 - GitHub organization boundary recorded
+
+- Recorded creation of the free elaren-studio GitHub organization with fdtorres1 as its active administrator and sole member.
+- Confirmed that the website remains in fdtorres1/elaren-studio and that no transfer, rename, push, or deployment change occurred.
+- Deferred repository transfer until direct Vercel project and custom-domain verification is complete.
