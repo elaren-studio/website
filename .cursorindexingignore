@@ -1,0 +1,2 @@
+# Do not index SpecStory auto-save files; explicit references remain possible.
+.specstory/**

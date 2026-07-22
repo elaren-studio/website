@@ -1,92 +1,63 @@
 # Elaren Studio Website
 
-A clean, fast static website built with Astro, TypeScript, and Tailwind CSS.
+Public website repository for Elaren Studio and elarenstudio.com.
 
-## Tech Stack
+This repository owns website source, public copy, site-specific design implementation, SEO, analytics configuration, forms, deployment instructions, and website decisions. Company strategy, portfolio planning, and master brand direction belong in the private Elaren HQ repository.
 
-- **Astro 5.15.4** - Static site generation
-- **TypeScript** - Strict mode enabled
-- **Tailwind CSS 4.1.17** - Utility-first CSS with brand kit configuration
-- **Markdown** - Content-driven architecture
+## Stack
 
-## Quick Start
+- Astro 5
+- TypeScript in strict mode
+- Tailwind CSS 4
+- MDX content collections
+- Playwright for PDF generation and browser-oriented tooling
 
-1. Install dependencies:
-```bash
-npm install
-```
+## Commands
 
-2. Start the development server:
-```bash
-npm run dev
-```
+    npm ci
+    npm run dev
+    npm run validate
+    npm run build
+    npm run preview
 
-3. Build for production:
-```bash
-npm run build
-```
+Run validate and build before pushing.
 
-## Project Structure
+## Content systems
 
-```
-elaren_studio_com/
-├── elaren_site_content/    # Markdown content files
-├── src/
-│   ├── components/         # Reusable Astro components
-│   ├── layouts/            # Page layouts
-│   ├── pages/              # Route pages
-│   ├── styles/             # Global CSS and design tokens
-│   └── utils/              # Helper functions
-├── public/                 # Static assets
-└── tailwind.config.mjs     # Tailwind configuration
-```
+The site currently has two intentional content paths:
 
-## Features
+1. Legacy public pages under elaren_site_content, read by static Astro page modules.
+2. Astro content collections under content/resources and content/seo-pages.
 
-- ✅ Content-driven architecture (markdown files)
-- ✅ Responsive design (mobile-first)
-- ✅ SEO optimized (meta tags, Open Graph)
-- ✅ Contact form (FormSubmit integration)
-- ✅ Fast static generation
-- ✅ Optimized codebase (no redundant CSS, streamlined components)
-- ✅ Hero section binary pattern background (encodes "ELAREN STUDIO" in ASCII)
-- ✅ About page with values section (Clarity, Endurance, Care, Respect)
-- ✅ Resources page (currently hidden from navigation)
-- ✅ Contact page with enhanced form styling and design consistency
-- ✅ Privacy and Terms pages with consistent design patterns
-- ✅ Work items showcase: Wright Wellness, Mesquite Symphony Orchestra, Caminos del Inka
-- ✅ Comprehensive pricing page with WaaS plans, one-time builds, landing pages, add-ons, FAQs, and market proof
-- ✅ Pricing consistency across all pages (Design & Build \$3,800, WaaS from \$175/month, Landing Pages \$1,000)
-- ✅ /plans redirects to /pricing (301 redirect)
+Do not describe all content as living in only one folder. See RUNBOOK.md for schemas and authoring instructions.
 
-## Contact Form Setup
+## Repository structure
 
-The contact form uses [FormSubmit](https://formsubmit.co/) (free, no signup required) and sends submissions to `hello@elarenstudio.com`.
+    content/                 MDX resources and SEO landing pages
+    elaren_site_content/     Markdown used by legacy/static public pages
+    public/                  Published static assets
+    scripts/                 Validation and PDF-generation tools
+    src/                     Astro components, layouts, libraries, and routes
+    docs/                    Current context, decisions, roadmap, and worklog
+    RUNBOOK.md               Website operating reference
 
-The form is already configured and ready to use. FormSubmit will:
-- Send form submissions directly to your email
-- Handle spam protection automatically
-- Redirect users back to the contact page with a success message
+## Integrations
 
-No additional setup required!
+- Production domain configured in Astro: https://elarenstudio.com
+- Lead forms: FormSubmit
+- Analytics: Plausible
+- Sitemap: Astro sitemap integration
 
-## Content Management
+The production hosting provider and repository connection must be verified in the authenticated provider portal before a GitHub transfer or rename. No hosting configuration file in this repository proves the live connection.
 
-Content is managed in the `elaren_site_content/` folder. Each markdown file includes:
-- Frontmatter with metadata (title, slug, description)
-- Markdown content that's automatically converted to HTML
+## Brand boundary
 
-## Brand Guidelines
+Website implementation details are in docs/brand-implementation.md. Master positioning, naming, and brand-source assets are canonical in:
 
-See `elaren_brand_kit.md` for complete brand guidelines, colors, typography, and design tokens.
+    /Volumes/Felix-SSD-1/Cursor Projects/Elaren/hq/docs/brand
 
-## Deployment
+Keep the website independently buildable. Do not copy private portfolio or company-operating documents into this repository.
 
-This site is configured for Vercel deployment. Connect your repository to Vercel and it will automatically build and deploy.
+## Handoff
 
-## Code Quality
-
-- Root cause fixes instead of CSS patches
-- Consolidated CSS rules (no duplicates)
-- Removed unused code and variables
-- Streamlined components for better performance
+Start with docs/ACTIVE_CONTEXT.md and RUNBOOK.md. Record durable changes in docs/DECISIONS.md and append substantial work to docs/WORKLOG.md.
