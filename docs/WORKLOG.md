@@ -54,3 +54,9 @@
 - Removed the duplicate trailing .env* pattern in .gitignore that silently re-ignored .env.example after the !.env.example exception; verified with git check-ignore that .env.example is tracked-eligible and .env.local stays ignored.
 - Updated the recorded live main head from 728a060 to 510b4c5 in ACTIVE_CONTEXT.
 - Recorded that the push of 510b4c5 created Vercel Production deployment dpl_Gr3LTi7ZdgQud5MvSz6CgbzoUozB, verified Ready, aliased to elarenstudio.com, and returning HTTP 200.
+
+## 2026-07-22 - RUNBOOK accuracy audit and active-context unpinning
+
+- Audited RUNBOOK.md against the actual codebase and corrected drift: FAQ section title/subtitle defaults live in the SeoFaq component rather than the Zod schema, the areaServed type enum and strict YYYY-MM-DD date validation are now documented, the lock icon and astro passthrough script are listed, and the project-structure tree gained favicon.svg, styles/, utils/, and a components ellipsis.
+- Replaced the pinned live-head commit SHA in ACTIVE_CONTEXT with a non-pinning statement to end self-referential staleness; historical deployment records keep their SHAs.
+- Verified CTA presets, pricing, cross-link scoring values, stack table, and remaining schema fields in RUNBOOK match the code exactly.

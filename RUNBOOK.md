@@ -28,6 +28,7 @@ npm run dev        # Local dev server (typically localhost:4321)
 npm run build      # Production build → dist/
 npm run preview    # Preview production build locally
 npm run validate   # Check SEO page links + slug collisions
+npm run astro      # Astro CLI passthrough
 ```
 
 Always run `build` and `validate` before pushing.
@@ -66,6 +67,7 @@ vercel domains inspect elarenstudio.com
 │   ├── resources/            # MDX content for resource articles
 │   └── seo-pages/            # MDX content for SEO landing pages
 ├── public/
+│   ├── favicon.svg
 │   ├── robots.txt            # Crawl directives + sitemap + LLMs-Txt
 │   ├── llms.txt              # Structured summary for AI models
 │   └── llms-full.txt         # Full Markdown content for AI models
@@ -81,7 +83,8 @@ vercel domains inspect elarenstudio.com
 │   │   ├── TableOfContents.astro  # Auto-generated TOC from headings
 │   │   ├── Header.astro
 │   │   ├── Footer.astro
-│   │   └── TherapistCta.astro
+│   │   ├── TherapistCta.astro
+│   │   └── ...               # Cards, headings, and section components
 │   ├── layouts/
 │   │   └── BaseLayout.astro  # Global layout (head, meta, OG, RSS)
 │   ├── lib/
@@ -90,7 +93,7 @@ vercel domains inspect elarenstudio.com
 │   │   ├── resources.ts      # Resource utilities, scoring, formatting
 │   │   ├── seo-pages.ts      # Related pages scoring + structured data
 │   │   └── icons.ts          # Shared SVG icon registry
-│   └── pages/
+│   ├── pages/
 │       ├── [slug].astro      # Dynamic route for SEO content pages
 │       ├── resources.astro   # Resource index (card grid + filtering)
 │       ├── resources/[...slug].astro  # Resource article template
@@ -98,6 +101,9 @@ vercel domains inspect elarenstudio.com
 │       ├── index.astro
 │       ├── therapist-websites.astro  # Main money page
 │       └── ...               # Static pages
+│   ├── styles/
+│   │   └── global.css
+│   └── utils/                # markdown helpers
 └── src/content.config.ts     # Content collection schemas (Zod)
 ```
 
@@ -143,10 +149,10 @@ SEO landing pages use Astro's content collections. Content lives in MDX files; t
 | `region` | string | no | — | Broader region (e.g., "dfw") |
 | `pageType` | "geo" \| "vertical" \| "practice-type" | yes | — | Determines pricing variant + cross-link scoring |
 | `relatedPages` | string[] | no | [] | Slugs of manually linked pages |
-| `areaServed` | object | no | — | Schema.org structured data: `{ type, name, state? }` |
+| `areaServed` | object | no | — | Schema.org structured data: `{ type, name, state? }` — `type` must be one of "City", "State", "Country", "AdministrativeArea" |
 | `faqs` | array | no | [] | `{ q, a }` pairs — generates FAQ section + FAQPage schema |
-| `faqSectionTitle` | string | no | "Frequently asked questions" | Custom FAQ heading |
-| `faqSectionSubtitle` | string | no | "Straightforward answers. No fine print." | Custom FAQ subhead |
+| `faqSectionTitle` | string | no | — (SeoFaq component default: "Frequently asked questions") | Custom FAQ heading |
+| `faqSectionSubtitle` | string | no | — (SeoFaq component default: "Straightforward answers. No fine print.") | Custom FAQ subhead |
 
 ### Page type behavior
 
@@ -194,7 +200,7 @@ Resource articles (guides, teardowns, templates) use a second Astro content coll
 |---|---|---|---|---|
 | `title` | string | yes | — | Article title (rendered as H1 by template) |
 | `description` | string | no | "" | Meta description + card excerpt |
-| `date` | string | no | — | ISO date (e.g., "2026-02-25"). Enables Article schema + RSS |
+| `date` | string | no | — | Strict YYYY-MM-DD (Zod-validated). Enables Article schema + RSS |
 | `type` | "teardown" \| "guide" \| "template" | yes | — | Determines URL prefix + grouping on index |
 | `tags` | string[] | no | [] | For filtering, related scoring, and display |
 | `vertical` | string | no | — | Maps to SEO page verticals for cross-system linking |
@@ -319,7 +325,7 @@ All in `src/components/seo/`. Import them in MDX body content.
 
 **File:** `src/lib/icons.ts`
 
-Named icon keys: `user`, `users`, `refresh`, `check`, `building`, `phone`, `globe`, `shield`, `box`, `chat`, `expand`, `frown`, `search`, `clock`.
+Named icon keys: `user`, `users`, `refresh`, `check`, `building`, `phone`, `globe`, `shield`, `box`, `chat`, `expand`, `frown`, `search`, `clock`, `lock`.
 
 Use named keys in `IconList` and `CardGrid` items. Raw SVG path strings also work as a fallback.
 

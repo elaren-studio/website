@@ -28,7 +28,7 @@ This repository owns website implementation and public copy. Elaren company stra
 
 - Elevated GitHub CLI authentication is active for fdtorres1.
 - The public repository was transferred and renamed from fdtorres1/elaren-studio to elaren-studio/website. GitHub preserved repository ID 1092039889, history, main, environments, and the former-path redirect; fdtorres1 retains ADMIN permission.
-- The live default branch is main at 510b4c5, and local main matches origin/main.
+- Local main matches origin/main; check git for the current head rather than relying on a pinned commit in this document.
 - GitHub records Preview and Production environments.
 - The authenticated Vercel project is felixs-projects-a5ff4c9b/elaren-studio, project ID prj_xFdQeKvaDH8l5LeD4smVEUxmM2FX.
 - Vercel is connected to GitHub repository ID 1092039889 at elaren-studio/website with production branch main, Astro preset, repository-root builds, and Node.js 22.x.
