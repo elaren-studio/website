@@ -1,6 +1,6 @@
 # Active Context
 
-Last updated: July 22, 2026
+Last updated: July 23, 2026
 
 ## Current state
 
@@ -11,7 +11,8 @@ Last updated: July 22, 2026
 - Current production domain configured in source is https://elarenstudio.com.
 - The site uses Astro, TypeScript, Tailwind, MDX content collections, FormSubmit, and Plausible.
 - A clean dependency install, link validation, and production build passed from this relocated checkout on July 22, 2026.
-- The production build generated 27 static pages.
+- The production build currently generates 29 static pages.
+- /studioregister is a Studio Register product landing page added on July 23, 2026 to support Stripe business verification; it follows the product's legal-naming boundary (An Elaren Studio product; owned and operated by Wright Torres Group, LLC; no d/b/a language) and may later grow into a fuller product site.
 
 ## Repository boundary
 

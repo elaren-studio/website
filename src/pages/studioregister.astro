@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+
+const features = [
+	{
+		title: 'Real availability, no double-booking',
+		summary:
+			'The studio owner publishes exact session slots. Clients pick a real date and time, and an expiring hold protects it while they finish checkout—so two people can never book the same slot.',
+	},
+	{
+		title: 'Secure deposits through Stripe',
+		summary:
+			'Clients pay a session deposit through Stripe-hosted Checkout. Card details go directly to Stripe and are never seen or stored by Studio Register. The remaining balance is settled with the studio.',
+	},
+	{
+		title: 'Clear pricing before payment',
+		summary:
+			'Every booking shows the package, session price, deposit amount, and remaining balance before any payment step. What the client reviews is exactly what is charged.',
+	},
+	{
+		title: 'Versioned session agreements',
+		summary:
+			'Clients review and accept the exact agreement version in effect at booking time. The accepted text is kept immutably with the booking record.',
+	},
+	{
+		title: 'Request-first event coverage',
+		summary:
+			'Venue-dependent sessions like birthday and quinceañera coverage start as a request—no payment taken and no date reserved until the studio confirms the details.',
+	},
+	{
+		title: 'A calm owner workspace',
+		summary:
+			'A private workspace for the booking queue, availability changes, package catalog, agreement history, and payment-provider status—focused on upcoming work, not vanity metrics.',
+	},
+];
+
+const paymentFacts = [
+	{
+		title: 'What clients pay for',
+		body: 'Photography session bookings: portrait, headshot, senior, quinceañera, and event sessions offered by the studio using Studio Register. Clients pay a deposit at booking; the balance is due to the studio around the session.',
+	},
+	{
+		title: 'How payment works',
+		body: 'Payments are processed by Stripe through a secure, Stripe-hosted checkout page created for each individual booking. Studio Register verifies payment through Stripe before confirming a reservation, and Stripe issues the payment receipt.',
+	},
+	{
+		title: 'Cancellations and refunds',
+		body: 'Each booking is governed by the session agreement the client reviews and accepts before paying, including its cancellation and refund terms. If a checkout is abandoned or a hold expires, no charge is made.',
+	},
+];
+---
+
+<BaseLayout
+	title="Studio Register"
+	description="Studio Register is booking, deposits, agreements, and studio operations for independent photographers. Clients book real availability and pay secure deposits through Stripe. An Elaren Studio product."
+>
+	<Header />
+	<main>
+		<!-- Hero -->
+		<section class="container py-16 md:py-24">
+			<div class="max-w-3xl">
+				<p class="text-sm font-medium text-accent uppercase tracking-wider mb-3">An Elaren Studio product</p>
+				<h1 class="text-4xl md:text-5xl font-semibold mb-6 text-ink">Studio Register</h1>
+				<p class="text-xl text-ink/80 leading-relaxed mb-6">
+					Booking, deposits, agreements, and studio operations for independent photographers. One place to run the business side of a creative practice—without a photography-platform subscription.
+				</p>
+				<p class="text-ink/70 leading-relaxed">
+					Clients see real availability, reserve an actual time, accept the session agreement, and pay a secure deposit. The photographer gets a private workspace that keeps bookings, balances, and requests in order.
+				</p>
+			</div>
+		</section>
+
+		<!-- Features -->
+		<section class="relative py-16 md:py-24 overflow-hidden" style="background-color: var(--clr-muted);">
+			<div class="absolute top-0 right-0 w-96 h-96 bg-slate-300/25 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+			<div class="absolute bottom-0 left-0 w-80 h-80 bg-slate-300/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+			<div class="container relative z-10">
+				<SectionHeading
+					kicker="What it does"
+					title="A complete booking flow, built carefully"
+					description="From published availability to a confirmed session, every step is designed to be unambiguous for the client and reliable for the studio."
+				/>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					{features.map((feature) => (
+						<div class="bg-paper rounded-xl p-8 border-2 border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-900/10 hover:border-accent/30 hover:-translate-y-1 transition-all duration-300">
+							<h3 class="text-xl font-semibold mb-3 text-ink">{feature.title}</h3>
+							<p class="text-ink/70 leading-relaxed mb-0">{feature.summary}</p>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Payments -->
+		<section class="bg-paper py-16 md:py-24">
+			<div class="container">
+				<SectionHeading
+					kicker="Payments"
+					title="How money moves through Studio Register"
+					description="Payments are simple by design: one deposit per booking, processed by Stripe, with nothing charged until the client completes checkout."
+				/>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					{paymentFacts.map((fact) => (
+						<div class="bg-paper rounded-xl p-8 border-2 border-slate-200">
+							<h3 class="text-lg font-semibold mb-3 text-ink">{fact.title}</h3>
+							<p class="text-ink/70 leading-relaxed mb-0">{fact.body}</p>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Status -->
+		<section class="relative py-16 md:py-24" style="background-color: var(--clr-muted);">
+			<div class="container">
+				<div class="max-w-3xl mx-auto text-center">
+					<p class="text-sm font-medium text-accent uppercase tracking-wider mb-3">Status</p>
+					<h2 class="text-2xl md:text-3xl font-semibold mb-4 text-ink">In development, first studio onboarding</h2>
+					<p class="text-lg text-ink/70 leading-relaxed mb-0">
+						Studio Register is in active development, with its first deployment being configured for an independent Dallas–Fort Worth photography studio. Each deployment serves a single studio, with the booking experience carrying that studio's own brand.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact and legal -->
+		<section class="container py-16 md:py-24">
+			<div class="max-w-3xl mx-auto text-center">
+				<h2 class="text-2xl md:text-3xl font-semibold mb-4 text-ink">Questions about Studio Register?</h2>
+				<p class="text-lg text-ink/70 mb-8 leading-relaxed">
+					For booking support or product questions, email
+					<a href="mailto:hello@elarenstudio.com" class="text-accent font-medium hover:underline">hello@elarenstudio.com</a>
+					or use the studio contact page.
+				</p>
+				<a
+					href="/contact"
+					class="inline-flex items-center justify-center px-8 py-4 bg-accent text-paper rounded-xl font-semibold no-underline shadow-xl shadow-accent/40 hover:shadow-2xl hover:shadow-accent/50 hover:-translate-y-0.5 transition-all duration-200"
+				>
+					Contact Elaren Studio
+				</a>
+				<p class="text-sm text-ink/60 mt-10 mb-0 leading-relaxed">
+					Studio Register is built by Elaren Studio, a product studio operated by Wright Torres Group, LLC, which owns and operates Studio Register.
+				</p>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</BaseLayout>

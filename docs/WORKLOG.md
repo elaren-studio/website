@@ -79,3 +79,11 @@
 - Reframed the work index as selected website projects rather than the studio's whole identity, replaced the retired Standard Plan name with a monthly care plan, and aligned every remaining Start a Project CTA (header, work pages) to Start a conversation.
 - Generalized the About clarity value from website-layout language to software language.
 - Left cta-presets.ts unchanged because only the deliberately retained SEO pages consume it.
+
+## 2026-07-23 - Studio Register landing page for Stripe verification
+
+- Added /studioregister, a Studio Register product landing page intended to support Stripe business verification and serve as the basis for a fuller product site later.
+- Copy was sourced from the canonical product repository (README, PRODUCT.md, BRAND_AND_LEGAL.md): features, payments (deposit-per-booking through Stripe-hosted Checkout, no card data stored, agreement-governed cancellation/refund terms), in-development status, and hello@elarenstudio.com as booking/product support.
+- Followed the product's legal-naming boundary: attribution reads "An Elaren Studio product," Wright Torres Group, LLC is identified as owner-operator, and no d/b/a language is used.
+- Linked the Studio Register card on the Products page to /studioregister.
+- Link validation and the production build passed at 29 pages, including /studioregister/index.html.
