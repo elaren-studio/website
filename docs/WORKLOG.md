@@ -47,3 +47,10 @@
 - Verified Vercel automatically created Production deployment dpl_8Q7CHcYRb4Ykj9jGMwthhpZcdg8F from the transferred repository connection.
 - Verified Vercel Ready status, GitHub deployment success, the elarenstudio.com production alias, and an HTTP 200 response from the custom domain.
 - Verified local main and origin/main were identical at 728a060 after the push.
+
+## 2026-07-22 - Documentation review fixes
+
+- Reviewed the five documentation-governance commits; link validation and the 27-page production build passed from the canonical checkout.
+- Removed the duplicate trailing .env* pattern in .gitignore that silently re-ignored .env.example after the !.env.example exception; verified with git check-ignore that .env.example is tracked-eligible and .env.local stays ignored.
+- Updated the recorded live main head from 728a060 to 510b4c5 in ACTIVE_CONTEXT.
+- Recorded that the push of 510b4c5 created Vercel Production deployment dpl_Gr3LTi7ZdgQud5MvSz6CgbzoUozB, verified Ready, aliased to elarenstudio.com, and returning HTTP 200.
