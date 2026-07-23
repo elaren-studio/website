@@ -1,7 +1,7 @@
 ---
 title: "Redfern Books"
 slug: "/work/redfern-books"
-summary: "Static build with ongoing updates under our Standard Plan."
+summary: "Static build with ongoing updates under a monthly care plan."
 ---
 
 # Redfern Books

@@ -8,7 +8,7 @@ export async function GET(context: APIContext) {
 	return rss({
 		title: "Elaren Studio",
 		description:
-			"Guides, teardowns, and templates for service businesses building better websites.",
+			"Guides, teardowns, and templates from Elaren Studio for clean, durable websites.",
 		site: context.site!,
 		items: resources
 			.filter((r) => r.data.date)

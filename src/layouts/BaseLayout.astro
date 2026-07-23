@@ -10,7 +10,7 @@ interface Props {
 	articleTags?: string[];
 }
 
-const { title, description = "Elaren Studio designs and maintains clean, fast websites. Static stack, preview-first workflow, Website-as-a-Service and one-time builds.", ogImage, ogType = "website", articleDate, articleTags } = Astro.props;
+const { title, description = "Elaren Studio is a small app studio. We ship our own software products and take select client builds—apps, custom tools, and websites made to last.", ogImage, ogType = "website", articleDate, articleTags } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = ogImage ? new URL(ogImage, Astro.site) : new URL('/og-image.png', Astro.site);
 
@@ -19,7 +19,7 @@ const structuredData = {
 	"@context": "https://schema.org",
 	"@type": "Organization",
 	"name": "Elaren Studio",
-	"description": "Web design studio specializing in clean, fast static websites. Custom builds, Website-as-a-Service, and landing pages.",
+	"description": "A small app studio that designs, ships, and maintains its own software products and builds select apps, custom tools, and websites for clients.",
 	"url": "https://elarenstudio.com",
 	"logo": "https://elarenstudio.com/favicon.svg",
 	"image": "https://elarenstudio.com/og-image.png",

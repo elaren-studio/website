@@ -13,7 +13,7 @@ const activeTypes = [...new Set(resources.map((r) => r.data.type))];
 
 <BaseLayout
 	title="Resources"
-	description="Guides, teardowns, and templates to keep your site bright and enduring."
+	description="Guides, teardowns, and templates for clean, durable websites."
 >
 	<Header />
 	<main>
@@ -22,7 +22,7 @@ const activeTypes = [...new Set(resources.map((r) => r.data.type))];
 				<Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Resources" }]} />
 				<h1 class="text-4xl md:text-5xl font-semibold mt-6 mb-4 text-ink">Resources</h1>
 				<p class="text-lg text-ink/70 leading-relaxed mb-8">
-					Guides, teardowns, and templates to keep your site bright and enduring.
+					Guides, teardowns, and templates for clean, durable websites.
 				</p>
 
 			<div class="flex flex-wrap gap-2" id="resource-filters" role="group" aria-label="Filter resources by type">

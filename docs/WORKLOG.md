@@ -70,3 +70,12 @@
 - Removed therapist and local-SEO banners and navigation links while keeping those pages, pricing, plans, and work case studies live at their URLs.
 - Rewrote llms.txt and synchronized llms-full.txt with the new copy, retaining legacy-offer references.
 - Recorded D-007 here and D-012 in HQ; validation and the production build passed at 28 pages.
+
+## 2026-07-23 - Repositioning refinement pass
+
+- Replaced the site-wide BaseLayout default meta description and Organization JSON-LD, which still described a web design studio; the 404 page inherits the corrected fallback.
+- Updated resources index, RSS feed description, and llms-full.txt to drop the retired bright-and-enduring tagline while keeping the website-focused resource framing.
+- Broadened the terms page beyond Website-as-a-Service to cover per-engagement application work.
+- Reframed the work index as selected website projects rather than the studio's whole identity, replaced the retired Standard Plan name with a monthly care plan, and aligned every remaining Start a Project CTA (header, work pages) to Start a conversation.
+- Generalized the About clarity value from website-layout language to software language.
+- Left cta-presets.ts unchanged because only the deliberately retained SEO pages consume it.
