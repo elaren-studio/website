@@ -1,34 +1,27 @@
 # Elaren Studio
 
-> Bright, enduring websites—built fast, kept current.
+> A small app studio. Software built with care, made to last.
 
-Elaren Studio is a web design studio that builds clean, fast, conversion-focused websites for local service businesses and therapy practices. We use a static-first stack (Astro, Tailwind CSS, global CDN) for speed, reliability, and longevity.
+Elaren Studio is an app studio and dev shop. We design, ship, and maintain our own software products, and each year we take a small number of client builds—v1/MVP product builds for founders and custom applications for small businesses. We also design, launch, and care for clean, fast static websites. Our stack philosophy is lean: deliberate scope, minimal dependencies, privacy-respecting defaults.
 
-## What We Do
+## Products
 
-- **Design & Build**: Custom static websites with modern frameworks. 10-day launch window. Starting at $3,800.
-- **Website-as-a-Service (WaaS)**: Lease your site with $0 down and ongoing improvements. From $175/month.
-- **Landing Pages**: Campaign-ready pages that convert. From $1,000.
-- **Therapist Websites**: Specialized offer for therapy practices. $500 setup + $99–$199/month care plans.
+- **OpusGraph** (live): Music library management for orchestras, choirs, bands, and other performing ensembles—catalog sheet music, track parts, log performance history, and plan seasons, powered by a curated classical music reference database. https://opusgraph.vercel.app
+- **AgentMeter** (shipped, open source): A macOS menu bar app that keeps AI coding usage limits visible at a glance—Codex, Cursor, Claude Code, Gemini, and more. https://github.com/fdtorres1/AgentMeter
+- **Studio Register** (in development): Booking, deposits, agreements, and studio operations for independent photographers.
+- **OmniSearch** (in development): Unified search across the places your work actually lives.
 
-## Therapist Website Offer
+Earlier-stage explorations (unnamed): music notation intelligence, local-first pet-care records, and bilingual early-childhood tools.
 
-Our primary vertical is therapist and therapy practice websites:
+The storefront and catalog-operations platform behind Resonance Music Press was designed and built by Elaren Studio.
 
-- **Website Launch**: $500 one-time (custom design, up to 5 pages, mobile optimization, SEO setup)
-- **WaaS Starter**: $99/month (hosting, SSL, backups, uptime monitoring, 1 edit/month)
-- **WaaS Care+**: $199/month (unlimited edits, monthly conversion tune-up, local SEO maintenance, priority support)
+## Services
 
-Launch target: ~10 days once copy and assets are provided.
+- **Product Builds**: Scoped v1 and MVP builds for founders and teams. Discovery and honest scoping first; weekly working software; launch with a maintenance path.
+- **Custom Applications**: Purpose-built tools for small businesses—booking systems, internal dashboards, workflow apps. Owned by the client, documented for handoff.
+- **Websites**: Clean, fast static sites (Astro, Tailwind CSS, global CDN)—designed, launched, and cared for with light monthly care plans.
 
-We serve solo therapists, group practices, and multi-location clinics. We do not provide HIPAA legal compliance guarantees.
-
-## Service Areas
-
-- Dallas, TX
-- Fort Worth, TX
-- Houston, TX
-- Nationwide (remote)
+Application work is conversation-priced; there is no public rate card. Start at https://elarenstudio.com/contact/
 
 ## Values
 
@@ -39,31 +32,28 @@ We serve solo therapists, group practices, and multi-location clinics. We do not
 
 ## Resources
 
-Guides, teardowns, and templates for service businesses and therapy practices.
+Guides, teardowns, and templates.
 
 - [Resources Index](https://elarenstudio.com/resources/)
 - [Wright Wellness Website Teardown: Before vs After](https://elarenstudio.com/resources/teardowns/wright-wellness-before-after-teardown/) — A real before-and-after website redesign for a mental health practice.
 - [How Much Does a Website Redesign Cost in 2026?](https://elarenstudio.com/resources/guides/website-redesign-cost-2026/) — Real cost ranges, hidden costs, and payment models compared for service businesses.
 - [How Long Does a Website Take in 2026?](https://elarenstudio.com/resources/guides/how-long-does-a-website-take-2026/) — Honest timelines, the seven delay killers, and how to launch in 10 days instead of 10 weeks.
-- [Squarespace vs WordPress vs Webflow in 2026](https://elarenstudio.com/resources/guides/squarespace-vs-wordpress-vs-webflow-2026/) — Evidence-based platform comparison for service businesses. Real performance data, total cost of ownership, and which platform fits which business stage.
+- [Squarespace vs WordPress vs Webflow in 2026](https://elarenstudio.com/resources/guides/squarespace-vs-wordpress-vs-webflow-2026/) — Evidence-based platform comparison for service businesses.
 - [Keep a Static Site Fresh](https://elarenstudio.com/resources/guides/keep-a-static-site-fresh/) — Short, regular updates beat large, infrequent ones.
-- [Project Brief Template](https://elarenstudio.com/resources/templates/project-brief/) — A ready-to-use project brief template for web design engagements.
+- [Project Brief Template](https://elarenstudio.com/resources/templates/project-brief/) — A ready-to-use project brief template.
 
 ## Key Pages
 
-- [Local SEO Care](https://elarenstudio.com/local-seo/)
 - [Home](https://elarenstudio.com/)
+- [Products](https://elarenstudio.com/products/)
 - [Services](https://elarenstudio.com/services/)
-- [Pricing](https://elarenstudio.com/pricing/)
 - [Resources](https://elarenstudio.com/resources/)
-- [Therapist Websites](https://elarenstudio.com/therapist-websites/)
-- [Therapist Website Design Dallas](https://elarenstudio.com/therapist-website-design-dallas/)
-- [Therapist Website Design Fort Worth](https://elarenstudio.com/therapist-website-design-fort-worth/)
-- [Therapist Website Design Houston](https://elarenstudio.com/therapist-website-design-houston-tx/)
-- [Group Practice Website Design](https://elarenstudio.com/group-practice-website-design/)
 - [About](https://elarenstudio.com/about/)
 - [Contact](https://elarenstudio.com/contact/)
-- [Work](https://elarenstudio.com/work/)
+
+## Legacy Offers
+
+Elaren Studio continues to support existing website clients, including therapy practices and local service businesses. Legacy service pages: [Therapist Websites](https://elarenstudio.com/therapist-websites/), [Local SEO Care](https://elarenstudio.com/local-seo/), [Pricing](https://elarenstudio.com/pricing/).
 
 ## Optional
 

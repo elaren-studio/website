@@ -5,7 +5,6 @@ import Footer from '../components/Footer.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import WorkCard from '../components/WorkCard.astro';
 import SectionHeading from '../components/SectionHeading.astro';
-import TherapistCta from '../components/TherapistCta.astro';
 import { readFile } from 'fs/promises';
 import { parseMarkdown } from '../utils/markdown';
 import { markdownToHtml } from '../utils/markdownToHtml';
@@ -42,17 +41,23 @@ const binaryPattern = Array.from({ length: 150 }, () =>
 			<div class="container relative z-10">
 				<div class="max-w-4xl">
 					<h1 class="text-5xl md:text-6xl font-semibold mb-6 text-ink leading-tight">
-						Bright, enduring websites.
+						Software built with care, made to last.
 					</h1>
 					<p class="text-xl md:text-2xl text-ink/80 mb-10 leading-relaxed max-w-3xl">
-						We design, launch, and care for clean, fast sites—so your team can focus on the work that matters.
+						Elaren Studio is a small app studio. We ship our own products—and build a few for others. Deliberately scoped, quietly maintained, still working years from now.
 					</p>
-					<div>
+					<div class="flex flex-wrap gap-4">
 						<a
-							href="/contact"
+							href="/products"
 							class="inline-flex items-center justify-center px-8 py-4 bg-accent text-paper rounded-xl font-semibold no-underline shadow-xl shadow-accent/40 hover:shadow-2xl hover:shadow-accent/50 hover:-translate-y-0.5 transition-all duration-200 text-lg"
 						>
-							Start a project
+							See what we build
+						</a>
+						<a
+							href="/contact"
+							class="inline-flex items-center justify-center px-8 py-4 bg-paper text-ink border-2 border-slate-200 rounded-xl font-semibold no-underline shadow-md hover:shadow-lg hover:border-accent/40 hover:-translate-y-0.5 transition-all duration-200 text-lg"
+						>
+							Start a conversation
 						</a>
 					</div>
 				</div>
@@ -63,52 +68,46 @@ const binaryPattern = Array.from({ length: 150 }, () =>
 		<section class="bg-paper py-16 md:py-24 relative">
 			<div class="container">
 				<SectionHeading
-					kicker="What we do"
-					title="Simple services built for clarity and longevity"
-					description="Every project follows a transparent process—no surprises, just clean results."
+					kicker="What we build"
+					title="Our own products, and a few for others"
+					description="A studio that lives with its own engineering decisions—then brings that discipline to client builds."
 				/>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<ServiceCard
-						title="Design & Build"
-						description="Custom static websites with modern frameworks, clear hierarchy, and precise typography."
+						title="Studio Products"
+						description="Focused apps we design, ship, and maintain ourselves—from ensemble music libraries to developer tools."
 						features={[
-							"10-day launch window",
-							"Responsive design",
-							"Global CDN deploy",
-							"SEO and analytics setup"
+							"Web platforms and native apps",
+							"Privacy-respecting by default",
+							"Open source where it makes sense"
 						]}
-						price="Starting at $3,800"
-						link="/services"
-						linkText="Learn more →"
+						link="/products"
+						linkText="See the products →"
 						icon="design"
 					/>
 					<ServiceCard
-						title="Website-as-a-Service"
-						description="Lease your site with $0 down and ongoing improvements. Or buy it up-front and add a light monthly care plan."
+						title="Client App Builds"
+						description="A first version that actually ships: scoped v1 and MVP builds for founders, and custom applications for small businesses."
 						features={[
-							"$0 down, hosting included",
-							"Unlimited small edits",
-							"Uptime monitoring & backups",
-							"Own your site after 12 months"
+							"Tightly scoped v1s and MVPs",
+							"Custom tools and internal apps",
+							"Long-term care after launch"
 						]}
-						price="From $175/month"
-						link="/pricing"
-						linkText="View pricing →"
-						icon="care"
+						link="/services"
+						linkText="How we work →"
+						icon="landing"
 					/>
 					<ServiceCard
-						title="Landing Pages"
-						description="Campaign-ready pages that convert. Fast turnaround, measurable results."
+						title="Websites"
+						description="The craft that started the studio: clean, fast static sites—designed, launched, and quietly cared for."
 						features={[
-							"Fast turnaround",
-							"Preview-first workflow",
-							"Conversion optimized",
-							"Analytics included"
+							"Design and build",
+							"Ongoing care plans",
+							"SEO and analytics setup"
 						]}
-						price="From $1,000"
 						link="/services"
 						linkText="Learn more →"
-						icon="landing"
+						icon="care"
 					/>
 				</div>
 			</div>
@@ -120,7 +119,7 @@ const binaryPattern = Array.from({ length: 150 }, () =>
 				<SectionHeading
 					kicker="Our approach"
 					title="Structure. Light. Clarity."
-					description="Every Elaren site starts with a clear structure, intentional typography, and a global CDN. No clutter. No bloat. Just clean, enduring architecture that stands the test of time."
+					description="Every Elaren build starts with one focused problem, deliberate scope, and a lean stack. No clutter. No bloat. Just clean, enduring software that stands the test of time."
 				/>
 				
 				<!-- Visual elements - larger and more prominent -->
@@ -164,33 +163,33 @@ const binaryPattern = Array.from({ length: 150 }, () =>
 			
 			<div class="container relative z-10">
 				<SectionHeading
-					kicker="Selected work"
-					title="Websites that outlast trends"
-					description="Each project begins with structure and ends with care."
+					kicker="From the studio"
+					title="Products we ship and live with"
+					description="Each one begins with a real problem and ends with software we maintain ourselves."
 				/>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 				<WorkCard
-					title="Brightfield Arts"
-					summary="A lean redesign that cut load times by 78%."
-					link="/work/brightfield-arts"
+					title="OpusGraph"
+					summary="Music library management for orchestras, choirs, and bands—powered by a curated classical reference database."
+					link="/products"
 				/>
 				<WorkCard
-					title="Havenline Consulting"
-					summary="A new brand presence and simplified site map."
-					link="/work/havenline-consulting"
+					title="AgentMeter"
+					summary="An open-source macOS menu bar app that keeps AI coding usage limits visible at a glance."
+					link="/products"
 				/>
 				<WorkCard
-					title="Redfern Books"
-					summary="Static build with ongoing updates under our Standard Plan."
-					link="/work/redfern-books"
+					title="Studio Register"
+					summary="Booking, deposits, and agreements for independent photographers. In development."
+					link="/products"
 				/>
 				</div>
 				<div class="mt-12 text-center">
 					<a
-						href="/work"
+						href="/products"
 						class="inline-flex items-center px-6 py-3 bg-accent text-paper rounded-xl font-semibold shadow-xl shadow-accent/40 hover:shadow-2xl hover:shadow-accent/50 hover:-translate-y-0.5 transition-all duration-200"
 					>
-						View all work
+						View all products
 						<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 						</svg>
@@ -199,22 +198,20 @@ const binaryPattern = Array.from({ length: 150 }, () =>
 			</div>
 		</section>
 
-		<TherapistCta />
-
 		<!-- CTA Section with solid slate background -->
 		<section class="bg-slate-200 py-16 md:py-24">
 			<div class="container">
 				<div class="max-w-3xl mx-auto text-center">
-					<h2 class="text-3xl md:text-4xl font-semibold mb-4 text-ink">Ready to build something enduring?</h2>
+					<h2 class="text-3xl md:text-4xl font-semibold mb-4 text-ink">Have an app that needs to exist?</h2>
 					<p class="text-lg text-ink/70 mb-8 leading-relaxed">
-						Let's start with a conversation about your goals and how we can help.
+						Tell us the problem it solves. If we're the right studio for it, we'll scope a first version together.
 					</p>
 					<div class="flex justify-center">
 						<a
 							href="/contact"
 							class="inline-flex items-center justify-center px-8 py-4 bg-accent text-paper rounded-xl font-semibold no-underline shadow-xl shadow-accent/40 hover:shadow-2xl hover:shadow-accent/50 hover:-translate-y-0.5 transition-all duration-200"
 						>
-							Start a project
+							Start a conversation
 						</a>
 					</div>
 				</div>

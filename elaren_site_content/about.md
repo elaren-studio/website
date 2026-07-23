@@ -1,14 +1,17 @@
 ---
 title: "About"
 slug: "/about"
-description: "Structure illuminated — the meeting point of craft and clarity."
+description: "Structure illuminated — a small app studio building software with care."
 ---
 
-We build and maintain them with the same care we bring to our own craft—steady, precise, and grounded in respect for our clients' time.
+Elaren Studio is a small app studio. We design, build, and maintain our own software products—and each year we take a small number of client builds for founders and small businesses.
+
+Building our own products keeps us honest. We live with every architecture decision, every dependency, and every shortcut—so we don't take many. That discipline carries into everything we build for others: deliberate scope, lean stacks, and software that keeps working long after launch.
+
 Each project is a partnership built on clarity, not complexity.
 
 ## Team
 **Felix Torres — Director**  
-Felix’s approach to web design mirrors his work in music: precision, pacing, and flow.
+Felix's approach to software mirrors his work in music: precision, pacing, and flow.
 
-[Start a Project](/contact)
+[Start a conversation](/contact)

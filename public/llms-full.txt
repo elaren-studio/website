@@ -1,6 +1,6 @@
 # Elaren Studio — Full Site Content
 
-> Bright, enduring websites—built fast, kept current.
+> A small app studio. Software built with care, made to last.
 
 Website: https://elarenstudio.com
 
@@ -8,79 +8,118 @@ Website: https://elarenstudio.com
 
 ## Home
 
-Elaren Studio designs, launches, and cares for clean, fast websites—so your team can focus on the work that matters.
+Software built with care, made to last.
 
-### Services Overview
+Elaren Studio is a small app studio. We ship our own products—and build a few for others. Deliberately scoped, quietly maintained, still working years from now.
 
-**Design & Build**
-Custom static websites with modern frameworks, clear hierarchy, and precise typography.
-- 10-day launch window
-- Responsive design
-- Global CDN deploy
-- SEO and analytics setup
-- Starting at $3,800
+See what we build: https://elarenstudio.com/products/
+Start a conversation: https://elarenstudio.com/contact/
 
-**Website-as-a-Service (WaaS)**
-Lease your site with $0 down and ongoing improvements. Or buy it up-front and add a light monthly care plan.
-- $0 down, hosting included
-- Unlimited small edits
-- Uptime monitoring & backups
-- Own your site after 12 months
-- From $175/month
+### What we build
+- **Studio Products** — focused apps we design, ship, and maintain ourselves
+- **Client App Builds** — scoped v1 and MVP builds for founders, custom applications for small businesses
+- **Websites** — clean, fast static sites, designed, launched, and cared for
 
-**Landing Pages**
-Campaign-ready pages that convert. Fast turnaround, measurable results.
-- Fast turnaround
-- Preview-first workflow
-- Conversion optimized
-- Analytics included
-- From $1,000
+### Our approach
+Every Elaren build starts with one focused problem, deliberate scope, and a lean stack. No clutter. No bloat. Just clean, enduring software that stands the test of time.
 
-### Our Approach: Structure. Light. Clarity.
+---
 
-Every Elaren site starts with a clear structure, intentional typography, and a global CDN. No clutter. No bloat. Just clean, enduring architecture.
+## Products
+
+URL: https://elarenstudio.com/products/
+
+Software we ship and live with.
+
+Every Elaren product starts as a real problem we care about. We build small, focused apps—then maintain them for the long run. The same discipline goes into everything we build for clients.
+
+### OpusGraph
+**Live**
+
+Music library management for orchestras, choirs, bands, and other performing ensembles. Catalog sheet music, track parts and copies, log performance history, and plan seasons—powered by a curated classical music reference database.
+
+Visit OpusGraph: https://opusgraph.vercel.app
+
+### AgentMeter
+**Shipped · Open source**
+
+A tiny macOS menu bar app that keeps AI coding usage limits visible at a glance—Codex, Cursor, Claude Code, Gemini, and more—with detailed meters and reset countdowns. Free and open source.
+
+View on GitHub: https://github.com/fdtorres1/AgentMeter
+
+### Studio Register
+**In development**
+
+Booking, deposits, agreements, and studio operations for independent photographers. One place to run the business side of a creative practice.
+
+### OmniSearch
+**In development**
+
+Unified search across the places your work actually lives. Currently in active development and daily internal use.
+
+### In the workshop: Problems we're exploring
+
+Earlier-stage work we aren't naming yet. Each one graduates to a named product only when the evidence supports it.
+
+- **Music notation intelligence** — Tooling that helps musicians and publishers get from scanned scores to reliable digital notation with less manual correction.
+- **Everyday records for pet care** — A private, local-first way for households to keep the health and care details that otherwise live in shoeboxes and memory.
+- **Bilingual early childhood** — Tools that help bilingual families build language-rich routines with their youngest children.
+
+### Also from the studio: Resonance Music Press
+
+The storefront, catalog operations, and publishing workflow platform behind Resonance Music Press was designed and built by Elaren Studio—an example of the platform work we take on for the right project.
 
 ---
 
 ## About
 
-Elaren Studio was founded on a simple idea: websites should be as clear and enduring as the work they represent.
+Elaren Studio is a small app studio. We design, build, and maintain our own software products—and each year we take a small number of client builds for founders and small businesses.
 
-### Values
+Building our own products keeps us honest. We live with every architecture decision, every dependency, and every shortcut—so we don't take many. That discipline carries into everything we build for others: deliberate scope, lean stacks, and software that keeps working long after launch.
 
-- **Clarity by design**: Simple layouts, typographic hierarchy, lean components. We strip away complexity to reveal what matters.
-- **Built to endure**: Static stack, global CDN, minimal dependencies. Your site stays fast and reliable for years, not months.
-- **Care that scales**: Lightweight monthly updates, proactive checks, usage alerts. We handle the details so you don't have to.
-- **Respect for your time**: No unnecessary meetings, no jargon, no surprises. Just clear communication and steady progress.
+Each project is a partnership built on clarity, not complexity.
+
+### Team
+
+**Felix Torres — Director**
+Felix's approach to software mirrors his work in music: precision, pacing, and flow.
+
+Start a conversation: https://elarenstudio.com/contact/
 
 ---
 
 ## Services
 
-Simple services built for clarity and longevity. Every project follows a transparent process—no surprises.
+We build our own products—and take a small number of client builds each year. The same standards apply to both: deliberate scope, a lean stack, and software that keeps working after launch.
 
-### Design & Build
-We create custom static websites with modern frameworks, clear hierarchy, and precise typography.
-- 10-day launch window
-- Responsive design
-- Global CDN deploy (Vercel or Netlify)
+### Product Builds
+A first version that actually ships. For founders and teams who need a v1 or MVP scoped tight enough to launch—and solid enough to grow.
+
+**Includes**
+- Discovery and honest scoping first
+- Web platforms and native apps
+- Weekly working software, not decks
+- Launch with a maintenance path
+
+### Custom Applications
+Purpose-built tools for small businesses: the booking system, internal dashboard, or workflow app that off-the-shelf software almost handles.
+
+**Includes**
+- Built around your actual workflow
+- Integrates with what you already use
+- Owned by you, documented for handoff
+- Ongoing care after launch
+
+### Websites
+The craft that started the studio. Clean, fast static sites with clear hierarchy and precise typography—designed, launched, and cared for.
+
+**Includes**
+- Custom design and build
+- Global CDN deploy
 - SEO and analytics setup
-- Starting at $3,800
+- Light monthly care plans
 
-### Website-as-a-Service
-Lease your site with $0 down and ongoing improvements. Or buy it up-front and add a light monthly care plan.
-- $0 down, hosting included
-- Unlimited small edits
-- Uptime monitoring & backups
-- Own your site after 12 months
-- From $175/month
-
-### Landing Pages
-Campaign-ready pages that convert. Fast turnaround, measurable results.
-- Fast turnaround
-- Preview-first workflow
-- Conversion optimized
-- From $1,000
+Not sure where to start? Start a conversation: https://elarenstudio.com/contact/
 
 ---
 

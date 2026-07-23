@@ -1,30 +1,38 @@
 ---
 title: "Services"
 slug: "/services"
-description: "Simple services built for clarity and longevity, with a transparent process."
+description: "Product builds, custom applications, and websites—deliberately scoped and made to last."
 ---
 
 # Services
 
-Simple services built for clarity and longevity. Every project follows a transparent process—no surprises.
+We build our own products—and take a small number of client builds each year. The same standards apply to both: deliberate scope, a lean stack, and software that keeps working after launch.
 
-## Design & Build
-We create custom static websites with modern frameworks, clear hierarchy, and precise typography.
+## Product Builds
+A first version that actually ships. For founders and teams who need a v1 or MVP scoped tight enough to launch—and solid enough to grow.
 
 **Includes**
-- 10-day launch window
-- Responsive design
-- Global CDN deploy (Vercel or Netlify)
+- Discovery and honest scoping first
+- Web platforms and native apps
+- Weekly working software, not decks
+- Launch with a maintenance path
+
+## Custom Applications
+Purpose-built tools for small businesses: the booking system, internal dashboard, or workflow app that off-the-shelf software almost handles.
+
+**Includes**
+- Built around your actual workflow
+- Integrates with what you already use
+- Owned by you, documented for handoff
+- Ongoing care after launch
+
+## Websites
+The craft that started the studio. Clean, fast static sites with clear hierarchy and precise typography—designed, launched, and cared for.
+
+**Includes**
+- Custom design and build
+- Global CDN deploy
 - SEO and analytics setup
+- Light monthly care plans
 
-**Starting at $3,800**
-
-## Website-as-a-Service
-Lease your site with $0 down and ongoing improvements. Or buy it up-front and add a light monthly care plan.  
-[View Pricing](/pricing)
-
-## Landing Pages
-Campaign-ready pages that convert. Fast turnaround, measurable results.  
-*From $1,000*
-
-Not sure where to start? [Schedule a quick chat](/contact).
+Not sure where to start? [Start a conversation](/contact).

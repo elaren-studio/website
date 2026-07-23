@@ -1,26 +1,19 @@
 ---
-title: "Elaren Studio — Bright, enduring websites"
+title: "Software built with care, made to last"
 slug: "/"
-description: "We design, launch, and care for clean, fast sites—so your team can focus on the work that matters."
+description: "Elaren Studio is a small app studio. We ship our own products—and build a few for others. Deliberately scoped, quietly maintained, made to last."
 ---
 
-# Bright, enduring websites.
+# Software built with care, made to last.
 
-We design, launch, and care for clean, fast sites—so your team can focus on the work that matters.
+Elaren Studio is a small app studio. We ship our own products—and build a few for others. Deliberately scoped, quietly maintained, still working years from now.
 
-[Start a project](/contact)
+[See what we build](/products)  [Start a conversation](/contact)
 
-## What we do
-- **Design & Build** — fast, stable static websites
-- **Website-as-a-Service** — lease your site with $0 down and ongoing improvements
-- **Landing Pages** — focused campaigns that launch in days
+## What we build
+- **Studio Products** — focused apps we design, ship, and maintain ourselves
+- **Client App Builds** — scoped v1 and MVP builds for founders, custom applications for small businesses
+- **Websites** — clean, fast static sites, designed, launched, and cared for
 
 ## Our approach
-Every Elaren site starts with a clear structure, intentional typography, and a global CDN. No clutter. No bloat. Just clean, enduring architecture that stands the test of time.
-
-## Testimonials
-> “Elaren delivered a site that feels effortless to maintain.” — Client Name, Small Org
-
-> “Everything just works. It’s refreshing.” — Client Name
-
-[View Pricing](/pricing)  [Book a Call](/contact)
+Every Elaren build starts with one focused problem, deliberate scope, and a lean stack. No clutter. No bloat. Just clean, enduring software that stands the test of time.

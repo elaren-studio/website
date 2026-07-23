@@ -41,3 +41,10 @@ Status: implemented
 Date: July 22, 2026
 
 The canonical public website repository is `elaren-studio/website`. Preserve the existing repository identity, history, default branch, and deployment project. Vercel remains connected to the same GitHub repository ID with `main` as the production branch, and its GitHub App access is limited to the `website` repository rather than all Elaren repositories.
+
+## D-007 - Reposition the public site as an app studio and dev shop
+
+Status: implemented
+Date: July 23, 2026
+
+The site presents Elaren Studio as a product studio with a select client-build lane, per HQ decision D-012. Navigation is Products, Services, Resources, About. OpusGraph, AgentMeter, Studio Register, and OmniSearch are named publicly; earlier-stage work appears only as unnamed problem spaces; Resonance Music Press is credited as designed and built by Elaren Studio. The therapist, local-SEO, pricing, and plans pages remain live but are removed from navigation, and no public pricing is shown for application work.

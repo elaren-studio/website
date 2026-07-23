@@ -60,3 +60,13 @@
 - Audited RUNBOOK.md against the actual codebase and corrected drift: FAQ section title/subtitle defaults live in the SeoFaq component rather than the Zod schema, the areaServed type enum and strict YYYY-MM-DD date validation are now documented, the lock icon and astro passthrough script are listed, and the project-structure tree gained favicon.svg, styles/, utils/, and a components ellipsis.
 - Replaced the pinned live-head commit SHA in ACTIVE_CONTEXT with a non-pinning statement to end self-referential staleness; historical deployment records keep their SHAs.
 - Verified CTA presets, pricing, cross-link scoring values, stack table, and remaining schema fields in RUNBOOK match the code exactly.
+
+## 2026-07-23 - Repositioned the site as an app studio and dev shop
+
+- Rewrote the homepage around the new positioning: "Software built with care, made to last," with studio products, client app builds, and websites as the three lanes and a products preview replacing the work preview.
+- Added a Products page naming OpusGraph (live), AgentMeter (shipped, open source), Studio Register (in development), and OmniSearch (in development), with unnamed problem-space cards for earlier-stage work and a designed-and-built credit for the Resonance Music Press platform.
+- Reframed Services to Product Builds, Custom Applications, and Websites, with conversation-driven inquiries and no public application pricing.
+- Rewrote About and the legacy content files for the app-studio story; updated header navigation to Products, Services, Resources, About and refreshed the footer tagline and links.
+- Removed therapist and local-SEO banners and navigation links while keeping those pages, pricing, plans, and work case studies live at their URLs.
+- Rewrote llms.txt and synchronized llms-full.txt with the new copy, retaining legacy-offer references.
+- Recorded D-007 here and D-012 in HQ; validation and the production build passed at 28 pages.
