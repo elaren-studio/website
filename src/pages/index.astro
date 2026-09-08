@@ -16,8 +16,8 @@ const { frontmatter, body } = parseMarkdown(content);
 // E=01000101 L=01001100 A=01000001 R=01010010 E=01000101 N=01001110 [space]=00100000 S=01010011 T=01010100 U=01010101 D=01000100 I=01001001 O=01001111
 const binaryString = '01000101010011000100000101010010010001010100111000100000010100110101010001010101010001000100100101001111';
 // Create repeating pattern: enough rows/columns to fill entire hero section - no gaps, continuous
-const binaryPattern = Array.from({ length: 150 }, () => 
-	Array.from({ length: 60 }, () => binaryString).join('')
+const binaryPattern = Array.from({ length: 100 }, () =>
+	Array.from({ length: 12 }, () => binaryString).join('')
 ).join('\n');
 ---
 
@@ -27,40 +27,52 @@ const binaryPattern = Array.from({ length: 150 }, () =>
 		<!-- Hero Section with enhanced gradient background -->
 		<section class="relative py-20 md:py-32 overflow-hidden" style="background: linear-gradient(to top, var(--clr-muted) 0%, var(--clr-slate-50) 50%, var(--clr-paper) 100%);">
 			<!-- Binary pattern: "ELAREN STUDIO" in ASCII binary - tight repeating pattern with fade matching gradient -->
-			<div class="absolute inset-0 opacity-[0.10] font-mono text-[8px] leading-[10px] text-ink/60 select-none overflow-hidden" style="font-family: 'Courier New', 'Courier', monospace; letter-spacing: 0px; mask-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,1) 100%);">
+			<div aria-hidden="true" class="absolute inset-0 opacity-[0.10] font-mono text-[8px] leading-[10px] text-ink/60 select-none overflow-hidden" style="font-family: 'Courier New', 'Courier', monospace; letter-spacing: 0px; mask-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,1) 100%);">
 				<div style="transform: translateX(-1px) translateY(-1px); white-space: pre;">
 					{binaryPattern}
 				</div>
 			</div>
-			
+
 			<!-- Decorative elements -->
 			<div class="absolute top-0 right-0 w-96 h-96 bg-slate-200/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 			<div class="absolute bottom-0 left-0 w-96 h-96 bg-slate-300/40 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 			<div class="absolute bottom-0 right-1/4 w-80 h-80 bg-slate-300/30 rounded-full blur-3xl translate-y-1/3"></div>
-			
+
 			<div class="container relative z-10">
 				<div class="max-w-4xl">
 					<h1 class="text-5xl md:text-6xl font-semibold mb-6 text-ink leading-tight">
-						Software built with care, made to last.
+						A clearer website. Content that keeps moving.
 					</h1>
 					<p class="text-xl md:text-2xl text-ink/80 mb-10 leading-relaxed max-w-3xl">
-						Elaren Studio is a small app studio. We ship our own products—and build a few for others. Deliberately scoped, quietly maintained, still working years from now.
+						Websites, content marketing, social publishing, and local SEO for small businesses and organizations in Arlington and Dallas–Fort Worth. Clear monthly scope, with remote service across Texas.
 					</p>
 					<div class="flex flex-wrap gap-4">
 						<a
-							href="/products"
+							href="/marketing-dallas-fort-worth"
 							class="inline-flex items-center justify-center px-8 py-4 bg-accent text-paper rounded-xl font-semibold no-underline shadow-xl shadow-accent/40 hover:shadow-2xl hover:shadow-accent/50 hover:-translate-y-0.5 transition-all duration-200 text-lg"
 						>
-							See what we build
+							Explore marketing services
 						</a>
 						<a
-							href="/contact"
+							href="/work-examples/program-campaign"
 							class="inline-flex items-center justify-center px-8 py-4 bg-paper text-ink border-2 border-slate-200 rounded-xl font-semibold no-underline shadow-md hover:shadow-lg hover:border-accent/40 hover:-translate-y-0.5 transition-all duration-200 text-lg"
 						>
-							Start a conversation
+							See a work example
 						</a>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<section class="bg-paper py-16 md:py-24">
+			<div class="container">
+				<SectionHeading kicker="Marketing with a defined scope" title="Choose the work your business needs next" description="Keep your pages, social posts, and email current—or focus a separate engagement on local search. We confirm one clear scope before you start." />
+				<div class="grid gap-8 md:grid-cols-3">
+					<ServiceCard title="Content Marketing" description="Useful website copy, social posts, and an email created from one approved plan." features={["Two articles or substantial page updates", "Twelve social posts and one email", "One coordinated monthly publishing package"]} link="/content-marketing" linkText="See content marketing →" icon="landing" />
+					<ServiceCard title="Social Content & Scheduling" description="Get the writing, supplied-asset design, and scheduling handled with a clear approval process." features={["Up to two existing social channels", "Included in the content marketing package", "Paid ads and daily community support excluded"]} link="/social-media-marketing" linkText="See social publishing →" icon="design" />
+					<ServiceCard title="Local SEO" description="Improve existing service pages and make your local offer easier to understand and find." features={["One website and primary location", "Two existing service-page updates", "Search Console review and clear next actions"]} link="/local-seo" linkText="See local SEO →" icon="care" />
+				</div>
+				<p class="mt-8 text-center text-ink/75">Start with <a class="font-semibold text-accent hover:underline" href="/resources/guides/seo-or-social-media-for-small-business">SEO or social: which should come first?</a> or compare <a class="font-semibold text-accent hover:underline" href="/resources/guides/content-social-marketing-cost">the monthly scope and pricing</a>.</p>
 			</div>
 		</section>
 
@@ -70,7 +82,7 @@ const binaryPattern = Array.from({ length: 150 }, () =>
 				<SectionHeading
 					kicker="What we build"
 					title="Our own products, and a few for others"
-					description="A studio that lives with its own engineering decisions—then brings that discipline to client builds."
+						description="Alongside our marketing work, we design and maintain software products and take on selected website and application builds."
 				/>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<ServiceCard
@@ -121,7 +133,7 @@ const binaryPattern = Array.from({ length: 150 }, () =>
 					title="Structure. Light. Clarity."
 					description="Every Elaren build starts with one focused problem, deliberate scope, and a lean stack. No clutter. No bloat. Just clean, enduring software that stands the test of time."
 				/>
-				
+
 				<!-- Visual elements - larger and more prominent -->
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
 					<div class="text-center p-8 bg-paper rounded-xl border-2 border-slate-200 shadow-md hover:shadow-lg hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 group">
@@ -160,7 +172,7 @@ const binaryPattern = Array.from({ length: 150 }, () =>
 			<!-- Decorative gradient elements -->
 			<div class="absolute top-0 right-0 w-96 h-96 bg-slate-300/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 			<div class="absolute bottom-0 left-0 w-80 h-80 bg-slate-300/15 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-			
+
 			<div class="container relative z-10">
 				<SectionHeading
 					kicker="From the studio"

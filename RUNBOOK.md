@@ -378,9 +378,9 @@ Handled by `src/layouts/BaseLayout.astro`. Accepts `title`, `description`, and o
 
 ## Forms
 
-The content marketing page (`/content-marketing`) uses `src/components/InquiryComposer.astro` to prepare an email locally to `hello@elarenstudio.com`. The visitor can review/copy the prepared details or explicitly open an email draft. The component sends no request to a form provider and never reports message delivery. Browser preparation/copy has been checked. On September 7, 2026, a synthetic external email test verified inbox delivery to this address with exact body integrity; this is a point-in-time mail-route test, separate from the legacy FormSubmit integration.
+The content, social, local SEO, and DFW marketing pages use `src/components/InquiryComposer.astro` to prepare an email locally to `hello@elarenstudio.com`. The visitor can review/copy the prepared details or explicitly open an email draft. The component sends no request to a form provider and never reports message delivery. Browser preparation/copy has been checked. On September 7, 2026, a synthetic external email test verified inbox delivery to this address with exact body integrity; this is a point-in-time mail-route test, separate from the legacy FormSubmit integration.
 
-Content marketing offer pricing is currently declared in `src/pages/content-marketing.astro`, including its visible copy and Service/Offer data. Keep these aligned with `public/llms.txt` and `public/llms-full.txt` when changing the offer. The related example is `/work-examples/program-campaign`; the preparation guide is `/resources/guides/what-to-send-a-content-partner`.
+Marketing prices and the shared publishing scope are declared in `src/lib/marketing.ts` and consumed by service pages, Pricing, and their Service/Offer data. Keep the buyer-guide prose, `public/llms.txt`, and `public/llms-full.txt` aligned when revising the offer. The two introductory places are shared across content/social and the separate local SEO option. The related example is `/work-examples/program-campaign`; the preparation guide is `/resources/guides/what-to-send-a-content-partner`.
 
 The therapist websites page (`/therapist-websites`) uses [FormSubmit](https://formsubmit.co/) for lead capture. The form POSTs to FormSubmit's endpoint and redirects on success. Fields: name, email, practice name, current website URL, team size, timeline.
 
@@ -437,3 +437,15 @@ When adding new pages or making significant changes:
 | Global layout | `src/layouts/BaseLayout.astro` |
 | Main money page | `src/pages/therapist-websites.astro` |
 | Robots / LLM files | `public/robots.txt`, `public/llms.txt`, `public/llms-full.txt` |
+
+
+## DFW marketing content map
+
+- `/content-marketing`: content-led entry to the publishing package.
+- `/social-media-marketing`: social creation and approved scheduling entry to the same package.
+- `/local-seo`: separate one-website/one-location alternative with two existing-page updates.
+- `/marketing-dallas-fort-worth`: regional comparison for Arlington/DFW and remote Texas organizations.
+- `/resources/guides/content-social-marketing-cost`: package cost and scope decision guide.
+- `/resources/guides/seo-or-social-media-for-small-business`: search versus publishing decision guide.
+
+The inquiry composer accepts a service prop, supplies relevant fields, and includes the service and source route in the prepared email. Test preparation and the generated mailto recipient/body after changing it; do not treat preparation as a send or a measured conversion. Run `npm run validate` and `npm run build` (38 pages after this batch), inspect canonical/Service data and sitemap inclusion, then verify deployed URLs. Existing historical Google inspection results above are dated observations, not current rankings.

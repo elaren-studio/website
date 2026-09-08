@@ -1,17 +1,26 @@
 ---
-const subject = "Elaren content marketing inquiry";
-const prompt = "Please include your organization, public website, selected channels, campaign goal, and target month.";
-const fields = ["Organization", "Public website", "Selected channels", "Campaign goal and target month"];
+interface Props {
+	service?: "content-marketing" | "social-media-marketing" | "local-seo" | "marketing";
+}
+const { service = "content-marketing" } = Astro.props;
+const configurations = {
+	"content-marketing": { label: "Content marketing", prompt: "Share your organization, website, channels, and what you want the next month of publishing to support.", fields: ["Organization", "Public website", "Selected channels", "Campaign goal and target month"] },
+	"social-media-marketing": { label: "Social content and scheduling", prompt: "Tell us which channels you use and what you want help creating. Content and social use the same publishing package.", fields: ["Organization", "Public website", "Up to two existing social channels", "Content goal and target month"] },
+	"local-seo": { label: "Local SEO", prompt: "Share your website and the service area you want to focus on. A Google Business Profile is optional; please send public links only.", fields: ["Business or organization", "Public website", "Primary service and location", "Google Business Profile link, if you have one", "Priority and target month"] },
+	marketing: { label: "DFW marketing", prompt: "Tell us where your business serves customers and whether you need content, social publishing, or local SEO. We will help confirm the right scope.", fields: ["Business or organization", "Public website", "Service area", "Service you need and target month"] },
+};
+const { label, prompt, fields } = configurations[service];
+const subject = `Elaren ${label.toLowerCase()} inquiry`;
 ---
 
-<div id="inquiry" class="scroll-mt-24 rounded-xl border-2 border-slate-200 bg-paper p-6 shadow-sm" data-inquiry-composer>
+<div id="inquiry" class="scroll-mt-24 rounded-xl border-2 border-slate-200 bg-paper p-6 shadow-sm" data-inquiry-composer data-subject={subject} data-service={label} data-source={Astro.url.pathname}>
 	<h2 class="text-2xl font-semibold text-ink">Tell us enough to check fit</h2>
 	<p class="mt-2 text-sm text-ink/70">{prompt}</p>
 	<div class="mt-5 space-y-4">
 		{fields.map((field, index) => (
 			<div>
-				<label for={`content-field-${index}`} class="mb-1.5 block text-sm font-medium text-ink">{field}</label>
-				<input id={`content-field-${index}`} data-inquiry-field type="text" autocomplete="off" class="w-full rounded-xl border-2 border-slate-200 bg-paper px-3 py-2.5 text-sm text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent" />
+				<label for={`${service}-field-${index}`} class="mb-1.5 block text-sm font-medium text-ink">{field}</label>
+				<input id={`${service}-field-${index}`} data-inquiry-field data-label={field} type="text" maxlength="300" autocomplete="off" class="w-full rounded-xl border-2 border-slate-200 bg-paper px-3 py-2.5 text-sm text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent" />
 			</div>
 		))}
 	</div>
@@ -19,7 +28,7 @@ const fields = ["Organization", "Public website", "Selected channels", "Campaign
 		<button type="button" data-prepare-email class="rounded-xl bg-accent px-5 py-3 font-semibold text-paper shadow-lg shadow-accent/30 transition hover:-translate-y-0.5">Prepare email</button>
 		<a href={`mailto:hello@elarenstudio.com?subject=${encodeURIComponent(subject)}`} class="rounded-xl border-2 border-slate-200 px-5 py-3 font-semibold text-ink no-underline hover:border-accent">Email link fallback</a>
 	</div>
-	<p class="mt-4 text-xs text-ink/60">Recipient: <strong>hello@elarenstudio.com</strong>. Your notes stay in this page until you choose to open email.</p>
+	<p class="mt-4 text-xs text-ink/60">Recipient: <strong>hello@elarenstudio.com</strong>. Your notes stay in this page until you choose to open email. Please leave out passwords, private customer details, and account credentials.</p>
 	<div data-inquiry-preview class="mt-4 hidden">
 		<label for="prepared-details" class="mb-1.5 block text-sm font-medium text-ink">Prepared details</label>
 		<textarea id="prepared-details" data-inquiry-textarea rows="6" readonly class="w-full rounded-xl border-2 border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-ink"></textarea>
@@ -30,7 +39,7 @@ const fields = ["Organization", "Public website", "Selected channels", "Campaign
 
 <script>
 	document.querySelectorAll<HTMLElement>("[data-inquiry-composer]").forEach((composer) => {
-		const subject = "Elaren content marketing inquiry";
+		const subject = composer.dataset.subject ?? "Elaren marketing inquiry";
 		const button = composer.querySelector<HTMLButtonElement>("[data-prepare-email]");
 		const status = composer.querySelector<HTMLElement>("[data-inquiry-status]");
 		const preview = composer.querySelector<HTMLElement>("[data-inquiry-preview]");
@@ -39,8 +48,8 @@ const fields = ["Organization", "Public website", "Selected channels", "Campaign
 		const copyButton = composer.querySelector<HTMLButtonElement>("[data-copy-details]");
 		button?.addEventListener("click", () => {
 			const values = Array.from(composer.querySelectorAll<HTMLInputElement>("[data-inquiry-field]"));
-			const labels = Array.from(composer.querySelectorAll("label")).map((label) => label.textContent?.trim() ?? "Details");
-			const body = values.map((input, index) => `${labels[index]}: ${input.value.trim() || "[please add]"}`).join("\n");
+			const details = values.map((input) => `${input.dataset.label}: ${input.value.trim() || "[please add]"}`).join("\n");
+			const body = `Service: ${composer.dataset.service}\nSource page: ${composer.dataset.source}\n\n${details}`;
 			if (textarea) textarea.value = body;
 			if (openEmail) openEmail.href = `mailto:hello@elarenstudio.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 			preview?.classList.remove("hidden");

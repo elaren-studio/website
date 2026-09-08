@@ -370,29 +370,26 @@ Terms: 50% deposit / 25% at design approval / 25% pre-launch. Multi-location: +$
 - Unlimited text & image updates (queue-based, 48 business-hour turnaround, <30 min each)
 - Ideal for: teams needing frequent updates
 
-### Growth Retainers
+### Marketing options
 
-**Foundation** — $1,950/month
-- Google Business Profile management
-- 1 post/week + review response
-- Monthly performance report
+The first two new marketing clients total across both options start at $495 for month one, then $750/month if continued, with the rate held for six months. Both are month to month, paid in advance after written scope, with no automatic renewal. Marketing excludes Website Care, hosting, and technical breakage repair.
 
-**Accelerator** (Most Popular) — $3,250/month
-- Everything in Foundation
-- 2 SEO blog posts/month
-- On-page SEO refinements
-- Citation & listing management
+**Content & social publishing** — $495 first month / $750/month continuation
+- Two articles or substantial existing-page updates, up to 1,000 words each
+- Twelve original social posts adapted across up to two existing platforms
+- One email up to 500 words
+- Design from supplied assets; publishing in existing systems
+- Topic research, basic on-page SEO, one 30-minute kickoff, one consolidated revision, concise report
 
-**Authority** — $4,750/month
-- Everything in Accelerator
-- 4 SEO blog posts/month
-- Advanced outreach campaigns
-- Quarterly strategy deep-dive
-
-Growth retainers: 6-month minimum. Third-party tools and ad spend billed at cost.
+**Local SEO** — $495 first month / $750/month continuation
+- One website and one location
+- Keyword and intent map for up to 10 queries, first-month baseline, GSC baseline and sitemap check
+- Two existing page updates, up to 1,000 words each
+- Review one eligible GBP and propose changes for approval before publishing
+- Ongoing: two page updates, GSC/GBP check, concise report
+- No citation mass cleanup, backlinks, rebuilds, migrations, paid tools, or new account verification
 
 ### Add-ons
-- Google Business Profile: $400/month (included in Growth retainers)
 - Analytics + Call Tracking: $500/month (live dashboard + monthly video)
 - Sales Landing Page: $1,250 (volume bundles available)
 - Standard Page: $650 (About, Team, FAQ, etc.)
@@ -403,8 +400,8 @@ Growth retainers: 6-month minimum. Third-party tools and ad spend billed at cost
 **Do you guarantee rankings, leads, or revenue?**
 No. SEO and conversion work is measurable, but nobody can honestly promise specific outcomes. What we guarantee is clear scope, consistent execution, and transparent reporting.
 
-**Do I pay for Care on top of a Growth retainer?**
-No. All Growth retainers include Standard Care (hosting, security, backups, monitoring, technical repair).
+**Does marketing include Website Care or hosting?**
+No. Marketing is separate from Website Care and hosting.
 
 **What's included in "unlimited text & image updates" (Care+)?**
 Text and image swaps on existing pages. Queue-based (one active request at a time), 48 business-hour turnaround. Each request should take under 30 minutes. Excludes layout changes, new sections, new pages, or redesign work.
@@ -414,9 +411,6 @@ Things that aren't working correctly: form failures, errors, plugin conflicts, p
 
 **What are the payment terms for builds?**
 50% to start, 25% at design approval, 25% pre-launch.
-
-**What's the minimum commitment for Growth retainers?**
-6 months. SEO needs time to compound. Third-party tools and ad spend billed at cost.
 
 **Can I add a location to an existing site?**
 Yes. Additional locations using the same design system are $3,500 each.
@@ -768,36 +762,18 @@ Fictional Northside Arts Workshop campaign example showing landing-page copy, a 
 
 ---
 
-## Local SEO Care
+## Local SEO
 
 URL: https://elarenstudio.com/local-seo/
 
-Local SEO Care That Turns Search Into Calls. We help home service businesses show up locally and convert that visibility into qualified calls and form submissions — not vanity traffic.
+Local SEO is a bounded month-to-month option for one website and one location. The first month is $495 for the first two new marketing clients total; continuation is $750/month if chosen, held for six months. It includes a keyword and intent map for up to 10 queries and a first-month baseline, a Google Search Console baseline and sitemap check, two existing page updates up to 1,000 words each, and a review of one eligible GBP with proposed changes approved before publishing. Ongoing scope is two page updates, a GSC/GBP check, and a concise report. There are no promises of rankings, leads, sales, or AI results, and no citation mass cleanup, backlinks, rebuilds, migrations, paid tools, or new account verification.
 
-### Who This Is For
+## Additional marketing routes
 
-Best fit: Home service businesses (cleaning, landscaping, painting, handyman, etc.), 1–3 locations, existing website + Google Business Profile, owners who want structured ongoing execution.
-
-Not a fit: "Rank me by next week" expectations, national SEO campaigns, teams unwilling to provide required access/assets.
-
-### How Engagement Works
-
-**Step 1: Setup Sprint** — $1,800–$3,000 one-time (2–6 weeks)
-- Google Business Profile audit + optimization
-- Local keyword map
-- Tracking baseline (calls, forms, key events)
-- On-site implementation (1 page refresh included)
-- Citation cleanup (up to 25 updates)
-
-**Step 2: Monthly Local SEO Care**
-
-- Tier A — Maintenance ($850–$1,000/mo): GBP updates + hygiene, citation monitoring, 1 minor on-page refresh/mo, monthly async report + next actions.
-- Tier B — Growth ($1,200–$1,500/mo): Everything in Tier A + 1 new local page + 1 refresh/mo, review/reputation workflow, CTA/form conversion tune-ups, quarterly competitor snapshot.
-- Tier C — Authority ($1,800–$2,200/mo): Everything in Tier B + 2 new local pages + 2 refreshes/mo, higher-frequency GBP optimization, monthly call/script conversion tuning session.
-
-### What We Measure
-
-Primary KPIs: Qualified calls, qualified form leads, conversion rate on key pages, GBP actions (calls, website clicks, directions). Supporting indicators: Local keyword movement, review velocity and average rating.
+- Social media marketing: https://elarenstudio.com/social-media-marketing/
+- Marketing Dallas–Fort Worth: https://elarenstudio.com/marketing-dallas-fort-worth/
+- Content & social marketing cost guide: https://elarenstudio.com/resources/guides/content-social-marketing-cost/
+- SEO or social media guide: https://elarenstudio.com/resources/guides/seo-or-social-media-for-small-business/
 
 ---
 

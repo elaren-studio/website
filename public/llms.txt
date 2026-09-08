@@ -1,8 +1,8 @@
 # Elaren Studio
 
-> A small app studio. Software built with care, made to last.
+> Websites, content, social publishing, and local SEO for Arlington, DFW, and Texas teams, alongside our own software products.
 
-Elaren Studio is an app studio and dev shop. We design, ship, and maintain our own software products, and each year we take a small number of client builds—v1/MVP product builds for founders and custom applications for small businesses. We also design, launch, and care for clean, fast static websites. Our stack philosophy is lean: deliberate scope, minimal dependencies, privacy-respecting defaults.
+Elaren Studio is an app studio and dev shop serving Arlington, Dallas–Fort Worth, and remote Texas teams. We design, ship, and maintain our own software products, take a small number of client builds, and offer clean websites plus scoped content, social publishing, and local SEO. Our stack philosophy is lean: deliberate scope, minimal dependencies, privacy-respecting defaults.
 
 ## Products
 
@@ -23,7 +23,10 @@ The storefront and catalog-operations platform behind Resonance Music Press was 
 - **Product Builds**: Scoped v1 and MVP builds for founders and teams. Discovery and honest scoping first; weekly working software; launch with a maintenance path.
 - **Custom Applications**: Purpose-built tools for small businesses—booking systems, internal dashboards, workflow apps. Owned by the client, documented for handoff.
 - **Websites**: Clean, fast static sites (Astro, Tailwind CSS, global CDN)—designed, launched, and cared for with light monthly care plans.
-- **Content marketing**: A scoped, month-to-month package with two substantial page updates, twelve original social posts adapted across up to two selected platforms, one email campaign, basic on-page SEO, and a concise monthly review. First month $495 for the first two new marketing clients; $750/month continuation if chosen.
+- **Content & social publishing**: One scoped publishing offer: two articles or existing-page updates (up to 1,000 words each), twelve original posts adapted across up to two existing platforms, one email up to 500 words, supplied-asset design, publishing, basic topic/on-page SEO research, kickoff, one revision, and a concise report. First month $495 for the first two new marketing clients total; $750/month continuation if chosen, held for six months. Month to month, paid in advance after written scope, with no automatic renewal.
+- **Local SEO**: One website and one location: a keyword and intent map for up to 10 queries, Search Console baseline and sitemap check, two existing page updates (up to 1,000 words each), and one eligible Google Business Profile review with proposed changes approved before publishing. Ongoing scope is two page updates, GSC/GBP check, and a concise report. Same $495 first month / $750 per month model and boundaries; no ranking, lead, sales, or AI-result promises.
+
+Marketing excludes Website Care, hosting, and technical breakage repair. No paid ads, filming, photo shoots, daily DM/comment management, citation mass cleanup, backlinks, rebuilds, migrations, paid tools, new account verification, or new technical SEO campaigns.
 
 Application work is conversation-priced; there is no public rate card. Start at https://elarenstudio.com/contact/
 
@@ -46,6 +49,8 @@ Guides, teardowns, and templates.
 - [Keep a Static Site Fresh](https://elarenstudio.com/resources/guides/keep-a-static-site-fresh/) — Short, regular updates beat large, infrequent ones.
 - [Project Brief Template](https://elarenstudio.com/resources/templates/project-brief/) — A ready-to-use project brief template.
 - [What to Send a Content Partner](https://elarenstudio.com/resources/guides/what-to-send-a-content-partner/) — Source material, channels, assets, and approvals for a responsible first month.
+- [Content & Social Marketing Cost](https://elarenstudio.com/resources/guides/content-social-marketing-cost/) — What a bounded first month includes and how the $495/$750 model works.
+- [SEO or Social Media for a Small Business](https://elarenstudio.com/resources/guides/seo-or-social-media-for-small-business/) — Choosing between the two scoped marketing paths.
 
 ## Key Pages
 
@@ -58,10 +63,12 @@ Guides, teardowns, and templates.
 - [Resources](https://elarenstudio.com/resources/)
 - [About](https://elarenstudio.com/about/)
 - [Contact](https://elarenstudio.com/contact/)
+- [Social Media Marketing](https://elarenstudio.com/social-media-marketing/)
+- [Marketing Dallas–Fort Worth](https://elarenstudio.com/marketing-dallas-fort-worth/)
 
-## Legacy Offers
+## Website and Marketing Offers
 
-Elaren Studio continues to support existing website clients, including therapy practices and local service businesses. Legacy service pages: [Therapist Websites](https://elarenstudio.com/therapist-websites/), [Local SEO Care](https://elarenstudio.com/local-seo/), [Pricing](https://elarenstudio.com/pricing/).
+Elaren Studio supports website clients, including therapy practices and local service businesses, and offers scoped marketing work for existing sites. See [Therapist Websites](https://elarenstudio.com/therapist-websites/), [Content Marketing](https://elarenstudio.com/content-marketing/), [Local SEO](https://elarenstudio.com/local-seo/), and [Pricing](https://elarenstudio.com/pricing/).
 
 ## Optional
 

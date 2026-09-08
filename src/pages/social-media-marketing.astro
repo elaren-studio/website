@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import InquiryComposer from "../components/InquiryComposer.astro";
+import MarketingResources from "../components/MarketingResources.astro";
+import { CONTENT_BOUNDARIES, CONTENT_PACKAGE, PRICING } from "../lib/marketing";
+
+const description = "Social content creation and scheduling for Dallas–Fort Worth organizations, coordinated with website and email publishing.";
+const schema = { "@context": "https://schema.org", "@type": "Service", name: "Elaren social content and scheduling", serviceType: "Social media marketing", provider: { "@type": "Organization", name: "Elaren Studio", url: "https://elarenstudio.com" }, areaServed: ["Dallas–Fort Worth, Texas", "Texas (remote)"], offers: [{ "@type": "Offer", price: String(PRICING.intro), priceCurrency: "USD", description: `First month for the first ${PRICING.launchClients} new marketing clients; social is included in the shared publishing package.` }, { "@type": "Offer", price: String(PRICING.monthly), priceCurrency: "USD", description: `Optional continuation, month to month; price held ${PRICING.priceHoldMonths} months for launch clients.` }], url: "https://elarenstudio.com/social-media-marketing/" };
+---
+<BaseLayout title="Social Media Marketing DFW" description={description}>
+ <Header />
+ <main>
+  <section class="container py-8 md:py-12"><Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Social content and scheduling" }]} /></section>
+  <section class="container pb-16 md:pb-24"><div class="max-w-3xl">
+   <p class="mb-3 text-sm font-medium uppercase tracking-wider text-accent">Social content and scheduling · DFW and Texas remote</p>
+   <h1 class="mb-6 text-4xl font-semibold text-ink md:text-5xl">Social content and scheduling for DFW organizations.</h1>
+   <p class="text-xl leading-relaxed text-ink/80">We turn one campaign or editorial theme into useful, on-brand posts for up to two platforms you already use. Writing, simple design from supplied assets, scheduling, and the matching website and email pieces stay coordinated.</p>
+   <div class="mt-8 rounded-xl border-2 border-accent/30 bg-accent/5 p-6"><p class="text-3xl font-semibold text-ink">${PRICING.intro} <span class="text-lg font-normal">for month one</span></p><p class="mt-2 text-ink/75">The first {PRICING.launchClients} new marketing clients total across content/social and local SEO can start here. Continue at ${PRICING.monthly}/month, held for {PRICING.priceHoldMonths} months. No setup fee, no automatic renewal, and no long-term contract.</p></div>
+   <div class="mt-7 flex flex-wrap gap-4"><a href="#inquiry" class="inline-flex rounded-xl bg-accent px-6 py-3 font-semibold text-paper no-underline shadow-lg shadow-accent/30">Plan a batch</a><a href="/work-examples/program-campaign" class="inline-flex items-center font-semibold text-accent hover:underline">View the fictional workflow example →</a></div>
+  </div></section>
+  <section class="bg-[var(--clr-muted)] py-16 md:py-20"><div class="container grid gap-8 md:grid-cols-2"><div><h2 class="mb-5 text-3xl font-semibold text-ink">The social work is part of one package</h2><p class="mb-5 text-ink/75">The content and social service pages describe one package: twelve original posts, their platform adaptations, two articles or page updates, and one email each month.</p><ul class="space-y-3 text-ink/80">{CONTENT_PACKAGE.map((item) => <li class="flex gap-3"><span class="text-accent" aria-hidden="true">✓</span><span>{item}</span></li>)}</ul></div><div class="rounded-xl border-2 border-slate-200 bg-paper p-7"><h2 class="mb-4 text-2xl font-semibold text-ink">Example workflow</h2><ol class="space-y-4 text-ink/75"><li><strong>1. Kickoff:</strong> choose a theme, audience, dates, and existing platform pair.</li><li><strong>2. Draft:</strong> write twelve original posts, adapt them to each platform, and pair them with supplied assets.</li><li><strong>3. Review:</strong> you provide one consolidated revision for the batch.</li><li><strong>4. Schedule:</strong> we publish or schedule the approved batch in your existing systems and report on the month.</li></ol><p class="mt-5 text-sm text-ink/65">The <a href="/work-examples/program-campaign" class="text-accent hover:underline">Northside Arts Workshop example</a> is fictional and shows the shape of this workflow.</p></div></div></section>
+  <section class="container py-16 md:py-24"><div class="grid gap-10 md:grid-cols-[1fr_0.9fr]"><div><h2 class="mb-4 text-3xl font-semibold text-ink">Good boundaries make social manageable</h2><ul class="space-y-3 text-ink/75">{CONTENT_BOUNDARIES.map((item) => <li class="flex gap-3"><span aria-hidden="true">•</span><span>{item}</span></li>)}</ul><p class="mt-5 text-ink/75">This does not include filming, photo shoots, paid ads, ad spend, or daily replies. We need an existing account and the access or approval path to schedule there.</p><div class="mt-8 rounded-xl border border-slate-200 p-6"><h3 class="mb-3 text-xl font-semibold text-ink">Social or content marketing?</h3><p class="text-ink/75">Choose this page when your main need is a reliable post batch and schedule. Choose <a href="/content-marketing" class="text-accent hover:underline">content marketing</a> when the website and email pieces are the starting point. The package and price remain the same.</p></div></div><div><h2 class="mb-4 text-3xl font-semibold text-ink">Check fit before we write</h2><p class="mb-6 leading-relaxed text-ink/75">Tell us your public website, current platforms, audience, and target month. We confirm scope in writing before an advance payment.</p><InquiryComposer service="social-media-marketing" /></div></div></section>
+  <section class="container border-t border-slate-100 py-12"><p class="text-sm text-ink/65">Need search work instead? See <a href="/local-seo" class="text-accent hover:underline">Local SEO for Arlington and DFW</a>.</p></section>
+  <section class="container pb-16">
+   <div class="max-w-3xl rounded-xl border-2 border-slate-200 bg-paper p-7">
+    <p class="text-sm font-medium uppercase tracking-wide text-accent">Fictional social post</p>
+    <h2 class="mt-3 text-2xl font-semibold text-ink">Answer one reader question at a time.</h2>
+    <blockquote class="mt-4 border-l-2 border-accent pl-5 leading-relaxed text-ink/80">First art workshop? That is welcome here. Students can explore materials and develop their own ideas with a teaching artist. No prior experience is required.</blockquote>
+    <p class="mt-4 text-sm leading-relaxed text-ink/65">This excerpt answers a parent's question about experience. It comes from our fictional Northside Arts Workshop example; a real campaign would need confirmed event details, an approved image, and a registration link before scheduling.</p>
+    <a href="/work-examples/program-campaign" class="mt-4 inline-block font-semibold text-accent hover:underline">See six sample post angles and their source brief →</a>
+   </div>
+  </section>
+  <MarketingResources />
+ </main><Footer />
+ <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</BaseLayout>
