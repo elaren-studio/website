@@ -1,10 +1,12 @@
 # Roadmap
 
-Last updated: September 7, 2026
+Last updated: September 8, 2026
 
 ## Immediate
 
-- Content-marketing inquiry mailbox delivery and Search Console owner access are verified. Sitemap resubmission remains pending through the owner UI or an OAuth write-scope upgrade; current API access is read-only. Recheck discovery/indexing of the three new routes after Google recrawls.
+- Four individual indexing requests (homepage, content-marketing offer, campaign example, preparation guide) were accepted into Google's priority crawl queue on September 8. Recheck later crawl/indexing; accepted requests do not establish indexed pages.
+
+- Content-marketing inquiry mailbox delivery and Search Console owner access are verified. The additive OAuth upgrade retained all 19 original scopes and added `https://www.googleapis.com/auth/webmasters` (20 total, zero removals); refresh and identity were verified. The sitemap-index submission completed at 16:49:08 UTC with HTTP 204 and a successful initial GET readback accepted pending processing, with zero errors and zero warnings. Current inspection shows the homepage `Crawled - currently not indexed` with the expected canonical and August 30, 2026 last crawl; the three new pages remain unknown to Google. Recheck discovery/indexing after Google recrawls.
 
 - Keep link validation and the 34-page production build green from the canonical Elaren/website path.
 - Keep README, RUNBOOK, and handoff documents aligned with the actual dual content system.
