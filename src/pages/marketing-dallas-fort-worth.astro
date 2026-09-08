@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import InquiryComposer from "../components/InquiryComposer.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { PRICING } from "../lib/marketing";
+
+const serviceSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	name: "Elaren marketing services in Dallas–Fort Worth",
+	url: "https://elarenstudio.com/marketing-dallas-fort-worth/",
+	serviceType: "Marketing services",
+	provider: { "@type": "Organization", name: "Elaren Studio", url: "https://elarenstudio.com" },
+	areaServed: [
+		{ "@type": "City", name: "Arlington", containedInPlace: { "@type": "State", name: "Texas" } },
+		{ "@type": "AdministrativeArea", name: "Dallas–Fort Worth", containedInPlace: { "@type": "State", name: "Texas" } },
+		{ "@type": "State", name: "Texas" },
+	],
+	offers: [{ "@type": "Offer", price: String(PRICING.intro), priceCurrency: "USD", description: "First month for the first two new marketing clients across both package options." }, { "@type": "Offer", price: String(PRICING.monthly), priceCurrency: "USD", description: "Continuation rate held for six months for those first two clients; month to month.", priceSpecification: { "@type": "UnitPriceSpecification", billingDuration: "P1M" } }],
+};
+---
+
+<BaseLayout title="Marketing Services in Dallas–Fort Worth" description="Two focused marketing packages for Arlington, Dallas–Fort Worth, and Texas organizations: content and social publishing or a local SEO alternative.">
+	<Header />
+	<main>
+		<section class="container py-16 md:py-24">
+			<div class="max-w-3xl">
+				<Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Marketing in Dallas–Fort Worth" }]} />
+				<p class="mt-6 mb-3 text-sm font-medium uppercase tracking-wider text-accent">Marketing services in Arlington and DFW</p>
+				<h1 class="mb-6 text-4xl font-semibold text-ink md:text-5xl">Marketing services for small organizations in Dallas–Fort Worth.</h1>
+				<p class="text-xl leading-relaxed text-ink/80">Elaren helps small businesses and nonprofits in Arlington, across Dallas–Fort Worth, and elsewhere in Texas turn approved ideas and existing assets into useful website, social, email, or local-search updates.</p>
+				<p class="mt-5 leading-relaxed text-ink/70">We work remotely with businesses in Arlington, Dallas, Fort Worth, and elsewhere in Texas. Share your primary service area so the work reflects where you actually serve customers.</p>
+				<div class="mt-7 rounded-xl border-2 border-accent/30 bg-accent/5 p-6">
+					<p class="text-3xl font-semibold text-ink">${PRICING.intro} <span class="text-lg font-normal">for the first month</span></p>
+					<p class="mt-2 text-ink/75">Available to the first {PRICING.launchClients} new marketing clients total across both package options. Continue at ${PRICING.monthly}/month, with that rate held for {PRICING.priceHoldMonths} months. No setup fee; month to month after written scope.</p>
+				</div>
+				<div class="mt-7 flex flex-wrap gap-4"><a href="#inquiry" class="inline-flex rounded-xl bg-accent px-6 py-3 font-semibold text-paper no-underline shadow-lg shadow-accent/30">Check fit for my organization</a><a href="/content-marketing" class="inline-flex items-center font-semibold text-accent hover:underline">See the full service scope →</a></div>
+			</div>
+		</section>
+
+		<section class="bg-[var(--clr-muted)] py-16 md:py-20"><div class="container"><div class="max-w-3xl"><p class="mb-3 text-sm font-medium uppercase tracking-wider text-accent">Choose the work that matches the bottleneck</p><h2 class="mb-5 text-3xl font-semibold text-ink">Two focused package options</h2><p class="leading-relaxed text-ink/75">Both options use the same introductory price and continuation terms. Choose the deliverables that match the next decision your organization needs to make.</p></div><div class="mt-8 grid gap-6 md:grid-cols-2"><div class="rounded-xl border-2 border-slate-200 bg-paper p-6"><h3 class="text-xl font-semibold text-ink">Content and social marketing</h3><p class="mt-3 leading-relaxed text-ink/70">Use this when your website needs fresh pages or articles and you want a coherent batch adapted for up to two existing social platforms, plus one email.</p><a href="/content-marketing" class="mt-5 inline-block font-semibold text-accent hover:underline">Review content scope →</a><a href="/social-media-marketing" class="mt-3 block font-semibold text-accent hover:underline">Review social scope →</a></div><div class="rounded-xl border-2 border-slate-200 bg-paper p-6"><h3 class="text-xl font-semibold text-ink">Local SEO</h3><p class="mt-3 leading-relaxed text-ink/70">Choose the alternative when one existing website and primary location need an intent map, page updates, and a Search Console or eligible Business Profile check.</p><a href="/local-seo" class="mt-5 inline-block font-semibold text-accent hover:underline">Review local SEO scope →</a></div></div></div></section>
+
+		<section class="container py-16 md:py-20"><div class="grid gap-10 md:grid-cols-[1fr_0.85fr]"><div><h2 class="mb-5 text-3xl font-semibold text-ink">What a first month can contain</h2><ul class="space-y-3 text-ink/80">{["Content and social: two articles or existing-page updates, up to 1,000 words each", "Content and social: twelve original posts adapted across up to two existing platforms", "Content and social: one email campaign or newsletter up to 500 words", "Local SEO: an intent map, baseline checks, two existing service-page updates, and a review of one eligible profile", "One 30-minute kickoff, one consolidated revision, and a report"].map((item) => <li class="flex gap-3"><span class="text-accent" aria-hidden="true">✓</span><span>{item}</span></li>)}</ul><p class="mt-6 leading-relaxed text-ink/70">The content and social option does not include filming, paid ads or ad spend, daily community replies, technical SEO campaigns, or new tool setup. Local SEO does not include social or email work, citation mass cleanup, link building, rebuilds, or paid tools.</p></div><div class="rounded-xl border-2 border-slate-200 bg-paper p-7"><h2 class="mb-4 text-2xl font-semibold text-ink">A useful regional workflow</h2><ol class="space-y-4 text-ink/75"><li><strong class="text-ink">1. Clarify the service area.</strong> Name the Arlington, Dallas, Fort Worth, or wider Texas communities you actually serve so pages and examples stay consistent.</li><li><strong class="text-ink">2. Confirm fit and scope.</strong> Share your website, audience, goal, target month, channels, and approved source material.</li><li><strong class="text-ink">3. Review one batch.</strong> We put deliverables in writing, then use one consolidated revision before publishing in approved existing systems.</li></ol><p class="mt-5 text-sm text-ink/60">Payment is in advance after written scope. There is no automatic renewal.</p></div></div></section>
+
+		<section class="container border-t border-slate-100 py-12"><p class="text-sm leading-relaxed text-ink/70">For a cost breakdown, read <a href="/resources/guides/content-social-marketing-cost" class="text-accent hover:underline">what content and social marketing costs</a>. To choose between search and publishing, read <a href="/resources/guides/seo-or-social-media-for-small-business" class="text-accent hover:underline">whether SEO or social media comes first</a>. The <a href="/work-examples/program-campaign" class="text-accent hover:underline">fictional campaign example</a> shows how one approved plan can become a monthly batch.</p></section>
+		<section class="bg-[var(--clr-muted)] py-16 md:py-20"><div class="container"><div class="max-w-2xl"><h2 class="mb-4 text-3xl font-semibold text-ink">Ready to compare the fit?</h2><p class="mb-7 leading-relaxed text-ink/75">Use the short inquiry to describe your organization and target month. It prepares an email for your review; it does not send a message from this page.</p><InquiryComposer service="marketing" /></div></div></section>
+	</main>
+	<Footer />
+	<script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+</BaseLayout>

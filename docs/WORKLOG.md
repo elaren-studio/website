@@ -171,3 +171,14 @@
 - Exercised production content-marketing inquiry preparation with synthetic data. Sent the prepared content as a clearly labeled self-test through the owner's external iCloud SMTP account, then verified exact recipient, inbox placement, body integrity, and passing SPF/DKIM/DMARC in Google.
 - The browser connection was lost before a repeat copy check; prior local desktop/mobile copy checks remain valid historical evidence. No legacy FormSubmit or analytics claim, prospect outreach, or social posting is implied.
 - Updated current context, roadmap, and runbook; private mailbox evidence remains outside the public repository.
+
+## 2026-09-08 - DFW marketing buyer-intent implementation
+
+- Reconciled local SEO and general marketing pricing with the $495 introductory month / optional $750 continuation model for two new marketing clients total. Centralized numeric pricing and the shared content/social deliverables.
+- Added social content/scheduling and DFW marketing pages, two buyer guides, inline fictional work excerpts, resource cross-links, and service/source-aware inquiry preparation.
+- Updated homepage, navigation, Services, Pricing, footer, metadata, and public LLM summaries while preserving existing product, website build, and Care offerings.
+- Expanded the mobile menu breakpoint for the additional navigation item and simplified the duplicated pricing tab. Reduced redundant decorative binary markup on the homepage while preserving its existing visual style.
+- Root exercised local SEO inquiry preparation with synthetic details and inspected desktop plus 390px/768px narrow-frame layouts in Personal Chrome. Narrow frames are responsive layout checks, not physical-device tests. No external message was sent.
+- Required validator and production build passed (38 HTML pages; sitemap contains 37 indexable URLs and excludes the 404). Structural review of ten changed routes passed: one H1 each, expected canonical, valid JSON-LD, matching $495/$750 Service offers, sitemap inclusion, and no broken internal links or fragments.
+- All four inquiry variants prepared the correct service/source and mailto recipient/body. Social inquiry copy returned success. Pricing tab and comparison-anchor navigation passed; both themes rendered. No application console errors or framework overlay appeared; existing Plausible ignored localhost as expected. Physical mobile devices and new external email delivery were not retested.
+- Remote release evidence follows when verified.

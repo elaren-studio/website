@@ -57,3 +57,14 @@ Date: September 7, 2026
 The new content marketing page uses explicit scope, pricing, approval, and no-guarantee boundaries from the implementation brief. Its inquiry composer only prepares a mailto draft to the existing public business email and never claims delivery. The Northside Arts Workshop example is prominently fictional, with no active registration, client endorsement, award, or achieved-result claims. Deployment, external sends, indexing, and analytics verification remain separate gates.
 
 The first two new clients may start at $495 for the first month and continue at $750/month, held for six months. The user authorized two source pushes: implementation/documentation first, then documentation recording the verified first push. This does not imply a production deployment or LinkedIn publication.
+
+## D-009 - DFW marketing buyer-intent pages and consistent introductory offers
+
+Status: implemented
+Date: September 8, 2026
+
+The user approved reconciling local SEO with the current introductory offer and expanding marketing buyer-intent pages for Arlington, Dallas–Fort Worth, and remote Texas work. Marketing now appears prominently alongside website services and existing software products, partially superseding D-007's navigation and homepage positioning.
+
+The first two new marketing clients total across both options can start at $495 for month one and optionally continue at $750/month, held six months. Content and social are two entry pages for one publishing package. Local SEO is a separately scoped alternative for one website and primary location. No setup fee, no automatic renewal, advance payment after written scope. Website builds and Care retain their separate prices and scope.
+
+Centralize marketing prices and publishing deliverables in `src/lib/marketing.ts`; synchronize guide prose and public LLM summaries when changing them. Distinguish approved creation/scheduling from paid ads, filming, and daily community management. Keep examples fictional until there is permission and evidence for a real case study. Use one regional overview rather than thin replicated city pages, factual service areas rather than invented offices, and visible scope matching Service structured data. Indexing and lead outcomes require separate evidence.

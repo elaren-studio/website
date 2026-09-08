@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import TherapistCta from '../components/TherapistCta.astro';
+import { PRICING, CONTENT_PACKAGE } from '../lib/marketing';
 
 // Format currency
 const usd = (n: number) => n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
@@ -65,49 +66,8 @@ const CARE_PLANS = [
 	},
 ];
 
-// Growth Retainers (Grow Your Business)
-const GROWTH_PLANS = [
-	{
-		key: 'foundation',
-		title: 'Foundation',
-		price: 1950,
-		description: 'Steady visibility and a clean, maintained presence.',
-		features: [
-			'Google Business Profile management',
-			'1 post/week + review response',
-			'Monthly performance report',
-		],
-	},
-	{
-		key: 'accelerator',
-		title: 'Accelerator',
-		price: 3250,
-		badge: 'Most Popular',
-		description: 'Actively winning more of your local market.',
-		features: [
-			'Everything in Foundation',
-			'2 SEO blog posts/month',
-			'On-page SEO refinements',
-			'Citation & listing management',
-		],
-	},
-	{
-		key: 'authority',
-		title: 'Authority',
-		price: 4750,
-		description: 'Pushing hard for long-term market advantage.',
-		features: [
-			'Everything in Accelerator',
-			'4 SEO blog posts/month',
-			'Advanced outreach campaigns',
-			'Quarterly strategy deep-dive',
-		],
-	},
-];
-
 // Add-ons
 const ADDONS = [
-	{ title: 'Google Business Profile', price: '$400/mo', note: 'Included in Growth retainers' },
 	{ title: 'Analytics + Call Tracking', price: '$500/mo', note: 'Live dashboard + monthly video' },
 	{ title: 'Sales Landing Page', price: '$1,250', note: 'Volume bundles available' },
 	{ title: 'Standard Page', price: '$650', note: 'About, Team, FAQ, etc.' },
@@ -121,8 +81,8 @@ const FAQS = [
 		answer: 'No. SEO and conversion work is measurable, but nobody can honestly promise specific outcomes. What we guarantee is clear scope, consistent execution, and transparent reporting.',
 	},
 	{
-		question: 'Do I pay for Care on top of a Growth retainer?',
-		answer: 'No. All Growth retainers include Standard Care (hosting, security, backups, monitoring, technical repair).',
+		question: 'Does marketing include website care or hosting?',
+		answer: 'No. Content, social publishing, and local SEO are separate from Website Care plans and hosting. Existing systems, access, and supplied assets are required.',
 	},
 	{
 		question: 'What\'s included in "unlimited text & image updates" (Care+)?',
@@ -137,24 +97,21 @@ const FAQS = [
 		answer: '50% to start, 25% at design approval, 25% pre-launch.',
 	},
 	{
-		question: 'What\'s the minimum commitment for Growth retainers?',
-		answer: '6 months. SEO needs time to compound. Third-party tools and any ad spend are billed at cost if used.',
-	},
-	{
 		question: 'Can I add a location to an existing site?',
 		answer: 'Yes. Additional locations using the same design system are $3,500 each.',
 	},
 ];
 ---
 
-<BaseLayout title="Pricing" description="Websites that bring in customers, not just look pretty. Flat pricing for home services and medical practices.">
+<BaseLayout title="Marketing and Website Pricing" description="Compare content and social publishing, local SEO, website builds, and care plans. Marketing starts at $495 for the first month for two new clients.">
 	<Header />
 	<main>
 		<!-- Sticky Section Nav -->
 		<nav class="sticky top-0 z-20 border-b border-slate-200 bg-paper/90 backdrop-blur-sm">
-			<div class="container flex items-center justify-between py-3">
-				<div class="flex gap-6 text-sm">
+			<div class="container flex flex-wrap items-center justify-between gap-3 py-3">
+				<div class="flex flex-wrap gap-x-4 gap-y-2 text-sm">
 					<a href="#builds" class="text-ink/60 hover:text-accent transition-colors font-medium">Builds</a>
+					<a href="#marketing" class="text-ink/60 hover:text-accent transition-colors font-medium">Marketing</a>
 					<a href="#monthly" class="text-ink/60 hover:text-accent transition-colors font-medium">Monthly</a>
 					<a href="#addons" class="text-ink/60 hover:text-accent transition-colors font-medium">Add-ons</a>
 					<a href="#faqs" class="text-ink/60 hover:text-accent transition-colors font-medium">FAQ</a>
@@ -173,10 +130,10 @@ const FAQS = [
 			<div class="max-w-3xl">
 				<p class="text-sm font-medium text-accent uppercase tracking-wider mb-3">Pricing</p>
 				<h1 class="text-4xl md:text-5xl font-semibold mb-6 text-ink leading-tight">
-					Websites that bring in customers, not just look pretty.
+					Clear pricing for marketing and websites.
 				</h1>
 				<p class="text-xl text-ink/80 leading-relaxed mb-8">
-					We build and manage sites for <strong>home services</strong> and <strong>dental / med-spa</strong> businesses. Everything is flat-priced. No mystery hours. If something falls outside scope, we'll tell you before doing it.
+					Choose a focused marketing package for your existing channels, a website build, or ongoing website care. Each has its own deliverables and written scope.
 				</p>
 				<div class="flex flex-wrap gap-4">
 					<a
@@ -191,7 +148,43 @@ const FAQS = [
 					>
 						Book a fit call
 					</a>
+					<a href="#marketing" class="inline-flex items-center px-6 py-3 border-2 border-accent/30 text-accent rounded-xl font-semibold no-underline hover:bg-accent/5 transition-all duration-200">
+						Explore content, social, and local SEO
+					</a>
 				</div>
+			</div>
+		</section>
+
+		<!-- Marketing -->
+		<section id="marketing" class="container py-16 md:py-24">
+			<div class="max-w-4xl mx-auto">
+				<p class="text-sm font-medium text-accent uppercase tracking-wider mb-3">Content, social, and local SEO</p>
+				<h2 class="text-2xl md:text-3xl font-semibold mb-3 text-ink">A focused month-to-month marketing start</h2>
+				<p class="text-ink/70 mb-8 max-w-3xl">For Arlington, Dallas–Fort Worth, and remote Texas teams. The first two new marketing clients across either option start at {usd(PRICING.intro)} for month one, then {usd(PRICING.monthly)}/month if continued. The rate is held for {PRICING.priceHoldMonths} months. Month to month, paid in advance after written scope, with no automatic renewal.</p>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="flex flex-col bg-paper border-2 border-slate-200 rounded-2xl p-8 shadow-md">
+						<h3 class="text-xl font-semibold mb-2 text-ink">Content &amp; social publishing</h3>
+						<p class="text-sm text-ink/60 mb-5">One publishing offer across existing channels, not separate bills.</p>
+						<ul class="flex-1 space-y-3 mb-6 text-sm text-ink/70">
+							{CONTENT_PACKAGE.map((item) => <li class="flex items-start"><span class="text-accent mr-3">✓</span><span>{item}</span></li>)}
+						</ul>
+						<p class="text-xs text-ink/60">No paid ads, filming, photo shoots, daily DM/comment management, new tools, or technical SEO campaigns.</p>
+					</div>
+					<div class="flex flex-col bg-paper border-2 border-slate-200 rounded-2xl p-8 shadow-md">
+						<h3 class="text-xl font-semibold mb-2 text-ink">Local SEO</h3>
+						<p class="text-sm text-ink/60 mb-5">A bounded first month for one website and one location.</p>
+						<ul class="flex-1 space-y-3 mb-6 text-sm text-ink/70">
+							<li>✓ Keyword and intent map for up to 10 queries</li>
+							<li>✓ Google Search Console baseline and sitemap check</li>
+							<li>✓ Two existing page updates, up to 1,000 words each</li>
+							<li>✓ Review one existing eligible GBP and propose changes for approval before publishing</li>
+							<li>✓ One 30-minute kickoff and one consolidated revision</li>
+							<li>✓ Ongoing: two page updates, GSC/GBP check, and a concise report</li>
+						</ul>
+						<p class="text-xs text-ink/60">No citation mass cleanup, backlinks, rebuilds, migrations, paid tools, or new account verification. No promise of rankings, leads, sales, or AI results.</p>
+					</div>
+				</div>
+				<p class="text-sm text-ink/60 mt-6">Both options exclude Website Care, hosting, and technical breakage repair. <a href="/marketing-dallas-fort-worth#inquiry" class="text-accent hover:underline">Start with a written scope</a>.</p>
 			</div>
 		</section>
 
@@ -261,7 +254,7 @@ const FAQS = [
 							role="tab"
 							aria-selected="true"
 							aria-controls="panel-care"
-							class="tab-button px-8 py-3 rounded-xl text-sm font-semibold transition-all duration-200 bg-paper text-ink shadow-md"
+							class="tab-button px-4 sm:px-8 py-3 rounded-xl text-sm font-semibold transition-all duration-200 bg-paper text-ink shadow-md"
 						>
 							<span class="flex items-center gap-2">
 								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -275,13 +268,13 @@ const FAQS = [
 							role="tab"
 							aria-selected="false"
 							aria-controls="panel-growth"
-							class="tab-button px-8 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-ink/60 hover:text-ink"
+							class="tab-button px-4 sm:px-8 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-ink/60 hover:text-ink"
 						>
 							<span class="flex items-center gap-2">
 								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
 								</svg>
-								Grow Your Business
+									Marketing
 							</span>
 						</button>
 					</div>
@@ -347,67 +340,15 @@ const FAQS = [
 					</div>
 				</div>
 
-				<!-- Growth Panel -->
+				<!-- Marketing panel -->
 				<div id="panel-growth" role="tabpanel" aria-labelledby="tab-growth" class="tab-panel hidden">
-					<p class="text-center text-ink/70 mb-8 max-w-2xl mx-auto">
-						For businesses that want to actively win their local market. SEO, content, and visibility—handled.
-					</p>
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-						{GROWTH_PLANS.map((p) => (
-							<div class={`relative flex flex-col bg-paper border-2 rounded-2xl p-8 shadow-md transition-all duration-300 ${
-								p.badge 
-									? 'border-accent shadow-xl md:-translate-y-3 ring-1 ring-accent/20' 
-									: 'border-slate-200 hover:shadow-xl hover:border-accent/30 hover:-translate-y-1'
-							}`}>
-								{p.badge && (
-									<div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
-										<span class="inline-block px-4 py-1.5 bg-accent text-paper text-xs font-bold uppercase tracking-wider rounded-full shadow-lg">
-											{p.badge}
-										</span>
-									</div>
-								)}
-								<div class={p.badge ? 'mt-3' : ''}>
-									<h3 class="text-xl font-semibold mb-1 text-ink">{p.title}</h3>
-									<p class="text-sm text-ink/60 mb-4 min-h-[40px]">{p.description}</p>
-									<div class="mb-6 pb-6 border-b border-slate-100">
-										<span class="text-4xl font-bold text-ink">{usd(p.price)}</span>
-										<span class="text-ink/60 ml-1">/month</span>
-									</div>
-									
-									<div class="mb-5 py-2 px-3 bg-accent/5 rounded-lg border border-accent/20 flex items-center gap-2">
-										<svg class="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-										</svg>
-										<p class="text-xs font-medium text-accent">Includes Standard Care</p>
-									</div>
-									
-									<ul class="flex-1 space-y-3 mb-8 text-sm text-ink/70">
-										{p.features.map((f) => (
-											<li class="flex items-start">
-												<svg class="w-5 h-5 text-accent mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-												</svg>
-												<span>{f}</span>
-											</li>
-										))}
-									</ul>
-									<a
-										href="/contact"
-										class={`mt-auto block text-center px-6 py-3 rounded-xl font-semibold no-underline transition-all duration-200 ${
-											p.badge
-												? 'bg-accent text-paper shadow-md shadow-accent/30 hover:shadow-xl hover:shadow-accent/50 hover:-translate-y-1'
-												: 'bg-slate-50 text-ink border-2 border-slate-200 hover:border-accent/30 hover:bg-paper shadow-sm hover:shadow-md hover:-translate-y-0.5'
-										}`}
-									>
-										Get Started
-									</a>
-								</div>
-							</div>
-						))}
+					<p class="text-center text-ink/70 mb-8 max-w-2xl mx-auto">Content, social publishing, and local SEO are scoped separately from Website Care and hosting.</p>
+					<div class="text-center max-w-2xl mx-auto rounded-2xl border-2 border-slate-200 p-8">
+						<h3 class="text-2xl font-semibold text-ink">Choose content and social publishing or local SEO</h3>
+						<p class="mt-4 text-ink/70">The first {PRICING.launchClients} new marketing clients total start at {usd(PRICING.intro)} for month one. Optional continuation is {usd(PRICING.monthly)}/month, held for {PRICING.priceHoldMonths} months.</p>
+						<a href="#marketing" class="mt-6 inline-flex rounded-xl bg-accent px-6 py-3 font-semibold text-paper no-underline">Compare marketing packages</a>
 					</div>
-					<p class="text-sm text-ink/50 mt-8 text-center">
-						6-month minimum. Third-party tools and ad spend billed at cost if used.
-					</p>
+					<p class="text-sm text-ink/50 mt-8 text-center">Month to month, paid in advance after written scope, with no automatic renewal. Marketing excludes Website Care, hosting, and technical breakage repair.</p>
 				</div>
 			</div>
 		</section>
