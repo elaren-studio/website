@@ -1,5 +1,13 @@
 # Worklog
 
+## 2026-09-08 - Search Console authorization and Elaren sitemap submission
+
+- Completed the additive Google OAuth upgrade in the verified owner account; all 19 original scopes remained and `https://www.googleapis.com/auth/webmasters` was added, for 20 total scopes with zero removals. Refresh and identity were verified. No credentials, backup paths, or private audit identifiers were recorded in the repository.
+- Submitted `https://elarenstudio.com/sitemap-index.xml` at 16:49:08 UTC. The PUT returned HTTP 204; the initial GET readback succeeded and accepted the submission pending processing, with zero errors and zero warnings.
+- Current inspection shows the homepage `Crawled - currently not indexed`, with the expected canonical and August 30, 2026 last crawl; the three new content-marketing pages remain unknown to Google. Page indexing and canonical adoption remain pending later recrawl evidence.
+- Search Console accepted four individual indexing requests into the priority crawl queue: homepage, content-marketing offer, campaign example, and preparation guide. No later indexing is claimed.
+- Verification: link/slug validation and 34-page production build passed; documentation diff checks passed. No public-site source changed during this handoff update.
+
 ## 2026-07-22 - Canonical repository relocation
 
 - Created a clean independent clone at /Volumes/Felix-SSD-1/Cursor Projects/Elaren/website.

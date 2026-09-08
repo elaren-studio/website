@@ -1,11 +1,18 @@
 # Active Context
 
-Last updated: September 7, 2026
+Last updated: September 8, 2026
+
+## Search Console authorization and sitemap submission verified September 8, 2026
+
+- The additive Google OAuth upgrade succeeded in the verified owner account: all 19 original scopes were retained and `https://www.googleapis.com/auth/webmasters` was added, for 20 total scopes with zero removals. Refresh and identity were verified. No credentials, backup paths, or private audit identifiers are recorded here.
+- The Elaren sitemap index `https://elarenstudio.com/sitemap-index.xml` was submitted at 16:49:08 UTC. The PUT returned HTTP 204; the initial GET readback succeeded and accepted the submission pending processing, with zero errors and zero warnings.
+- Current Search Console inspection shows the homepage `Crawled - currently not indexed`, with the expected canonical `https://elarenstudio.com/` and last crawl August 30, 2026. The three new content-marketing pages remain `URL is unknown to Google`.
+- Search Console accepted four individual indexing requests into its priority crawl queue: `/`, `/content-marketing/`, `/work-examples/program-campaign/`, and `/resources/guides/what-to-send-a-content-partner/`. Requests are complete; later indexing remains unverified.
 
 ## Technical foundation verified September 7, 2026
 
-- Search Console domain owner access is verified. The homepage is indexed with the expected canonical; its last reported crawl was August 30. The three new content-marketing routes are not yet known to Google in the inspected URL variants.
-- The live sitemap index returns HTTP 200 and points to `sitemap-0.xml`. Search Console already lists the index with zero errors/warnings and a February 25 last-download timestamp. Resubmission was attempted but rejected because the existing OAuth grant has only `webmasters.readonly`; use the owner UI or a separately consented write-scope upgrade to complete it.
+- The September 7 baseline showed the homepage indexed with the expected canonical and an August 30 crawl. The September 8 inspection above supersedes that index status. Domain owner access remains verified.
+- The live sitemap index returns HTTP 200 and points to `sitemap-0.xml`. Search Console lists the index with zero errors/warnings and a February 25 last-download timestamp. The September 8 submission is recorded above; initial readback accepted it pending processing.
 - A clearly labeled synthetic inquiry from the owner's external iCloud mailbox reached the Google inbox addressed and delivered to `hello@elarenstudio.com`, with exact body integrity and SPF/DKIM/DMARC passing. The production composer prepared the expected recipient/body. The browser connection became unavailable before a repeat copy test; earlier desktop/mobile preparation/copy checks remain recorded below.
 - These checks concern the content-marketing email route. They do not verify the separate legacy FormSubmit integration or establish conversions. Private email identifiers and message evidence stay outside the public repository.
 
