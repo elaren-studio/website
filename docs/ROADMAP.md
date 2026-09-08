@@ -5,6 +5,7 @@ Last updated: September 8, 2026
 ## DFW buyer-intent batch
 
 - Implemented: reconciled local SEO/content offers, social service page, one DFW regional overview, and two buyer guides. Shared marketing prices, explicit delivery limits, fictional examples, service-specific inquiries, and navigation cross-links support the same buying path.
+- Released on main as `2fb497326680c2ed1b7f5a9e1f355fb9bdd650d4`; Vercel Production `6334338852` succeeded. Live routes and sitemap returned expected content. September 8 sitemap resubmission at 18:29:08 UTC was accepted pending processing with zero errors/warnings.
 - Next: inspect Search Console discovery and query/page impressions after recrawl, then refine the pages receiving relevant impressions. Track qualified inquiries by source page using prepared email details; there is no new conversion dashboard.
 - Add further city or industry pages only when there is distinct useful content and evidence of demand. Use actual delivered work for future case studies with client permission.
 - Keep paid advertising, filming, and daily community management outside the publishing package. Review introductory availability after two new marketing clients have joined; do not display an invented remaining-slot counter.

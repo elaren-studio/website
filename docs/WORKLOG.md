@@ -182,3 +182,10 @@
 - Required validator and production build passed (38 HTML pages; sitemap contains 37 indexable URLs and excludes the 404). Structural review of ten changed routes passed: one H1 each, expected canonical, valid JSON-LD, matching $495/$750 Service offers, sitemap inclusion, and no broken internal links or fragments.
 - All four inquiry variants prepared the correct service/source and mailto recipient/body. Social inquiry copy returned success. Pricing tab and comparison-anchor navigation passed; both themes rendered. No application console errors or framework overlay appeared; existing Plausible ignored localhost as expected. Physical mobile devices and new external email delivery were not retested.
 - Remote release evidence follows when verified.
+
+## 2026-09-08 - DFW marketing push, merge, and production verified
+
+- First push: `0433a958ba61a7010a7d6fc77c453df70d80d61c` to `origin/feature/dfw-marketing-2026-09-08`. Local HEAD and `git ls-remote` matched. GitHub account/repository permission, branch comparison, staged scope, required validator, and 38-page build were checked before the release.
+- Authorized main merge: `2fb497326680c2ed1b7f5a9e1f355fb9bdd650d4`. Vercel Production deployment `6334338852` reported success at 18:28:13 UTC. All six changed service/guide routes, Pricing, and the child sitemap returned HTTP 200 with expected content from Vercel. The production regional page was opened and verified in Personal Chrome.
+- Sitemap resubmission at 18:29:08 UTC returned HTTP 204. GET readback returned HTTP 200, zero errors/warnings, and processing pending. Owner identity and access were verified; the token refresh retained all 20 existing scopes with zero removals. Prior sitemap crawl counters are not a current indexing result.
+- This documentation follow-up records the verified first push and deployed implementation for the subsequent push. Generated output, temporary QA files, and the temporary dependency link are excluded from Git. Physical-device testing, new client acquisition, and later Google indexing remain outside these verification claims.
