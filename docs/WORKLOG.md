@@ -199,3 +199,10 @@
 - Read README and the standard handoff docs. Updated current context, roadmap, decisions, runbook, and measurement instructions; README's architecture and commands remain accurate.
 - Verification passed: required validator, 39-page production build, six-route canonical/sitemap/H1/JSON-LD/internal-link checks, case-study publication/update dates, and both 1680×947 image assets. Personal Chrome checks covered desktop rendering, 390px case/guide layouts, mobile menu, image loading, table scrolling containment, and guide-to-local-SEO inquiry preparation. A wrapped link required clicking its visible text after the browser locator's center point missed it; actual navigation and the correct mailto body were verified. No application console errors were observed. Physical mobile devices were not tested.
 - The snapshot script completed authenticated reads and its refusal of existing/public output directories was checked. The initial snapshot has eight URL inspections; future runs also include the newly added first-month guide. Inquiry counts remain unmeasured.
+
+## 2026-09-08 - Proof and guide release verified
+
+- First push verified: local and remote `21643344caa9f53c18d0eb5f97f012035c7f4dcf` on `feature/marketing-proof-2026-09-08`. Main comparison was one commit ahead, zero behind; authorized merge created `c6779b0b8f701f6ea5f09e3cfeaa4a84b2da88a8`.
+- Vercel Production deployment `6340934968` succeeded September 9 at 02:01:17 UTC (September 8 local). HTTP 200 and expected content verified for the case study, first-month guide, local SEO resource links, child sitemap, and both current-public-site JPEGs. The live case study was verified in Personal Chrome.
+- Sitemap PUT at September 9, 02:03:04 UTC returned 204; GET returned 200 with processing pending and zero errors/warnings. Owner identity/property access were verified; no credentials or scopes were changed, and all 20 scopes remain present.
+- This follow-up documents the first push and production receipt for the next documentation push. Private measurement files remain outside Git; no new conversion claims or customer messages were published.

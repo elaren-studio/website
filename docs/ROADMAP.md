@@ -5,6 +5,7 @@ Last updated: September 8, 2026
 ## Proof and measurement batch
 
 - Implemented: evidence-corrected Wright Wellness case study, two current screenshots, first-month local SEO guide, service cross-links, and visible resource update dates.
+- Released as main merge `c6779b0b8f701f6ea5f09e3cfeaa4a84b2da88a8`; Vercel Production `6340934968` succeeded. Public content/assets and sitemap receipt were verified. New-guide indexing is not yet established.
 - Baseline captured privately; use `docs/SEARCH_MEASUREMENT.md` for the reporting window, indexed-version limitations, repeatable script, and inquiry qualification. Start comparisons after sufficient postlaunch data is available.
 - Next candidate: research private-practice marketing search intent and competing pages before deciding on an additional industry page. The existing project establishes relevant implementation experience, not market demand or business results.
 
