@@ -50,6 +50,7 @@ Last updated: September 9, 2026
 
 ## Deferred
 
+- Plausible account verification, custom-event goal setup, and dashboard readback (owner decision September 9, 2026). Leave the deployed event code unchanged and stop treating sign-in as an immediate gate.
 - Hosting-provider migration
 - Broad content-system consolidation
 - Removal of elaren_site_content while current routes still depend on it

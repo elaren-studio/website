@@ -4,6 +4,8 @@ Last updated: September 9, 2026
 
 ## September 9 inquiry and discovery batch
 
+- Owner decision after release: defer Plausible account verification, goal setup, and dashboard readback. Do not keep requesting sign-in; resume only when the owner brings analytics back into scope. Existing deployed event code remains unchanged. Use Search Console/Bing observations and private inbox reconciliation in the meantime.
+
 - The five marketing service entry pages now share direct FormSubmit submission, required reply details, duplicate-submit prevention, a 20-second timeout, and an email/copy fallback that retains entered details on failure. Pricing and delivery scope are unchanged. Privacy copy and public summaries describe the direct route.
 - The existing FormSubmit route was activated using its domain-matched activation message. A labeled synthetic AJAX check and a separate production-browser submission were each independently found in the intended Elaren inbox with their exact marker and source path. The browser displayed acceptance, prevented duplicate submission, and reset only after the explicit new-inquiry action. This proves point-in-time route delivery, not actual prospect conversion.
 - Added fixed service/source-page events for inquiry start, confirmed provider acceptance, and failed/unconfirmed submission. Form field values are excluded. Plausible is signed out in Personal Chrome; account ownership, goal configuration, and dashboard readback remain pending owner sign-in. Qualification and collected cash remain private manual ledger measures.
@@ -112,7 +114,7 @@ The repository owner, name, local origin, and Vercel Git connection changed succ
 ## Next actions
 
 1. Continue running validation and a production build before pushes to main.
-2. Complete Plausible owner sign-in, verify the Elaren property, configure matching custom-event goals, and read back an event. Keep qualified-inquiry reconciliation in the private ledger.
+2. Keep qualified-inquiry reconciliation in the private ledger and review postlaunch Search Console/Bing evidence. Plausible owner sign-in and goal verification are deferred by the owner.
 
 ## September 7, 2026 content marketing implementation
 

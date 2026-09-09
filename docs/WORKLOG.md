@@ -242,3 +242,7 @@
 - IndexNow accepted seven exact production URLs with HTTP 202 after public-key and selected-page HTTP checks: the five marketing entry pages, private-practice sample, and first-month local SEO guide. Key validation and indexing remain separate pending observations.
 - Plausible remained signed out; the user was asked to sign in in Personal Chrome. Scoped credential lookup did not find an exact Plausible item, and no broad credential inventory was performed. Event code is deployed, but account ownership, configured goals, and dashboard event readback remain incomplete. No new subscription or paid tool was purchased.
 - This follow-up records the verified push/deployment/provider receipts for the second documentation push. Local server and temporary dependency/cache artifacts are cleaned up after release.
+
+## 2026-09-09 - Plausible deferred by owner
+
+- The owner deferred Plausible. Updated current context, roadmap, and measurement instructions so account sign-in and goal setup are no longer immediate actions. The deployed event code remains unchanged. No analytics login or account configuration was attempted during this follow-up.
