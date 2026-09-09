@@ -2,6 +2,14 @@
 
 Last updated: September 8, 2026
 
+## September 8 private-practice marketing batch
+
+- Added `/private-practice-marketing/`, focused on content marketing for therapists and small counseling practices in Arlington, DFW, and remote Texas. The existing $495 introductory / optional $750 monthly offer and shared two-client availability remain unchanged. Local SEO and website builds are explicit alternatives.
+- Added `/work-examples/private-practice-content/`: an invented Arlington practice, article outline/opening, existing-page excerpt, six sample posts from twelve, and a referral email example. Instagram/LinkedIn are used; no patient stories, actual campaign, clinical review, or performance outcomes are claimed.
+- The industry page links the disclosed Wright Wellness case study and therapist website offer. Services, therapist websites, and the shared marketing resources block link back. The inquiry composer has practice-specific fields and continues preparing an email locally; no direct form submission or analytics integration was added.
+- Search-result/competitor review established commercial category evidence only. Private research notes remain outside this public repository. The two new routes were added to the existing read-only measurement script; indexing, demand, and inquiries remain unverified for these pages.
+- Implementation is in `feature/private-practice-marketing-2026-09-08`. Required validator and 41-page build passed, as did seven-route structural checks and Personal Chrome desktop/mobile inquiry navigation/preparation/copy. Production release evidence will be recorded after deployment.
+
 ## September 8 case study, local SEO guide, and measurement
 
 - Reworked the existing Wright Wellness teardown with two current public screenshots, documented homepage/service/team changes, and a specific writing example. Felix confirmed his role as Operations Manager; the case explicitly discloses the relationship. Retained source contradicts earlier missing-H1/thin-page claims, which were removed. No historical screenshot or measured outcome is invented.

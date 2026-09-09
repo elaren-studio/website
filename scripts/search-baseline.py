@@ -20,7 +20,8 @@ ROUTES = ["/", "/content-marketing/", "/social-media-marketing/", "/local-seo/",
           "/marketing-dallas-fort-worth/", "/resources/guides/content-social-marketing-cost/",
           "/resources/guides/seo-or-social-media-for-small-business/",
           "/resources/teardowns/wright-wellness-before-after-teardown/",
-          "/resources/guides/first-month-local-seo/"]
+          "/resources/guides/first-month-local-seo/", "/private-practice-marketing/",
+          "/work-examples/private-practice-content/"]
 
 
 def main():

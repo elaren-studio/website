@@ -2,12 +2,18 @@
 
 Last updated: September 8, 2026
 
+## Private-practice marketing batch
+
+- Implemented one content-marketing industry page, linked practice sample, practice-specific inquiry fields, and contextual links from the established offers. Prices, client limits, and service boundaries are unchanged.
+- Research found commercial providers for all three query groups; it did not establish keyword volume, an easy ranking opportunity, or price leadership. Use postlaunch Search Console and actual inquiry evidence before adding another industry or city page.
+- Local QA passed: validator, 41-page build, structural links/metadata, and Personal Chrome desktop/mobile buyer path. Publication is pending for this batch. Direct inquiry submission, analytics ownership verification, and business-profile eligibility remain separate work.
+
 ## Proof and measurement batch
 
 - Implemented: evidence-corrected Wright Wellness case study, two current screenshots, first-month local SEO guide, service cross-links, and visible resource update dates.
 - Released as main merge `c6779b0b8f701f6ea5f09e3cfeaa4a84b2da88a8`; Vercel Production `6340934968` succeeded. Public content/assets and sitemap receipt were verified. New-guide indexing is not yet established.
 - Baseline captured privately; use `docs/SEARCH_MEASUREMENT.md` for the reporting window, indexed-version limitations, repeatable script, and inquiry qualification. Start comparisons after sufficient postlaunch data is available.
-- Next candidate: research private-practice marketing search intent and competing pages before deciding on an additional industry page. The existing project establishes relevant implementation experience, not market demand or business results.
+- Private-practice intent research and the resulting page/sample are covered in the batch above. The existing project establishes relevant implementation experience, not market demand or business results.
 
 ## DFW buyer-intent batch
 
@@ -23,7 +29,7 @@ Last updated: September 8, 2026
 
 - Content-marketing inquiry mailbox delivery and Search Console owner access are verified. The additive OAuth upgrade retained all 19 original scopes and added `https://www.googleapis.com/auth/webmasters` (20 total, zero removals); refresh and identity were verified. The sitemap-index submission completed at 16:49:08 UTC with HTTP 204 and a successful initial GET readback accepted pending processing, with zero errors and zero warnings. Current inspection shows the homepage `Crawled - currently not indexed` with the expected canonical and August 30, 2026 last crawl; the three new pages remain unknown to Google. Recheck discovery/indexing after Google recrawls.
 
-- Keep link validation and the 39-page production build green from the canonical Elaren/website path.
+- Keep link validation and the 41-page build green from the active Elaren/website task worktree.
 - Keep README, RUNBOOK, and handoff documents aligned with the actual dual content system.
 - Website transferred to elaren-studio/website with repository identity and history preserved.
 - Vercel project, production branch, selected-repository GitHub App access, production deployment, and elarenstudio.com attachment verified after reconnection.

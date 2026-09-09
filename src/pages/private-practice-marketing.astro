@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import InquiryComposer from "../components/InquiryComposer.astro";
+import { PRICING, CONTENT_PACKAGE, CONTENT_BOUNDARIES } from "../lib/marketing";
+import { PLANS } from "../lib/pricing";
+
+const description = "Content marketing for therapists and small private practices in Arlington, DFW, and Texas: website copy, social posts, and email from $495 for month one.";
+const faqs = [
+  ["Do you offer SEO for therapists?", "Yes. Basic topic research and on-page SEO for the two written pieces are included in the content package. If your priority is improving existing service pages and understanding search visibility, choose the separately scoped local SEO option. The two packages are alternatives, not a combined $495 service."],
+  ["Does social media management include replies or advertising?", "Our scope is content creation, design using supplied assets, and approved publishing or scheduling on up to two existing platforms. Your team handles comments, direct messages, appointment inquiries, and clinical questions. Paid advertising, ad spend, filming, and daily community management are outside this package."],
+  ["Can you write for a solo therapist or a group practice?", "Either can fit when the work can be kept to one agreed monthly batch and one person consolidates feedback. Share the services and audience you want to prioritize. A large roster, multiple locations, or a full website rewrite may need a different scope."],
+  ["Who checks the practice information?", "Your designated reviewer confirms services, clinician credentials, fees, availability, service areas, and contact instructions. A qualified clinician at your practice reviews any clinical content. We publish only after your approval; Elaren provides marketing support, not clinical review or care."],
+  ["How soon will this produce inquiries?", "We do not promise a date or number of inquiries, search positions, or AI citations. Month one produces the agreed content and a report. We review available search and engagement data separately from actual inquiries received by your practice."],
+];
+const serviceSchema = {
+  "@context": "https://schema.org", "@type": "Service",
+  name: "Content marketing for therapists and private practices",
+  serviceType: "Content and social publishing",
+  url: "https://elarenstudio.com/private-practice-marketing/",
+  description,
+  provider: { "@type": "Organization", name: "Elaren Studio", url: "https://elarenstudio.com" },
+  areaServed: ["Arlington, Texas", "Dallas–Fort Worth, Texas", "Texas (remote)"],
+  offers: [
+    { "@type": "Offer", price: String(PRICING.intro), priceCurrency: "USD", description: `First month for the first ${PRICING.launchClients} new marketing clients total across content/social and the separate local SEO option; advance payment after written scope.` },
+    { "@type": "Offer", price: String(PRICING.monthly), priceCurrency: "USD", description: `Optional monthly continuation for those introductory clients, rate held ${PRICING.priceHoldMonths} months; no automatic renewal.` },
+  ],
+};
+---
+
+<BaseLayout title="Content Marketing for Therapists & Private Practices" description={description}>
+  <Header />
+  <main>
+    <section class="container py-16 md:py-24">
+      <div class="max-w-3xl">
+        <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: "Private practice marketing" }]} />
+        <p class="mt-6 mb-3 text-sm font-medium uppercase tracking-wider text-accent">Therapists and counseling practices · Arlington, DFW, and Texas</p>
+        <h1 class="mb-6 text-4xl font-semibold text-ink md:text-5xl">Content marketing for your private practice.</h1>
+        <p class="text-xl leading-relaxed text-ink/80">Give prospective clients and referral partners clear answers about your practice. We turn approved information into website content, social posts, and one email—then publish the batch after your review.</p>
+        <div class="mt-8 rounded-xl border-2 border-accent/30 bg-accent/5 p-6">
+          <p class="text-3xl font-semibold text-ink">${PRICING.intro} <span class="text-lg font-normal">for the first month</span></p>
+          <p class="mt-2 leading-relaxed text-ink/75">For the first {PRICING.launchClients} new marketing clients total across content/social and local SEO. Optional continuation is ${PRICING.monthly}/month, held for {PRICING.priceHoldMonths} months. No setup fee or automatic renewal. Payment follows a written scope and is due before work starts.</p>
+        </div>
+        <div class="mt-7 flex flex-wrap gap-4">
+          <a href="#inquiry" class="inline-flex rounded-xl bg-accent px-6 py-3 font-semibold text-paper no-underline shadow-lg shadow-accent/30">Check fit for my practice</a>
+          <a href="/work-examples/private-practice-content" class="inline-flex items-center font-semibold text-accent hover:underline">See a sample month →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[var(--clr-muted)] py-16 md:py-20">
+      <div class="container grid gap-10 md:grid-cols-2">
+        <div>
+          <h2 class="mb-5 text-3xl font-semibold text-ink">One coordinated monthly batch</h2>
+          <ul class="space-y-3 text-ink/80">{CONTENT_PACKAGE.map((item) => <li class="flex gap-3"><span class="text-accent" aria-hidden="true">✓</span><span>{item}</span></li>)}</ul>
+          <p class="mt-5 text-sm leading-relaxed text-ink/70">Twelve original posts means twelve distinct pieces, adapted for the selected channels—not twenty-four different posts. We work in your existing website, social, and email systems.</p>
+        </div>
+        <div class="rounded-xl border-2 border-slate-200 bg-paper p-7">
+          <h2 class="mb-4 text-2xl font-semibold text-ink">Useful questions your content can answer</h2>
+          <ul class="space-y-4 leading-relaxed text-ink/75">
+            <li><strong class="text-ink">Before reaching out:</strong> Which services do you offer, where do you work, and how does someone contact the office?</li>
+            <li><strong class="text-ink">Before an appointment:</strong> Where can someone confirm fees, format, current availability, and what the office needs from them?</li>
+            <li><strong class="text-ink">Before a referral:</strong> Where can a professional find current practice information and the appropriate inquiry route?</li>
+          </ul>
+          <a href="/work-examples/private-practice-content" class="mt-6 inline-block font-semibold text-accent hover:underline">Read the fictional practice example →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-16 md:py-20">
+      <div class="max-w-3xl"><h2 class="mb-5 text-3xl font-semibold text-ink">Experience inside a working practice</h2>
+        <p class="leading-relaxed text-ink/75">Elaren is credited as the designer of the Wright Wellness website. Felix Torres, Elaren’s Director, also serves as Wright Wellness’s Operations Manager. That work gives us direct experience organizing service information, clinician navigation, and the steps visitors use to reach an office.</p>
+        <p class="mt-4 leading-relaxed text-ink/75">The case study shows current screenshots and documented website changes. It discloses the working relationship and makes no claim of improved rankings, patient volume, or revenue.</p>
+        <a href="/resources/teardowns/wright-wellness-before-after-teardown" class="mt-6 inline-block font-semibold text-accent hover:underline">See the Wright Wellness website work →</a>
+      </div>
+    </section>
+
+    <section class="container border-t border-slate-200 py-16 md:py-20">
+      <h2 class="mb-8 text-3xl font-semibold text-ink">Start with the work your practice needs</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="rounded-xl border-2 border-accent/30 bg-accent/5 p-6"><h3 class="text-xl font-semibold text-ink">Website, social, and email content</h3><p class="mt-3 leading-relaxed text-ink/75">Choose the publishing package when you have approved practice information and need it written, adapted, and scheduled consistently.</p><a href="#inquiry" class="mt-5 inline-block font-semibold text-accent hover:underline">Discuss the content batch →</a></article>
+        <article class="rounded-xl border-2 border-slate-200 bg-paper p-6"><h3 class="text-xl font-semibold text-ink">Local SEO for therapists</h3><p class="mt-3 leading-relaxed text-ink/75">Choose the separate ${PRICING.intro} first-month option for one website and primary location: up to ten query intents, a Search Console baseline and sitemap check, two existing-page updates up to 1,000 words each, and review of one existing eligible Business Profile. Includes kickoff, one revision, and a report.</p><p class="mt-3 text-sm text-ink/65">Website-only work is available without an eligible profile. Social and email are excluded from this option.</p><a href="/local-seo" class="mt-5 inline-block font-semibold text-accent hover:underline">Review local SEO and continuation scope →</a></article>
+        <article class="rounded-xl border-2 border-slate-200 bg-paper p-6"><h3 class="text-xl font-semibold text-ink">A new practice website</h3><p class="mt-3 leading-relaxed text-ink/75">If you need a new site, review the separate Website Launch offer at the ${PLANS.launch.price} founding rate. Hosting and care plans have their own terms; a build is not included in the marketing month.</p><a href="/therapist-websites" class="mt-5 inline-block font-semibold text-accent hover:underline">See therapist website plans →</a></article>
+      </div>
+    </section>
+
+    <section class="bg-[var(--clr-muted)] py-16 md:py-20">
+      <div class="container grid gap-10 md:grid-cols-2">
+        <div><h2 class="mb-5 text-3xl font-semibold text-ink">A review process your team can manage</h2>
+          <ol class="space-y-5 leading-relaxed text-ink/75">
+            <li><strong class="text-ink">1. Choose the focus.</strong> Share public links, your priority services, actual service area, existing channels, and target month. We confirm fit, deliverables, access, and review dates in writing.</li>
+            <li><strong class="text-ink">2. Supply the facts.</strong> Provide approved service descriptions, brand assets, clinician bios, contact instructions, and an existing email audience that has agreed to receive your updates. Choose one person to collect feedback.</li>
+            <li><strong class="text-ink">3. Review the batch.</strong> We draft; your reviewer verifies practice facts and consolidates one revision. Your clinical reviewer approves any clinical statements. Draft and publishing dates depend on receiving the agreed material and feedback.</li>
+            <li><strong class="text-ink">4. Approve publication.</strong> We publish or schedule the approved work in the agreed existing systems and report on what was delivered and the available performance data.</li>
+          </ol>
+        </div>
+        <div><h2 class="mb-5 text-3xl font-semibold text-ink">Content creation and scheduling, with clear limits</h2>
+          <ul class="space-y-4 leading-relaxed text-ink/75">{CONTENT_BOUNDARIES.map((item) => <li>{item}</li>)}</ul>
+          <p class="mt-5 leading-relaxed text-ink/75">Your team continues handling appointment requests and social replies. We use approved business information; patient records and private client stories are not needed. This service does not include clinical, legal, or compliance review.</p>
+          <p class="mt-5 leading-relaxed text-ink/75">We work remotely with practices in Arlington, Dallas–Fort Worth, and elsewhere in Texas. Your content reflects where and how your practice actually provides services.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-16 md:py-20"><div class="grid gap-10 md:grid-cols-2">
+      <div><h2 class="mb-5 text-3xl font-semibold text-ink">Questions before you start</h2>{faqs.map(([question, answer]) => <details class="border-b border-slate-200 py-4"><summary class="cursor-pointer font-semibold text-ink">{question}</summary><p class="mt-3 leading-relaxed text-ink/75">{answer}</p></details>)}<p class="mt-6 text-sm text-ink/70">For a broader comparison, read <a href="/resources/guides/first-month-local-seo" class="text-accent hover:underline">what a first month of local SEO includes</a> or <a href="/content-marketing" class="text-accent hover:underline">the full content marketing scope</a>.</p></div>
+      <div><h2 class="mb-4 text-3xl font-semibold text-ink">Tell us about your practice</h2><p class="mb-6 leading-relaxed text-ink/75">This is a business-service inquiry to Elaren, not an appointment request. Share public practice information only. We will confirm the package and terms before you pay.</p><InquiryComposer service="private-practice-marketing" /></div>
+    </div></section>
+  </main>
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+</BaseLayout>

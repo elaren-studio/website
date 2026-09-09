@@ -280,8 +280,8 @@ Single source of truth for plan names, prices, descriptions, and billing periods
 | Key | Name | Price | Billing |
 |-----|------|-------|---------|
 | `launch` | Website Launch | $500 | one-time |
-| `starter` | WaaS Starter | $99 | monthly |
-| `carePlus` | WaaS Care+ | $199 | monthly |
+| `starter` | Essentials | $49 | monthly |
+| `carePlus` | Care+ | $129 | monthly |
 
 To change a price, edit `pricing.ts`. Both the visible UI and structured data update from that one file.
 
@@ -448,7 +448,13 @@ When adding new pages or making significant changes:
 - `/resources/guides/content-social-marketing-cost`: package cost and scope decision guide.
 - `/resources/guides/seo-or-social-media-for-small-business`: search versus publishing decision guide.
 
-The inquiry composer accepts a service prop, supplies relevant fields, and includes the service and source route in the prepared email. Test preparation and the generated mailto recipient/body after changing it; do not treat preparation as a send or a measured conversion. Run `npm run validate` and `npm run build` (39 pages after the proof/guide batch), inspect canonical/Service data and sitemap inclusion, then verify deployed URLs. Existing historical Google inspection results above are dated observations, not current rankings.
+The inquiry composer accepts a service prop, supplies relevant fields, and includes the service and source route in the prepared email. Test preparation and the generated mailto recipient/body after changing it; do not treat preparation as a send or a measured conversion. Run `npm run validate` and `npm run build` (41 pages after the private-practice batch), inspect canonical/Service data and sitemap inclusion, then verify deployed URLs. Existing historical Google inspection results above are dated observations, not current rankings.
+
+## Private-practice content map
+
+- `/private-practice-marketing/`: industry entry to the existing publishing package, with separately scoped local SEO and website alternatives, real project disclosure, approval responsibilities, and the `private-practice-marketing` inquiry configuration.
+- `/work-examples/private-practice-content/`: fictional article outline/opening, existing-page excerpt, six of twelve sample posts, and one referral email. No real client campaign or results are implied. The example's contact actions are plain text; its business inquiry links back to Elaren.
+- Services, therapist websites, and the shared marketing resource cards link to the industry page. Both new routes are included in `scripts/search-baseline.py` for future private snapshots.
 
 
 ## Case-study evidence and measurement
