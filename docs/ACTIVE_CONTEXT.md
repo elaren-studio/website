@@ -62,7 +62,7 @@ This production record supersedes earlier feature-branch-only release boundaries
 - The site uses Astro 7, TypeScript, Tailwind CSS 4, MDX content collections, FormSubmit, and Plausible.
 - The homepage presents marketing and website services alongside the existing software products per D-009, partially superseding D-007.
 - Dependencies were fully updated on July 29, 2026, including the Astro 5-to-7 and MDX 4-to-7 majors; npm audit reports zero vulnerabilities.
-- The production build currently generates 39 static pages.
+- The production build currently generates 41 static pages.
 - The therapist offering was repriced on August 9, 2026: Website Launch $500 founding client rate (standard $1,200), Essentials $49/mo (formerly WaaS Starter $99), Care+ $129/mo (formerly WaaS Care+ $199), plus a +$750 copywriting add-on; /therapist-websites gained an AI-builder comparison section, and pricing.ts, the city SEO pages, resource guides, and llms-full.txt were synchronized.
 - /studioregister is a Studio Register product landing page added on July 23, 2026 to support Stripe business verification; it follows the product's legal-naming boundary (An Elaren Studio product; owned and operated by Wright Torres Group, LLC; no d/b/a language) and may later grow into a fuller product site.
 - Therapist offering repriced August 9, 2026 for Facebook-group promotion: Website Launch $500 founding rate (standard $1,200), Essentials $49/mo (was WaaS Starter $99), Care+ $129/mo (was WaaS Care+ $199), plus a +$750 copywriting add-on; synchronized across the therapist page, src/lib/pricing.ts, city SEO pages, resource guides, and llms-full.txt.
