@@ -6,7 +6,7 @@ Last updated: September 8, 2026
 
 - Implemented one content-marketing industry page, linked practice sample, practice-specific inquiry fields, and contextual links from the established offers. Prices, client limits, and service boundaries are unchanged.
 - Research found commercial providers for all three query groups; it did not establish keyword volume, an easy ranking opportunity, or price leadership. Use postlaunch Search Console and actual inquiry evidence before adding another industry or city page.
-- Local QA passed: validator, 41-page build, structural links/metadata, and Personal Chrome desktop/mobile buyer path. Publication is pending for this batch. Direct inquiry submission, analytics ownership verification, and business-profile eligibility remain separate work.
+- Released as main merge `388a5f282eae66e18b9b9f1437daa11c3a5ef913`; Vercel Production `6342750325` succeeded and live content/sitemap were verified through HTTP. Local QA passed: validator, 41-page build, structural links/metadata, and Personal Chrome desktop/mobile buyer path. Sitemap submission was accepted pending processing. Direct inquiry submission, analytics ownership verification, and business-profile eligibility remain separate work.
 
 ## Proof and measurement batch
 
