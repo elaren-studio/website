@@ -2,6 +2,14 @@
 
 Last updated: September 8, 2026
 
+## September 8 case study, local SEO guide, and measurement
+
+- Reworked the existing Wright Wellness teardown with two current public screenshots, documented homepage/service/team changes, and a specific writing example. Felix confirmed his role as Operations Manager; the case explicitly discloses the relationship. Retained source contradicts earlier missing-H1/thin-page claims, which were removed. No historical screenshot or measured outcome is invented.
+- Added `/resources/guides/first-month-local-seo` with the $495 scope, annotated fictional Arlington example, approval steps, and optional $750 continuation. The shared service-page resource block links to both pieces. Resource frontmatter now supports an optional `updatedDate`, displayed visibly and in Article `dateModified` while retaining the original publication date.
+- Captured a private Search Console baseline for August 9–September 5 (finalized web-search data) and eight URL inspections. Homepage, content-marketing, and the existing case study were indexed at capture; local SEO was discovered but not indexed, and the four newest marketing routes were unknown. This supersedes the earlier dated inspection state below; crawl dates can predate the newest deployed copy.
+- Added `scripts/search-baseline.py` and `docs/SEARCH_MEASUREMENT.md` for reproducible snapshots and a manual weekly review. Search metrics and the inquiry ledger stay outside this public repository. Qualified inquiries remain unmeasured until the private ledger is reconciled. No new analytics integration or scheduled automation was created.
+- Current build: 39 pages. Release verification is recorded in the worklog after provider readback.
+
 ## September 8 DFW marketing implementation
 
 - The current batch reconciles `/local-seo` and `/content-marketing`, adds `/social-media-marketing` and `/marketing-dallas-fort-worth`, and adds the buyer guides `/resources/guides/content-social-marketing-cost` and `/resources/guides/seo-or-social-media-for-small-business`.
@@ -43,7 +51,7 @@ This production record supersedes earlier feature-branch-only release boundaries
 - The site uses Astro 7, TypeScript, Tailwind CSS 4, MDX content collections, FormSubmit, and Plausible.
 - The homepage presents marketing and website services alongside the existing software products per D-009, partially superseding D-007.
 - Dependencies were fully updated on July 29, 2026, including the Astro 5-to-7 and MDX 4-to-7 majors; npm audit reports zero vulnerabilities.
-- The production build currently generates 38 static pages.
+- The production build currently generates 39 static pages.
 - The therapist offering was repriced on August 9, 2026: Website Launch $500 founding client rate (standard $1,200), Essentials $49/mo (formerly WaaS Starter $99), Care+ $129/mo (formerly WaaS Care+ $199), plus a +$750 copywriting add-on; /therapist-websites gained an AI-builder comparison section, and pricing.ts, the city SEO pages, resource guides, and llms-full.txt were synchronized.
 - /studioregister is a Studio Register product landing page added on July 23, 2026 to support Stripe business verification; it follows the product's legal-naming boundary (An Elaren Studio product; owned and operated by Wright Torres Group, LLC; no d/b/a language) and may later grow into a fuller product site.
 - Therapist offering repriced August 9, 2026 for Facebook-group promotion: Website Launch $500 founding rate (standard $1,200), Essentials $49/mo (was WaaS Starter $99), Care+ $129/mo (was WaaS Care+ $199), plus a +$750 copywriting add-on; synchronized across the therapist page, src/lib/pricing.ts, city SEO pages, resource guides, and llms-full.txt.

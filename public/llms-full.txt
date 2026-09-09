@@ -708,12 +708,17 @@ Guides, teardowns, and templates for clean, durable websites.
 
 ### Teardowns
 
-**Wright Wellness Website Teardown: Before vs After**
+**Wright Wellness Website: What Changed and Why**
 URL: https://elarenstudio.com/resources/teardowns/wright-wellness-before-after-teardown/
 
-A real before-and-after website redesign for a mental health practice. See what changed, why it matters, and the practical lessons for service businesses. Covers homepage structure, mobile UX, service pages, provider bios, and conversion flow improvements.
+A documented website case study updated September 8, 2026, with two current public screenshots, source-supported homepage and service-navigation changes, and a concrete writing example. Elaren is credited as designer; Felix Torres is also Wright Wellness's Operations Manager. Historical comparison is based on retained website source, not archived screenshots. No ranking, conversion, revenue, or patient-outcome improvements are claimed. This broader website project is not the $495 local SEO scope.
 
 ### Guides
+
+**What Does a First Month of Local SEO Include?**
+URL: https://elarenstudio.com/resources/guides/first-month-local-seo/
+
+A practical explanation of the $495 introductory month: one website and primary location, up to ten query intents, Search Console/sitemap baseline, two existing-page updates up to 1,000 words each, optional existing eligible Business Profile review, approvals, kickoff, one revision, and report. Includes a fictional Arlington appliance-service example without invented search volume or ranking results. Optional $750/month continuation held six months for the first two new marketing clients total across both options; no setup fee or automatic renewal.
 
 **How Much Does a Website Redesign Cost in 2026?**
 URL: https://elarenstudio.com/resources/guides/website-redesign-cost-2026/

@@ -42,7 +42,8 @@ Application work is conversation-priced; there is no public rate card. Start at 
 Guides, teardowns, and templates.
 
 - [Resources Index](https://elarenstudio.com/resources/)
-- [Wright Wellness Website Teardown: Before vs After](https://elarenstudio.com/resources/teardowns/wright-wellness-before-after-teardown/) — A real before-and-after website redesign for a mental health practice.
+- [Wright Wellness Website: What Changed and Why](https://elarenstudio.com/resources/teardowns/wright-wellness-before-after-teardown/) — Current screenshots and documented changes; Felix Torres is also the practice's Operations Manager. No measured business-result claims.
+- [What Does a First Month of Local SEO Include?](https://elarenstudio.com/resources/guides/first-month-local-seo/) — The $495 scope, annotated fictional page example, approvals, and optional continuation.
 - [How Much Does a Website Redesign Cost in 2026?](https://elarenstudio.com/resources/guides/website-redesign-cost-2026/) — Real cost ranges, hidden costs, and payment models compared for service businesses.
 - [How Long Does a Website Take in 2026?](https://elarenstudio.com/resources/guides/how-long-does-a-website-take-2026/) — Honest timelines, the seven delay killers, and how to launch in 10 days instead of 10 weeks.
 - [Squarespace vs WordPress vs Webflow in 2026](https://elarenstudio.com/resources/guides/squarespace-vs-wordpress-vs-webflow-2026/) — Evidence-based platform comparison for service businesses.

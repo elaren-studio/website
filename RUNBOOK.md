@@ -448,4 +448,11 @@ When adding new pages or making significant changes:
 - `/resources/guides/content-social-marketing-cost`: package cost and scope decision guide.
 - `/resources/guides/seo-or-social-media-for-small-business`: search versus publishing decision guide.
 
-The inquiry composer accepts a service prop, supplies relevant fields, and includes the service and source route in the prepared email. Test preparation and the generated mailto recipient/body after changing it; do not treat preparation as a send or a measured conversion. Run `npm run validate` and `npm run build` (38 pages after this batch), inspect canonical/Service data and sitemap inclusion, then verify deployed URLs. Existing historical Google inspection results above are dated observations, not current rankings.
+The inquiry composer accepts a service prop, supplies relevant fields, and includes the service and source route in the prepared email. Test preparation and the generated mailto recipient/body after changing it; do not treat preparation as a send or a measured conversion. Run `npm run validate` and `npm run build` (39 pages after the proof/guide batch), inspect canonical/Service data and sitemap inclusion, then verify deployed URLs. Existing historical Google inspection results above are dated observations, not current rankings.
+
+
+## Case-study evidence and measurement
+
+The existing Wright Wellness teardown includes current public screenshots under `public/images/case-studies/wright-wellness/`, explicit relationship disclosure, and source-supported changes. Screenshot dates describe capture dates; do not describe them as historical before images. Resource `updatedDate` is optional and drives a visible update label and Article `dateModified`, preserving `datePublished`.
+
+The local SEO buying guide is `/resources/guides/first-month-local-seo`. Keep it aligned with the service scope and `src/lib/marketing.ts` prices. See `docs/SEARCH_MEASUREMENT.md` for the read-only `scripts/search-baseline.py` workflow, private snapshot location rules, query reporting limits, and manual inquiry ledger. Do not commit generated measurement files or count prepared emails as received inquiries.

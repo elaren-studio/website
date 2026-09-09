@@ -2,6 +2,12 @@
 
 Last updated: September 8, 2026
 
+## Proof and measurement batch
+
+- Implemented: evidence-corrected Wright Wellness case study, two current screenshots, first-month local SEO guide, service cross-links, and visible resource update dates.
+- Baseline captured privately; use `docs/SEARCH_MEASUREMENT.md` for the reporting window, indexed-version limitations, repeatable script, and inquiry qualification. Start comparisons after sufficient postlaunch data is available.
+- Next candidate: research private-practice marketing search intent and competing pages before deciding on an additional industry page. The existing project establishes relevant implementation experience, not market demand or business results.
+
 ## DFW buyer-intent batch
 
 - Implemented: reconciled local SEO/content offers, social service page, one DFW regional overview, and two buyer guides. Shared marketing prices, explicit delivery limits, fictional examples, service-specific inquiries, and navigation cross-links support the same buying path.
@@ -16,7 +22,7 @@ Last updated: September 8, 2026
 
 - Content-marketing inquiry mailbox delivery and Search Console owner access are verified. The additive OAuth upgrade retained all 19 original scopes and added `https://www.googleapis.com/auth/webmasters` (20 total, zero removals); refresh and identity were verified. The sitemap-index submission completed at 16:49:08 UTC with HTTP 204 and a successful initial GET readback accepted pending processing, with zero errors and zero warnings. Current inspection shows the homepage `Crawled - currently not indexed` with the expected canonical and August 30, 2026 last crawl; the three new pages remain unknown to Google. Recheck discovery/indexing after Google recrawls.
 
-- Keep link validation and the 38-page production build green from the canonical Elaren/website path.
+- Keep link validation and the 39-page production build green from the canonical Elaren/website path.
 - Keep README, RUNBOOK, and handoff documents aligned with the actual dual content system.
 - Website transferred to elaren-studio/website with repository identity and history preserved.
 - Vercel project, production branch, selected-repository GitHub App access, production deployment, and elarenstudio.com attachment verified after reconnection.

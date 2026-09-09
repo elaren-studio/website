@@ -68,3 +68,12 @@ The user approved reconciling local SEO with the current introductory offer and 
 The first two new marketing clients total across both options can start at $495 for month one and optionally continue at $750/month, held six months. Content and social are two entry pages for one publishing package. Local SEO is a separately scoped alternative for one website and primary location. No setup fee, no automatic renewal, advance payment after written scope. Website builds and Care retain their separate prices and scope.
 
 Centralize marketing prices and publishing deliverables in `src/lib/marketing.ts`; synchronize guide prose and public LLM summaries when changing them. Distinguish approved creation/scheduling from paid ads, filming, and daily community management. Keep examples fictional until there is permission and evidence for a real case study. Use one regional overview rather than thin replicated city pages, factual service areas rather than invented offices, and visible scope matching Service structured data. Indexing and lead outcomes require separate evidence.
+
+## D-010 - Evidence-led case study and private measurement
+
+Status: implemented
+Date: September 8, 2026
+
+Preserve the existing Wright Wellness teardown URL while replacing unsupported historical and outcome claims with retained-source comparisons, two current public screenshots, and clearly labeled observations. Disclose Felix Torres's user-confirmed Operations Manager role at Wright Wellness alongside Elaren's design credit. No ownership, independent testimonial, clinical authorship, or measured ranking/conversion results are implied. A full website project is not priced as the introductory local SEO month.
+
+Keep original resource publication dates and add an optional updatedDate for substantial revisions. Keep Search Console responses, business metrics, and inquiry records private outside the public repository; commit only the read-only capture tool and operating instructions. Preparation and copy clicks are not inquiries. No row and an unreconciled ledger are not zero demand or zero leads.
