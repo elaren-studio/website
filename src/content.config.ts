@@ -51,6 +51,7 @@ const resources = defineCollection({
 		description: z.string().default(""),
 		date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Date must be YYYY-MM-DD").optional(),
 		type: z.enum(["teardown", "guide", "template"]),
+		updatedDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Updated date must be YYYY-MM-DD").optional(),
 		tags: z.array(z.string()).default([]),
 		vertical: z.string().optional(),
 		draft: z.boolean().default(false),

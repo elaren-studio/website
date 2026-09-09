@@ -48,6 +48,7 @@ const articleSchema = resource.data.date
 			headline: resource.data.title,
 			description: resource.data.description,
 			datePublished: resource.data.date,
+			dateModified: resource.data.updatedDate ?? resource.data.date,
 			url: canonicalUrl,
 			image: ogImageUrl,
 			mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
@@ -89,6 +90,7 @@ const articleSchema = resource.data.date
 					<span class="text-sm text-ink/50">{readingTime} min read</span>
 					</div>
 					<h1 class="text-3xl md:text-4xl font-semibold text-ink mb-4">{resource.data.title}</h1>
+					{resource.data.updatedDate && <p class="mb-4 text-sm text-ink/60">Updated <time datetime={resource.data.updatedDate}>{formatDate(resource.data.updatedDate)}</time></p>}
 					{resource.data.description && (
 						<p class="text-lg text-ink/70 leading-relaxed">{resource.data.description}</p>
 					)}
