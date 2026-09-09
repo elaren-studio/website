@@ -1,6 +1,14 @@
 # Active Context
 
-Last updated: September 8, 2026
+Last updated: September 9, 2026
+
+## September 9 inquiry and discovery batch
+
+- The five marketing service entry pages now share direct FormSubmit submission, required reply details, duplicate-submit prevention, a 20-second timeout, and an email/copy fallback that retains entered details on failure. Pricing and delivery scope are unchanged. Privacy copy and public summaries describe the direct route.
+- The existing FormSubmit route was activated using its domain-matched activation message. One labeled synthetic AJAX submission returned the documented success response and was independently found in the intended Elaren inbox with the exact marker and source path. This proves point-in-time route delivery; production browser submission remains a release check.
+- Added fixed service/source-page events for inquiry start, confirmed provider acceptance, and failed/unconfirmed submission. Form field values are excluded. Plausible is signed out in Personal Chrome; account ownership, goal configuration, and dashboard readback remain pending owner sign-in. Qualification and collected cash remain private manual ledger measures.
+- Added the Bing-issued public verification meta tag and a public IndexNow key with a selected-URL submission tool. Bing verification, sitemap submission, and IndexNow receipt remain postdeployment checks. No Google OAuth permissions were changed.
+- Required link validation, the 41-page build, three inquiry tests, and five IndexNow tests passed. Personal Chrome verified required fields and a deliberately unavailable local endpoint: failure text, preserved message, enabled retry, prepared fallback, and copy feedback. The temporary test endpoint was reverted. Production release evidence follows separately.
 
 ## September 8 private-practice marketing batch
 

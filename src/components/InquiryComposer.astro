@@ -1,75 +1,128 @@
 ---
 interface Props {
-	service?: "content-marketing" | "social-media-marketing" | "local-seo" | "marketing" | "private-practice-marketing";
+  service?: "content-marketing" | "social-media-marketing" | "local-seo" | "marketing" | "private-practice-marketing";
 }
 const { service = "content-marketing" } = Astro.props;
 const configurations = {
-	"private-practice-marketing": { label: "Private practice marketing", prompt: "Tell us what your practice needs help publishing or improving. Use public business information only; leave out patient details and clinical records.", fields: ["Practice name", "Public practice website", "Primary service and area served", "Existing channels and preferred package", "Priority and target month"] },
-	"content-marketing": { label: "Content marketing", prompt: "Share your organization, website, channels, and what you want the next month of publishing to support.", fields: ["Organization", "Public website", "Selected channels", "Campaign goal and target month"] },
-	"social-media-marketing": { label: "Social content and scheduling", prompt: "Tell us which channels you use and what you want help creating. Content and social use the same publishing package.", fields: ["Organization", "Public website", "Up to two existing social channels", "Content goal and target month"] },
-	"local-seo": { label: "Local SEO", prompt: "Share your website and the service area you want to focus on. A Google Business Profile is optional; please send public links only.", fields: ["Business or organization", "Public website", "Primary service and location", "Google Business Profile link, if you have one", "Priority and target month"] },
-	marketing: { label: "DFW marketing", prompt: "Tell us where your business serves customers and whether you need content, social publishing, or local SEO. We will help confirm the right scope.", fields: ["Business or organization", "Public website", "Service area", "Service you need and target month"] },
+  "private-practice-marketing": { label: "Private practice marketing", prompt: "Share your practice’s service area, existing channels, and the work you want help with. Use public business information only; leave out patient details and clinical records." },
+  "content-marketing": { label: "Content marketing", prompt: "Tell us your audience, existing channels, and what you want the next month of publishing to support." },
+  "social-media-marketing": { label: "Social content and scheduling", prompt: "Tell us which channels you use and what you want help creating. Content and social use the same publishing package." },
+  "local-seo": { label: "Local SEO", prompt: "Share your primary service, location, and what you want to improve. An existing eligible Google Business Profile is optional; include a public link if relevant." },
+  marketing: { label: "DFW marketing", prompt: "Tell us where your business serves customers and whether you need content, social publishing, or local SEO." },
 };
-const { label, prompt, fields } = configurations[service];
+const { label, prompt } = configurations[service];
 const subject = `Elaren ${label.toLowerCase()} inquiry`;
+const inputClass = "w-full rounded-xl border-2 border-slate-200 bg-paper px-3 py-2.5 text-sm text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent";
 ---
 
-<div id="inquiry" class="scroll-mt-24 rounded-xl border-2 border-slate-200 bg-paper p-6 shadow-sm" data-inquiry-composer data-subject={subject} data-service={label} data-source={Astro.url.pathname}>
-	<h2 class="text-2xl font-semibold text-ink">Tell us enough to check fit</h2>
-	<p class="mt-2 text-sm text-ink/70">{prompt}</p>
-	<div class="mt-5 space-y-4">
-		{fields.map((field, index) => (
-			<div>
-				<label for={`${service}-field-${index}`} class="mb-1.5 block text-sm font-medium text-ink">{field}</label>
-				<input id={`${service}-field-${index}`} data-inquiry-field data-label={field} type="text" maxlength="300" autocomplete="off" class="w-full rounded-xl border-2 border-slate-200 bg-paper px-3 py-2.5 text-sm text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent" />
-			</div>
-		))}
-	</div>
-	<div class="mt-5 flex flex-wrap items-center gap-3">
-		<button type="button" data-prepare-email class="rounded-xl bg-accent px-5 py-3 font-semibold text-paper shadow-lg shadow-accent/30 transition hover:-translate-y-0.5">Prepare email</button>
-		<a href={`mailto:hello@elarenstudio.com?subject=${encodeURIComponent(subject)}`} class="rounded-xl border-2 border-slate-200 px-5 py-3 font-semibold text-ink no-underline hover:border-accent">Email link fallback</a>
-	</div>
-	<p class="mt-4 text-xs text-ink/60">Recipient: <strong>hello@elarenstudio.com</strong>. Your notes stay in this page until you choose to open email. Please leave out passwords, private customer details, and account credentials.</p>
-	<div data-inquiry-preview class="mt-4 hidden">
-		<label for="prepared-details" class="mb-1.5 block text-sm font-medium text-ink">Prepared details</label>
-		<textarea id="prepared-details" data-inquiry-textarea rows="6" readonly class="w-full rounded-xl border-2 border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-ink"></textarea>
-		<div class="mt-3 flex flex-wrap items-center gap-3"><button type="button" data-copy-details class="rounded-xl border-2 border-slate-200 px-4 py-2 font-semibold text-ink hover:border-accent">Copy details</button><a data-open-email href={`mailto:hello@elarenstudio.com?subject=${encodeURIComponent(subject)}`} class="rounded-xl bg-accent px-4 py-2 font-semibold text-paper no-underline">Open email draft</a></div>
-	</div>
-	<p data-inquiry-status class="mt-3 hidden rounded-lg border border-accent/30 bg-accent/5 p-3 text-sm text-ink" role="status"></p>
+<div id="inquiry" class="scroll-mt-24 rounded-xl border-2 border-slate-200 bg-paper p-6 shadow-sm" data-inquiry-composer data-subject={subject} data-service={label} data-service-key={service} data-source={Astro.url.pathname}>
+  <h2 class="text-2xl font-semibold text-ink">Tell us enough to check fit</h2>
+  <p class="mt-2 text-sm leading-relaxed text-ink/70">{prompt}</p>
+  <form method="post" data-inquiry-form class="mt-5 space-y-4">
+    <fieldset data-inquiry-fields class="space-y-4 disabled:opacity-70">
+      <legend class="sr-only">Your business inquiry</legend>
+      <div><label for={`${service}-name`} class="mb-1.5 block text-sm font-medium text-ink">Your name (required)</label><input id={`${service}-name`} name="name" type="text" required maxlength="150" autocomplete="name" class={inputClass} /></div>
+      <div><label for={`${service}-email`} class="mb-1.5 block text-sm font-medium text-ink">Email for our reply (required)</label><input id={`${service}-email`} name="email" type="email" required maxlength="254" autocomplete="email" class={inputClass} /></div>
+      <div><label for={`${service}-organization`} class="mb-1.5 block text-sm font-medium text-ink">Business or practice name (optional)</label><input id={`${service}-organization`} name="organization" type="text" maxlength="200" autocomplete="organization" class={inputClass} /></div>
+      <div><label for={`${service}-website`} class="mb-1.5 block text-sm font-medium text-ink">Public website (optional)</label><input id={`${service}-website`} name="website" type="text" maxlength="300" inputmode="url" autocomplete="url" class={inputClass} /></div>
+      <div><label for={`${service}-message`} class="mb-1.5 block text-sm font-medium text-ink">What do you need, and when? (required)</label><textarea id={`${service}-message`} name="message" required maxlength="3000" rows="5" class={inputClass}></textarea></div>
+      <div class="hidden" aria-hidden="true"><label for={`${service}-extra`}>Leave this field empty</label><input id={`${service}-extra`} name="_honey" type="text" tabindex="-1" autocomplete="off" /></div>
+    </fieldset>
+    <button type="submit" data-send-inquiry class="hidden rounded-xl bg-accent px-5 py-3 font-semibold text-paper shadow-lg shadow-accent/30 disabled:cursor-wait disabled:opacity-60">Send inquiry</button>
+    <p class="text-xs leading-relaxed text-ink/65">Send inquiry shares these details with Elaren through FormSubmit so we can reply. Please leave out passwords, private customer details, and patient information. <a href="/privacy" class="text-accent underline">Privacy details</a>.</p>
+    <noscript><p class="text-sm text-ink/75">Please email <a href={`mailto:hello@elarenstudio.com?subject=${encodeURIComponent(subject)}`} class="text-accent underline">hello@elarenstudio.com</a> with your inquiry. The send button requires JavaScript.</p></noscript>
+  </form>
+  <p data-inquiry-status class="mt-4 hidden rounded-lg border border-accent/30 bg-accent/5 p-3 text-sm text-ink" role="status" tabindex="-1" aria-live="polite"></p>
+  <button type="button" data-new-inquiry class="mt-4 hidden font-semibold text-accent underline">Write another inquiry</button>
+  <details class="mt-5 border-t border-slate-200 pt-4" data-email-fallback>
+    <summary class="cursor-pointer text-sm font-semibold text-accent">Prefer email or having trouble sending?</summary>
+    <p class="mt-3 text-sm text-ink/70">Email <a href={`mailto:hello@elarenstudio.com?subject=${encodeURIComponent(subject)}`} class="text-accent underline">hello@elarenstudio.com</a>, or prepare a draft with your details below.</p>
+    <button type="button" data-prepare-email class="mt-3 rounded-xl border-2 border-slate-200 px-4 py-2 font-semibold text-ink">Prepare email instead</button>
+    <div data-inquiry-preview class="mt-4 hidden">
+      <label for={`${service}-prepared`} class="mb-1.5 block text-sm font-medium text-ink">Prepared details</label>
+      <textarea id={`${service}-prepared`} data-inquiry-textarea rows="8" readonly class={inputClass}></textarea>
+      <div class="mt-3 flex flex-wrap gap-3"><button type="button" data-copy-details class="rounded-xl border-2 border-slate-200 px-4 py-2 font-semibold text-ink">Copy details</button><a data-open-email href={`mailto:hello@elarenstudio.com?subject=${encodeURIComponent(subject)}`} class="rounded-xl bg-accent px-4 py-2 font-semibold text-paper no-underline">Open email draft</a></div>
+    </div>
+    <p data-fallback-status class="mt-3 text-sm text-ink/70" role="status"></p>
+  </details>
 </div>
 
 <script>
-	document.querySelectorAll<HTMLElement>("[data-inquiry-composer]").forEach((composer) => {
-		const subject = composer.dataset.subject ?? "Elaren marketing inquiry";
-		const button = composer.querySelector<HTMLButtonElement>("[data-prepare-email]");
-		const status = composer.querySelector<HTMLElement>("[data-inquiry-status]");
-		const preview = composer.querySelector<HTMLElement>("[data-inquiry-preview]");
-		const textarea = composer.querySelector<HTMLTextAreaElement>("[data-inquiry-textarea]");
-		const openEmail = composer.querySelector<HTMLAnchorElement>("[data-open-email]");
-		const copyButton = composer.querySelector<HTMLButtonElement>("[data-copy-details]");
-		button?.addEventListener("click", () => {
-			const values = Array.from(composer.querySelectorAll<HTMLInputElement>("[data-inquiry-field]"));
-			const details = values.map((input) => `${input.dataset.label}: ${input.value.trim() || "[please add]"}`).join("\n");
-			const body = `Service: ${composer.dataset.service}\nSource page: ${composer.dataset.source}\n\n${details}`;
-			if (textarea) textarea.value = body;
-			if (openEmail) openEmail.href = `mailto:hello@elarenstudio.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-			preview?.classList.remove("hidden");
-			if (status) {
-				status.textContent = "Details prepared locally. Review them, copy them, or choose Open email draft; this page has not sent anything.";
-				status.classList.remove("hidden");
-			}
-		});
-		copyButton?.addEventListener("click", async () => {
-			if (!textarea) return;
-			try {
-				await navigator.clipboard.writeText(textarea.value);
-				if (status) status.textContent = "Details copied to your clipboard. No message was sent.";
-			} catch {
-				textarea.focus();
-				textarea.select();
-				if (status) status.textContent = "Copy is unavailable here. Select the prepared details and use your device’s copy command. No message was sent.";
-			}
-			status?.classList.remove("hidden");
-		});
-	});
+  import { submitInquiry } from "../lib/inquiry";
+  document.querySelectorAll<HTMLElement>("[data-inquiry-composer]").forEach((composer) => {
+    const form = composer.querySelector<HTMLFormElement>("[data-inquiry-form]")!;
+    const fields = composer.querySelector<HTMLFieldSetElement>("[data-inquiry-fields]")!;
+    const sendButton = composer.querySelector<HTMLButtonElement>("[data-send-inquiry]")!;
+    const status = composer.querySelector<HTMLElement>("[data-inquiry-status]")!;
+    const newButton = composer.querySelector<HTMLButtonElement>("[data-new-inquiry]")!;
+    const fallback = composer.querySelector<HTMLDetailsElement>("[data-email-fallback]")!;
+    const preview = composer.querySelector<HTMLElement>("[data-inquiry-preview]")!;
+    const textarea = composer.querySelector<HTMLTextAreaElement>("[data-inquiry-textarea]")!;
+    const openEmail = composer.querySelector<HTMLAnchorElement>("[data-open-email]")!;
+    const fallbackStatus = composer.querySelector<HTMLElement>("[data-fallback-status]")!;
+    let busy = false;
+    let sent = false;
+    let started = false;
+    const track = (event: string) => {
+      // Only fixed service/page values go to analytics, never form fields or email links.
+      if (location.hostname !== "elarenstudio.com") return;
+      const analytics = (window as Window & { plausible?: (name: string, options: object) => void }).plausible;
+      try { analytics?.(event, { props: { service: composer.dataset.serviceKey, page: composer.dataset.source } }); } catch { /* Analytics must not interrupt an inquiry. */ }
+    };
+    const values = () => Object.fromEntries(Array.from(new FormData(form).entries(), ([key, value]) => [key, String(value).trim()]));
+    const prepare = () => {
+      // Read DOM values directly: successful/sending fieldsets may be disabled.
+      const read = (name: string) => (form.elements.namedItem(name) as HTMLInputElement | HTMLTextAreaElement).value.trim();
+      const body = `Service: ${composer.dataset.service}\nSource page: ${composer.dataset.source}\n\nName: ${read("name")}\nReply email: ${read("email")}\nOrganization: ${read("organization")}\nWebsite: ${read("website")}\n\n${read("message")}`;
+      textarea.value = body;
+      openEmail.href = `mailto:hello@elarenstudio.com?subject=${encodeURIComponent(composer.dataset.subject!)}&body=${encodeURIComponent(body)}`;
+      preview.classList.remove("hidden");
+    };
+    sendButton.classList.remove("hidden");
+    form.addEventListener("input", () => {
+      if (!started) { started = true; track("Inquiry Started"); }
+      if (!preview.classList.contains("hidden")) prepare();
+    });
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (busy || sent || !form.reportValidity()) return;
+      const payload = values();
+      if (payload._honey) return;
+      if (!payload.name || !payload.email || !payload.message) {
+        status.textContent = "Please add your name, reply email, and a short description of the work.";
+        status.classList.remove("hidden"); status.focus(); return;
+      }
+      busy = true; sendButton.disabled = true; fields.disabled = true;
+      sendButton.textContent = "Sending…";
+      status.textContent = "Sending your inquiry. Please keep this page open.";
+      status.classList.remove("hidden");
+      try {
+        await submitInquiry({ ...payload, Service: composer.dataset.service!, "Source page": composer.dataset.source!, _subject: composer.dataset.subject!, _template: "table" });
+        sent = true;
+        status.textContent = "Thank you—your inquiry was submitted to Elaren. We’ll reply to the email you provided. Your details remain in the form for reference.";
+        track("Inquiry Submitted");
+        sendButton.textContent = "Inquiry submitted";
+        newButton.classList.remove("hidden");
+      } catch {
+        status.textContent = "We couldn’t confirm submission. Your details are still here. A delayed request may still arrive; you can try again or use the email option below.";
+        track("Inquiry Submission Failed");
+        fields.disabled = false; sendButton.disabled = false; sendButton.textContent = "Try sending again";
+        prepare(); fallback.open = true;
+      } finally { busy = false; status.focus(); }
+    });
+    newButton.addEventListener("click", () => {
+      form.reset(); fields.disabled = false; sendButton.disabled = false; sent = false; started = false;
+      sendButton.textContent = "Send inquiry"; newButton.classList.add("hidden"); status.classList.add("hidden");
+      preview.classList.add("hidden"); textarea.value = ""; fallbackStatus.textContent = ""; fallback.open = false;
+      openEmail.href = `mailto:hello@elarenstudio.com?subject=${encodeURIComponent(composer.dataset.subject!)}`;
+      (form.elements.namedItem("name") as HTMLInputElement).focus();
+    });
+    composer.querySelector("[data-prepare-email]")!.addEventListener("click", () => {
+      prepare(); fallbackStatus.textContent = "Email details prepared locally. Opening a draft does not send it.";
+    });
+    composer.querySelector("[data-copy-details]")!.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(textarea.value); fallbackStatus.textContent = "Details copied. Paste them into your email."; }
+      catch { textarea.focus(); textarea.select(); fallbackStatus.textContent = "Select and copy the prepared details using your device’s copy command."; }
+    });
+  });
 </script>

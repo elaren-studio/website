@@ -1,5 +1,16 @@
 # Decisions
 
+## D-012 - Direct inquiries and separate discovery receipts
+
+Status: implemented; external verification recorded in ACTIVE_CONTEXT
+Date: September 9, 2026
+
+Supersede the marketing composer-only boundary in D-008/D-011 with direct submission through the existing FormSubmit route. Retain a locally prepared email alternative, required reply fields, a honeypot, duplicate prevention, a timeout, and entered text on uncertain failure. Report success only for the documented submission acknowledgement, never an arbitrary HTTP 200 or activation message. Do not automatically retry uncertain sends.
+
+Emit inquiry start, accepted submission, and failed submission events through the existing Plausible installation with fixed service/page properties only. Account ownership and configured goals must be verified before claiming dashboard measurement. Qualified inquiries and collected cash require private inbox/ledger reconciliation.
+
+Use the Bing-issued public ownership meta tag and one public IndexNow key. Notify selected changed production URLs after verifying exact public responses. Keep ownership, sitemap acceptance, URL submission, indexing, and ranking as separate observed states. Preserve existing Google permissions.
+
 ## D-001 - Keep the website independent from HQ and products
 
 Status: implemented
