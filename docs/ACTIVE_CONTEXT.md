@@ -8,7 +8,8 @@ Last updated: September 8, 2026
 - Added `/resources/guides/first-month-local-seo` with the $495 scope, annotated fictional Arlington example, approval steps, and optional $750 continuation. The shared service-page resource block links to both pieces. Resource frontmatter now supports an optional `updatedDate`, displayed visibly and in Article `dateModified` while retaining the original publication date.
 - Captured a private Search Console baseline for August 9–September 5 (finalized web-search data) and eight URL inspections. Homepage, content-marketing, and the existing case study were indexed at capture; local SEO was discovered but not indexed, and the four newest marketing routes were unknown. This supersedes the earlier dated inspection state below; crawl dates can predate the newest deployed copy.
 - Added `scripts/search-baseline.py` and `docs/SEARCH_MEASUREMENT.md` for reproducible snapshots and a manual weekly review. Search metrics and the inquiry ledger stay outside this public repository. Qualified inquiries remain unmeasured until the private ledger is reconciled. No new analytics integration or scheduled automation was created.
-- Current build: 39 pages. Release verification is recorded in the worklog after provider readback.
+- Current build: 39 pages. Source `21643344caa9f53c18d0eb5f97f012035c7f4dcf` was pushed and merged as `c6779b0b8f701f6ea5f09e3cfeaa4a84b2da88a8`. Vercel Production `6340934968` succeeded at September 9, 02:01:17 UTC (September 8 local). The case study, guide, local SEO cross-links, sitemap, and both JPEGs returned HTTP 200 with expected content; the case study was opened in Personal Chrome.
+- The changed sitemap was resubmitted at September 9, 02:03:04 UTC: HTTP 204, HTTP 200 readback, processing pending, zero errors/warnings. All 20 OAuth scopes remain unchanged. Later indexing of the new guide remains a separate observation.
 
 ## September 8 DFW marketing implementation
 
