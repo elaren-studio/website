@@ -5,10 +5,11 @@ Last updated: September 9, 2026
 ## September 9 inquiry and discovery batch
 
 - The five marketing service entry pages now share direct FormSubmit submission, required reply details, duplicate-submit prevention, a 20-second timeout, and an email/copy fallback that retains entered details on failure. Pricing and delivery scope are unchanged. Privacy copy and public summaries describe the direct route.
-- The existing FormSubmit route was activated using its domain-matched activation message. One labeled synthetic AJAX submission returned the documented success response and was independently found in the intended Elaren inbox with the exact marker and source path. This proves point-in-time route delivery; production browser submission remains a release check.
+- The existing FormSubmit route was activated using its domain-matched activation message. A labeled synthetic AJAX check and a separate production-browser submission were each independently found in the intended Elaren inbox with their exact marker and source path. The browser displayed acceptance, prevented duplicate submission, and reset only after the explicit new-inquiry action. This proves point-in-time route delivery, not actual prospect conversion.
 - Added fixed service/source-page events for inquiry start, confirmed provider acceptance, and failed/unconfirmed submission. Form field values are excluded. Plausible is signed out in Personal Chrome; account ownership, goal configuration, and dashboard readback remain pending owner sign-in. Qualification and collected cash remain private manual ledger measures.
-- Added the Bing-issued public verification meta tag and a public IndexNow key with a selected-URL submission tool. Bing verification, sitemap submission, and IndexNow receipt remain postdeployment checks. No Google OAuth permissions were changed.
-- Required link validation, the 41-page build, three inquiry tests, and five IndexNow tests passed. Personal Chrome verified required fields and a deliberately unavailable local endpoint: failure text, preserved message, enabled retry, prepared fallback, and copy feedback. The temporary test endpoint was reverted. Production release evidence follows separately.
+- Bing ownership verification succeeded in the owner account using the deployed meta tag. The sitemap index is listed as Submitted/Processing with one known sitemap and zero current errors/warnings; crawling and indexing remain pending. IndexNow accepted seven selected service/supporting URLs with HTTP 202, key validation pending. The public key and every selected URL passed HTTP 200 checks without redirects. No Google OAuth permissions were changed.
+- Required link validation, the 41-page build, three inquiry tests, and five IndexNow tests passed. Five service routes passed structural checks. Personal Chrome at 1680×947 verified required fields and a deliberately unavailable local endpoint: failure text, preserved message, enabled retry, prepared fallback, and copy feedback. The temporary test endpoint was reverted and the final code rebuilt. Production rendered success and reset passed; no production application console errors were observed. Mobile/physical-device checks were not repeated in this batch.
+- Source `65dfd95a20a69d6a8d41053251348b527a916fb5` was pushed and verified, then merged as `a3c9c0ae542575f2a9b13f0236f716cfc0b756fa`. Vercel Production `6343112401` succeeded September 9 at 05:20:50 UTC. All five marketing forms, privacy copy, homepage verification tag, sitemap, and public key were verified live. This documentation follow-up records the release for the requested second push.
 
 ## September 8 private-practice marketing batch
 
@@ -102,15 +103,16 @@ This repository owns website implementation and public copy. Elaren company stra
 
 ## External state not yet verified
 
-- FormSubmit account ownership
 - Plausible account ownership
+
+The existing FormSubmit route was activated and delivery verified September 9 as recorded above; there is no separate verified FormSubmit dashboard account.
 
 The repository owner, name, local origin, and Vercel Git connection changed successfully. The Vercel project, domain, DNS, form, and analytics settings did not change.
 
 ## Next actions
 
 1. Continue running validation and a production build before pushes to main.
-2. Verify FormSubmit and Plausible account ownership separately when needed.
+2. Complete Plausible owner sign-in, verify the Elaren property, configure matching custom-event goals, and read back an event. Keep qualified-inquiry reconciliation in the private ledger.
 
 ## September 7, 2026 content marketing implementation
 

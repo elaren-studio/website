@@ -5,7 +5,7 @@ Last updated: September 9, 2026
 ## Inquiry and search distribution batch
 
 - Implemented direct marketing inquiries with retained-text failure recovery and email fallback, plus events with fixed service/page properties. Existing FormSubmit activation and a labeled inbox-delivery test passed. Plausible account verification and dashboard goals remain pending owner sign-in.
-- Implemented Bing ownership markup and selected-URL IndexNow tooling. Verify ownership and submit the sitemap/changed URLs after production deployment; receipts do not establish indexing or ranking.
+- Deployed as main `a3c9c0ae542575f2a9b13f0236f716cfc0b756fa`; Vercel Production `6343112401` succeeded. The live form-to-inbox test passed. Bing ownership is verified, the sitemap is Submitted/Processing, and IndexNow accepted seven selected URLs with HTTP 202 pending key validation. These receipts do not establish indexing or ranking.
 - Next measurement: reconcile real received inquiries privately, exclude synthetic checks, then compare postlaunch discovery and relevant landing-page impressions using `docs/SEARCH_MEASUREMENT.md`.
 
 ## Private-practice marketing batch
