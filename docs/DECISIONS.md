@@ -77,3 +77,12 @@ Date: September 8, 2026
 Preserve the existing Wright Wellness teardown URL while replacing unsupported historical and outcome claims with retained-source comparisons, two current public screenshots, and clearly labeled observations. Disclose Felix Torres's user-confirmed Operations Manager role at Wright Wellness alongside Elaren's design credit. No ownership, independent testimonial, clinical authorship, or measured ranking/conversion results are implied. A full website project is not priced as the introductory local SEO month.
 
 Keep original resource publication dates and add an optional updatedDate for substantial revisions. Keep Search Console responses, business metrics, and inquiry records private outside the public repository; commit only the read-only capture tool and operating instructions. Preparation and copy clicks are not inquiries. No row and an unreconciled ledger are not zero demand or zero leads.
+
+## D-011 - One practice-specific content marketing page and inspectable sample
+
+Status: implemented
+Date: September 8, 2026
+
+Use `/private-practice-marketing/` as an industry-specific entry to the existing content/social publishing offer. Keep `/local-seo/` and `/therapist-websites/` as the detailed separate alternatives. Search results support the existence of the commercial service category; no volume, low-competition, price-leadership, or conversion claim is justified by that review.
+
+Connect the Wright Wellness website evidence with its Operations Manager disclosure, without implying independent endorsement or clinical credentials. The companion sample is clearly fictional, contains excerpts rather than claiming a complete delivered month, and uses practice logistics instead of medical advice. Practice reviewers approve facts and publication; clinical review stays with a qualified practice clinician. Use Instagram and LinkedIn in this example. Reuse marketing pricing and inquiry behavior; do not introduce a new form service, ad product, or analytics account as part of this content batch.

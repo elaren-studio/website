@@ -1,9 +1,10 @@
 ---
 interface Props {
-	service?: "content-marketing" | "social-media-marketing" | "local-seo" | "marketing";
+	service?: "content-marketing" | "social-media-marketing" | "local-seo" | "marketing" | "private-practice-marketing";
 }
 const { service = "content-marketing" } = Astro.props;
 const configurations = {
+	"private-practice-marketing": { label: "Private practice marketing", prompt: "Tell us what your practice needs help publishing or improving. Use public business information only; leave out patient details and clinical records.", fields: ["Practice name", "Public practice website", "Primary service and area served", "Existing channels and preferred package", "Priority and target month"] },
 	"content-marketing": { label: "Content marketing", prompt: "Share your organization, website, channels, and what you want the next month of publishing to support.", fields: ["Organization", "Public website", "Selected channels", "Campaign goal and target month"] },
 	"social-media-marketing": { label: "Social content and scheduling", prompt: "Tell us which channels you use and what you want help creating. Content and social use the same publishing package.", fields: ["Organization", "Public website", "Up to two existing social channels", "Content goal and target month"] },
 	"local-seo": { label: "Local SEO", prompt: "Share your website and the service area you want to focus on. A Google Business Profile is optional; please send public links only.", fields: ["Business or organization", "Public website", "Primary service and location", "Google Business Profile link, if you have one", "Priority and target month"] },
